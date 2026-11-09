@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "npm --prefix Awesome-main run build",
+    "dev": "npm --prefix Awesome-main run dev"
+  },
+  "dependencies": {
+    "@google/genai": "^2.31.0"
+  }
+}

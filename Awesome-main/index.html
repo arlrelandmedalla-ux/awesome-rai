@@ -1,0 +1,5197 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+  <title>Awesome Accounting Services | Company Profile</title>
+  <meta
+    name="description"
+    content="Awesome Accounting Services provides accounting, tax compliance, bookkeeping, payroll support, and financial reporting for businesses in General Mariano Alvarez, Cavite and nearby areas."
+  />
+  <meta
+    name="keywords"
+    content="Accounting Services Cavite, Bookkeeping Philippines, BIR Compliance, SSS HDMF PHIC Compliance, Financial Statements, Company Profile"
+  />
+  <link rel="icon" href="public/header-logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111213;
+      --surface: #191a1c;
+      --surface-strong: #1e2022;
+      --ink: #f4efe8;
+      --muted: #b6afa6;
+      --line: rgba(238, 222, 203, 0.12);
+      --brand: #d58b51;
+      --brand-deep: #f0ad70;
+      --accent: #bd7442;
+      --accent-soft: rgba(189, 116, 66, 0.16);
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.3);
+      --font-body: "DM Sans", sans-serif;
+      --font-display: "Manrope", sans-serif;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.7;
+      letter-spacing: 0.005em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(189, 116, 66, 0.12), transparent 30%),
+        linear-gradient(180deg, #111213 0%, #151617 45%, #101112 100%);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    section {
+      padding: 92px 20px;
+    }
+
+    .container {
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(189, 116, 66, 0.14);
+      color: #f4d0ad;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--brand-deep);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.12;
+      text-wrap: balance;
+    }
+
+    h1,
+    h2 {
+      color: var(--ink);
+      letter-spacing: -0.045em;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6.6vw, 5.25rem);
+      line-height: 1.02;
+      font-weight: 800;
+      max-width: 11ch;
+    }
+
+    h2 {
+      font-size: clamp(2.15rem, 4.5vw, 3.5rem);
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.015rem;
+      line-height: 1.72;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+      background: rgba(10, 25, 41, 0.82);
+      border-bottom: 1px solid rgba(133, 204, 235, 0.16);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
+    }
+
+    .nav-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    .brand-copy span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      position: relative;
+      display: inline-flex;
+      min-height: 38px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      border: 1px solid rgba(165, 203, 229, 0.1);
+      border-radius: 12px;
+      background: linear-gradient(155deg, rgba(33, 63, 88, 0.78), rgba(13, 33, 53, 0.88));
+      color: #d7e8f4;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 650;
+      letter-spacing: 0.005em;
+      box-shadow:
+        0 3px 0 rgba(5, 17, 30, 0.82),
+        0 6px 12px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09);
+      transition: color 0.2s ease, transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      transform: translateY(-3px);
+      border-color: rgba(83, 222, 237, 0.46);
+      background: linear-gradient(155deg, rgba(39, 101, 127, 0.92), rgba(23, 58, 84, 0.96));
+      color: #b7fbff;
+      text-shadow: 0 0 16px rgba(53, 215, 232, 0.24);
+      box-shadow:
+        0 6px 0 rgba(5, 17, 30, 0.82),
+        0 12px 20px rgba(0, 0, 0, 0.24),
+        0 0 18px rgba(53, 215, 232, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-links a:active {
+      transform: translateY(2px);
+      box-shadow:
+        0 1px 0 rgba(5, 17, 30, 0.82),
+        0 3px 7px rgba(0, 0, 0, 0.16),
+        inset 0 2px 3px rgba(0, 0, 0, 0.16);
+    }
+
+    .hero {
+      position: relative;
+      padding: 40px 20px 84px;
+    }
+
+    .hero-shell {
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+      padding: 28px;
+      border-radius: 36px;
+      background:
+        linear-gradient(135deg, rgba(15, 16, 17, 0.92), rgba(46, 31, 23, 0.78)),
+        url("/header.jpg") center/cover no-repeat;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(232, 153, 85, 0.24), transparent 24%),
+        linear-gradient(90deg, rgba(8, 9, 10, 0.86) 8%, rgba(8, 9, 10, 0.52) 58%, rgba(8, 9, 10, 0.36) 100%);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      min-height: 76vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      align-items: end;
+      gap: 30px;
+    }
+
+    .hero-copy {
+      padding: 28px;
+      color: #ffffff;
+      animation: rise 0.8s ease both;
+    }
+
+    .hero-copy p {
+      color: rgba(255, 248, 239, 0.88);
+      max-width: 620px;
+      margin: 20px 0 28px;
+      font-size: 1.06rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .btn,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #f0b879, #c77943);
+      color: #21150e;
+      box-shadow: 0 14px 30px rgba(197, 119, 62, 0.25);
+    }
+
+    .btn-secondary {
+      color: #fffaf2;
+      border: 1px solid rgba(255, 249, 240, 0.28);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .btn:hover,
+    .btn-secondary:hover,
+    .btn:focus-visible,
+    .btn-secondary:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      box-shadow: 0 18px 36px rgba(197, 119, 62, 0.36);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      border-color: rgba(240, 173, 112, 0.65);
+      background: rgba(189, 116, 66, 0.14);
+    }
+
+    a:not(.brand):not(.btn):not(.btn-secondary),
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+      outline: 2px solid rgba(240, 173, 112, 0.8);
+      outline-offset: 3px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 760px;
+    }
+
+    .stat-card {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+
+    .stat-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      color: #f8e8c3;
+    }
+
+    .stat-card span {
+      font-size: 0.92rem;
+      color: rgba(255, 249, 240, 0.86);
+    }
+
+    .hero-panel {
+      align-self: center;
+      padding: 26px;
+      border-radius: 30px;
+      background: rgba(29, 30, 32, 0.94);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      animation: rise 1s ease 0.1s both;
+    }
+
+    .hero-panel h3 {
+      margin-bottom: 14px;
+      color: var(--brand-deep);
+    }
+
+    .hero-panel ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .hero-panel li {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .hero-panel li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hero-panel strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .mini-card {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(189, 116, 66, 0.12);
+      border: 1px solid rgba(213, 139, 81, 0.2);
+      color: #f0c49f;
+      font-weight: 700;
+    }
+
+    .intro-grid,
+    .process-grid,
+    .contact-grid {
+      display: grid;
+      gap: 26px;
+    }
+
+    .intro-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      align-items: start;
+    }
+
+    .story-card,
+    .profile-card,
+    .service-card,
+    .industry-card,
+    .process-step,
+    .contact-panel,
+    .map-card {
+      background: linear-gradient(145deg, rgba(34, 35, 37, 0.96), rgba(25, 26, 28, 0.98));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .story-card:hover,
+    .profile-card:hover,
+    .service-card:hover,
+    .industry-card:hover,
+    .process-step:hover,
+    .contact-panel:hover,
+    .map-card:hover,
+    .gallery-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(213, 139, 81, 0.32);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .story-card,
+    .profile-card,
+    .contact-panel,
+    .map-card {
+      padding: 32px;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      line-height: 1.78;
+      color: #d0c8bf;
+      max-width: 62ch;
+    }
+
+    .key-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .key-points div {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(189, 116, 66, 0.07);
+      border: 1px solid rgba(213, 139, 81, 0.16);
+    }
+
+    .key-points strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #efb17b;
+    }
+
+    .profile-card {
+      background:
+        linear-gradient(180deg, rgba(189, 116, 66, 0.06), transparent 45%),
+        var(--surface-strong);
+    }
+
+    .profile-list {
+      list-style: none;
+      display: grid;
+      gap: 16px;
+    }
+
+    .profile-list li {
+      padding-left: 18px;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .profile-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.75em;
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--brand);
+    }
+
+    .services-wrap {
+      background: linear-gradient(180deg, rgba(189, 116, 66, 0.045), transparent);
+    }
+
+    .services-grid,
+    .industries-grid,
+    .process-grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .service-card,
+    .industry-card,
+    .process-step {
+      padding: 28px;
+    }
+
+    .service-card p,
+    .industry-card p,
+    .process-step p {
+      font-size: 0.98rem;
+    }
+
+    .service-tag,
+    .step-no {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.015em;
+      background: rgba(189, 116, 66, 0.14);
+      color: #f0ad70;
+    }
+
+    .industry-card {
+      background:
+        linear-gradient(180deg, rgba(213, 139, 81, 0.08), transparent),
+        var(--surface-strong);
+    }
+
+    .process-wrap {
+      background: #191a1c;
+    }
+
+    .process-step {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-step::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(213, 139, 81, 0.08);
+    }
+
+    .cta-band {
+      padding: 32px;
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, #33251e, #191a1c 78%);
+      border: 1px solid rgba(213, 139, 81, 0.26);
+      color: #fff;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+    }
+
+    .cta-band p {
+      color: rgba(244, 239, 232, 0.78);
+      max-width: 60ch;
+    }
+
+    .section-stack-lg {
+      margin-top: 32px;
+    }
+
+    .section-stack-md {
+      margin-top: 30px;
+    }
+
+    .cta-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.65rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      margin-bottom: 10px;
+    }
+
+    .contact-grid {
+      grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+      align-items: start;
+    }
+
+    .contact-details {
+      list-style: none;
+      display: grid;
+      gap: 18px;
+      margin: 26px 0;
+    }
+
+    .contact-details strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    .response {
+      margin-bottom: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(189, 116, 66, 0.08);
+      border: 1px solid var(--line);
+      font-weight: 600;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #e0d8ce;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(238, 222, 203, 0.16);
+      background: #141516;
+      color: var(--ink);
+      font: inherit;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(213, 139, 81, 0.78);
+      box-shadow: 0 0 0 4px rgba(213, 139, 81, 0.14);
+    }
+
+    .field textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+      border-radius: 20px;
+    }
+
+    .floating-links {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 25;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .floating-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 132px;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 14px 28px rgba(31, 42, 55, 0.15);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+    }
+
+    .floating-links a:first-child {
+      background: #25d366;
+    }
+
+    .floating-links a:last-child {
+      background: #1877f2;
+    }
+
+    .floating-links a:hover,
+    .floating-links a:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.35);
+      filter: brightness(1.08);
+    }
+
+    footer {
+      padding: 28px 20px 34px;
+      border-top: 1px solid var(--line);
+      background: rgba(17, 18, 19, 0.86);
+    }
+
+    .footer-inner {
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .gallery-section {
+      padding-top: 0;
+    }
+
+    .gallery-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 24px;
+      scroll-margin-top: 96px;
+    }
+
+    .gallery-filters {
+      position: relative;
+    }
+
+    .gallery-date-toggle {
+      display: flex;
+      min-width: 188px;
+      min-height: 48px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 15px;
+      border: 1px solid rgba(53, 215, 232, 0.3);
+      border-radius: 14px;
+      background: linear-gradient(145deg, #142b41, #0d2033);
+      color: #e8f5ff;
+      font: 700 0.94rem var(--font-body);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.24);
+      cursor: pointer;
+    }
+
+    .gallery-date-toggle:focus-visible,
+    .gallery-year-select:focus-visible,
+    .gallery-month-option:focus-visible {
+      outline: 3px solid rgba(137, 104, 239, 0.35);
+      outline-offset: 2px;
+    }
+
+    .gallery-date-toggle svg {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-filters[aria-expanded="true"] .gallery-date-toggle svg {
+      transform: rotate(180deg);
+    }
+
+    .gallery-date-panel {
+      position: absolute;
+      z-index: 20;
+      right: 0;
+      top: calc(100% + 10px);
+      display: grid;
+      width: min(288px, calc(100vw - 40px));
+      gap: 14px;
+      padding: 14px;
+      border: 1px solid rgba(53, 215, 232, 0.2);
+      border-radius: 18px;
+      background: linear-gradient(155deg, #142b41, #0b1b2b);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+    }
+
+    .gallery-date-panel[hidden] {
+      display: none;
+    }
+
+    .gallery-year-select {
+      width: 100%;
+      min-height: 42px;
+      padding: 0 12px;
+      border: 1px solid rgba(165, 203, 229, 0.18);
+      border-radius: 10px;
+      background: #0b1b2b;
+      color: #e8f5ff;
+      font: 700 0.95rem var(--font-body);
+    }
+
+    .gallery-year-select::placeholder {
+      color: #91aabd;
+      opacity: 1;
+    }
+
+    .gallery-month-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .gallery-month-option {
+      min-height: 40px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: #c4d5e2;
+      font: 600 0.92rem var(--font-body);
+      cursor: pointer;
+      transition: color 0.18s ease, background 0.18s ease;
+    }
+
+    .gallery-month-option:hover {
+      background: rgba(53, 215, 232, 0.1);
+    }
+
+    .gallery-month-option[aria-pressed="true"] {
+      background: linear-gradient(135deg, #42dbe8, #548fff);
+      color: #071827;
+    }
+
+    .gallery-month-option[data-month="all"] {
+      grid-column: 1 / -1;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface-strong);
+      box-shadow: var(--shadow);
+      transform: perspective(900px) translateZ(0);
+      transform-style: preserve-3d;
+      transition: transform 0.28s cubic-bezier(0.2, 0.75, 0.25, 1), border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .gallery-card img,
+    .gallery-card video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #111213;
+      transition: transform 0.45s cubic-bezier(0.2, 0.75, 0.25, 1), filter 0.3s ease;
+    }
+
+    .gallery-card:hover,
+    .gallery-card:focus-within {
+      transform: perspective(900px) translateY(-6px) rotateX(1deg) scale(1.012);
+      border-color: rgba(83, 222, 237, 0.42);
+      box-shadow:
+        0 24px 48px rgba(0, 0, 0, 0.38),
+        0 0 24px rgba(53, 215, 232, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .gallery-card:hover img,
+    .gallery-card:hover video,
+    .gallery-card:focus-within img {
+      transform: scale(1.045);
+      filter: saturate(1.08) brightness(1.04);
+    }
+
+    .gallery-card img {
+      cursor: zoom-in;
+    }
+
+    .gallery-video-card-stage {
+      position: relative;
+    }
+
+    .gallery-card-video {
+      cursor: zoom-in;
+    }
+
+    .gallery-card video.gallery-card-video:fullscreen,
+    .gallery-card video.gallery-card-video:-webkit-full-screen {
+      width: auto;
+      height: auto;
+      max-width: 100vw;
+      max-height: 100vh;
+      aspect-ratio: auto;
+      object-fit: contain;
+      border-radius: 0;
+      background: #000;
+    }
+
+    .gallery-card figcaption {
+      padding: 15px 18px;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .gallery-card:hover figcaption,
+    .gallery-card:focus-within figcaption {
+      background: linear-gradient(110deg, rgba(53, 215, 232, 0.07), transparent 68%);
+      transform: translateZ(5px);
+    }
+
+    .gallery-card figcaption p {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .gallery-card time {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .gallery-empty {
+      grid-column: 1 / -1;
+      padding: 28px;
+      border: 1px dashed rgba(213, 139, 81, 0.28);
+      border-radius: var(--radius-md);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .gallery-show-more {
+      display: flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin: 24px auto 0;
+      padding: 0 18px;
+      border: 1px solid rgba(53, 215, 232, 0.28);
+      border-radius: 999px;
+      background: #142b41;
+      color: #e8f5ff;
+      font: 700 0.92rem var(--font-body);
+      cursor: pointer;
+    }
+
+    .gallery-show-more[hidden] {
+      display: none;
+    }
+
+    .gallery-show-more:hover,
+    .gallery-show-more:focus-visible {
+      border-color: rgba(53, 215, 232, 0.65);
+      background: #1b3b56;
+    }
+
+    .gallery-show-more svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-show-more[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+
+    .gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      gap: 16px;
+      padding: 22px;
+      background: rgba(3, 10, 18, 0.94);
+    }
+
+    .gallery-lightbox[hidden] {
+      display: none;
+    }
+
+    .gallery-lightbox-back {
+      justify-self: start;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid rgba(165, 203, 229, 0.28);
+      border-radius: 999px;
+      background: #142b41;
+      color: #e8f5ff;
+      font: 700 0.95rem var(--font-body);
+      cursor: pointer;
+    }
+
+    .gallery-lightbox-back:hover,
+    .gallery-lightbox-back:focus-visible {
+      border-color: rgba(53, 215, 232, 0.65);
+      background: #1b3b56;
+    }
+
+    .gallery-lightbox-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: contain;
+      cursor: zoom-out;
+    }
+
+    .gallery-lightbox-video-stage {
+      position: relative;
+      display: grid;
+      min-width: 0;
+      min-height: 0;
+      place-items: center;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .gallery-lightbox-video {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      min-height: 0;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .gallery-lightbox-video-stage:fullscreen,
+    .gallery-lightbox-video-stage:-webkit-full-screen {
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: minmax(0, 1fr);
+      background: #000;
+    }
+
+    .gallery-lightbox-video-stage:fullscreen .gallery-lightbox-video,
+    .gallery-lightbox-video-stage:-webkit-full-screen .gallery-lightbox-video {
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+
+    .gallery-lightbox-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .gallery-video-card-fullscreen {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      display: grid;
+      width: 38px;
+      height: 34px;
+      place-items: center;
+      border: 0;
+      border-radius: 4px;
+      background: rgba(24, 24, 24, 0.82);
+      color: #fff;
+      font: 700 1.15rem/1 var(--font-body);
+      cursor: pointer;
+    }
+
+    .gallery-video-card-fullscreen:hover,
+    .gallery-video-card-fullscreen:focus-visible {
+      background: #181818;
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    .gallery-video-card-fullscreen[hidden] {
+      display: none;
+    }
+
+    .gallery-lightbox-video-stage[hidden],
+    .gallery-lightbox-image[hidden],
+    .gallery-lightbox-video[hidden] {
+      display: none;
+    }
+
+    .gallery-lightbox-video:fullscreen,
+    .gallery-lightbox-video:-webkit-full-screen {
+      width: auto;
+      height: auto;
+      max-width: 100vw;
+      max-height: 100vh;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .gallery-lightbox-image[hidden],
+    .gallery-lightbox-video[hidden] {
+      display: none;
+    }
+
+    .gallery-lightbox-description {
+      width: min(900px, 100%);
+      justify-self: center;
+      padding: 0 12px 8px;
+      color: var(--ink);
+      text-align: center;
+    }
+
+    .gallery-lightbox-nav {
+      position: absolute;
+      top: 50%;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      transform: translateY(-50%);
+      border: 1px solid rgba(165, 203, 229, 0.3);
+      border-radius: 50%;
+      background: rgba(20, 43, 65, 0.92);
+      color: #e8f5ff;
+      font: 400 2rem/1 var(--font-body);
+      cursor: pointer;
+    }
+
+    .gallery-lightbox-nav:hover,
+    .gallery-lightbox-nav:focus-visible {
+      border-color: rgba(53, 215, 232, 0.7);
+      background: #1b3b56;
+    }
+
+    .gallery-lightbox-previous { left: 22px; }
+    .gallery-lightbox-next { right: 22px; }
+
+    @media (max-width: 760px) {
+      .gallery-lightbox { padding: 14px; }
+      .gallery-lightbox-previous { left: 10px; }
+      .gallery-lightbox-next { right: 10px; }
+      .gallery-lightbox-nav { width: 42px; height: 42px; }
+    }
+
+    .voice-launcher {
+      position: fixed;
+      left: 14px;
+      bottom: 9px;
+      z-index: 40;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #10233d;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      filter: drop-shadow(0 10px 8px rgba(0, 20, 45, 0.25));
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .voice-launcher-content {
+      position: relative;
+      display: inline-flex;
+      align-items: flex-end;
+    }
+
+    .voice-launcher-icon {
+      display: block;
+      position: relative;
+      z-index: 1;
+      flex: 0 0 66px;
+      width: 66px;
+      height: 75px;
+      overflow: visible;
+      filter: drop-shadow(0 5px 3px rgba(0, 0, 0, 0.24));
+      transform-origin: 50% 80%;
+      animation: assistant-thinking-float 2.8s ease-in-out infinite;
+    }
+
+    .voice-launcher .robot-head {
+      transform-origin: 50% 55%;
+      animation: assistant-thinking-tilt 4.8s ease-in-out infinite;
+    }
+
+    .voice-launcher .robot-left-arm {
+      transform-box: view-box;
+      transform-origin: 31px 58px;
+      animation: assistant-wave 1.1s ease-in-out infinite alternate;
+    }
+
+    .voice-launcher-thought-trail {
+      position: absolute;
+      z-index: 2;
+      left: 46px;
+      bottom: 37px;
+      width: 30px;
+      height: 28px;
+      pointer-events: none;
+    }
+
+    .voice-launcher-thought-dot {
+      position: absolute;
+      display: block;
+      width: 5px;
+      height: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, #fff, #dff5ff 75%);
+      box-shadow: 0 1px 3px rgba(8, 29, 61, 0.3), 0 0 6px rgba(255, 255, 255, 0.6);
+      opacity: 0;
+      animation: assistant-thought-drift 1.8s ease-out infinite;
+    }
+
+    .voice-launcher-thought-dot:nth-child(1) { left: 1px; bottom: 0; animation-delay: 0s; }
+    .voice-launcher-thought-dot:nth-child(2) { left: 9px; bottom: 7px; width: 4px; height: 4px; animation-delay: 0.45s; }
+    .voice-launcher-thought-dot:nth-child(3) { left: 17px; bottom: 14px; width: 3px; height: 3px; animation-delay: 0.9s; }
+
+    .voice-launcher-bubble {
+      position: relative;
+      display: inline-flex;
+      flex: 0 0 114px;
+      width: 114px;
+      align-items: center;
+      justify-content: center;
+      min-height: 47px;
+      margin: 0 0 25px -15px;
+      padding: 0 11px;
+      color: #142a4a;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      isolation: isolate;
+      transform: translateY(-7px);
+      animation: assistant-cloud-float 3.2s ease-in-out infinite;
+      filter: drop-shadow(0 5px 0 #9ccbe7) drop-shadow(0 8px 7px rgba(8, 29, 61, 0.2));
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .voice-launcher-bubble-shape {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .voice-launcher-bubble-label {
+      position: relative;
+      z-index: 1;
+      margin-top: -3px;
+    }
+
+    .voice-launcher-bubble:hover {
+      filter: drop-shadow(0 6px 0 #9ccbe7) drop-shadow(0 11px 9px rgba(8, 29, 61, 0.25));
+    }
+
+    @keyframes assistant-thinking-float {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-3px) rotate(2deg); }
+    }
+
+    @keyframes assistant-cloud-float {
+      0%, 100% { translate: 0 0; }
+      50% { translate: 0 -2px; }
+    }
+
+    @keyframes assistant-thinking-tilt {
+      0%, 72%, 100% { transform: rotate(0); }
+      80% { transform: rotate(-7deg); }
+      89% { transform: rotate(4deg); }
+    }
+
+    @keyframes assistant-wave {
+      from { transform: rotate(-6deg); }
+      to { transform: rotate(16deg); }
+    }
+
+    @keyframes assistant-thought-drift {
+      0% { opacity: 0; transform: translate(0, 5px) scale(0.65); }
+      20% { opacity: 0.95; }
+      75% { opacity: 0.9; }
+      100% { opacity: 0; transform: translate(8px, -10px) scale(1.05); }
+    }
+
+    .voice-launcher:hover,
+    .voice-launcher:focus-visible {
+      transform: translateY(-3px) scale(1.03);
+      filter: drop-shadow(0 13px 10px rgba(0, 20, 45, 0.34));
+    }
+
+    .voice-launcher:hover .voice-launcher-bubble,
+    .voice-launcher:focus-visible .voice-launcher-bubble {
+      transform: translateY(-7px);
+      animation-play-state: paused;
+      filter: drop-shadow(0 7px 0 #9ccbe7) drop-shadow(0 13px 10px rgba(8, 29, 61, 0.28));
+    }
+
+    .voice-launcher:active {
+      transform: translateY(2px) scale(0.98);
+      filter: drop-shadow(0 5px 5px rgba(0, 20, 45, 0.22));
+    }
+
+    .voice-launcher.keyboard-open,
+    .voice-launcher.keyboard-open:hover,
+    .voice-launcher.keyboard-open:focus-visible {
+      bottom: calc(var(--voice-visible-bottom, 8px) + 76px);
+      transform: scale(0.78);
+      transform-origin: bottom left;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .voice-launcher-icon,
+      .voice-launcher .robot-head,
+      .voice-launcher .robot-left-arm,
+      .voice-launcher-thought-dot,
+      .voice-launcher-bubble {
+        animation: none;
+      }
+      .voice-launcher-thought-dot { opacity: 0.8; }
+    }
+
+    .voice-panel {
+      position: fixed;
+      left: 24px;
+      bottom: 90px;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      width: min(600px, calc(100vw - 32px));
+      max-height: min(720px, calc(100vh - 120px));
+      max-height: min(720px, calc(100dvh - 120px));
+      min-height: 0;
+      overflow: hidden;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #1a1b1d;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.55);
+      isolation: isolate;
+      overscroll-behavior: contain;
+      touch-action: manipulation;
+    }
+
+    .voice-panel[hidden] {
+      display: none;
+    }
+
+    .service-tabs[hidden],
+    .voice-log[hidden],
+    .voice-compose[hidden],
+    .voice-back[hidden] {
+      display: none;
+    }
+
+    .voice-panel.is-chat {
+      height: min(760px, calc(100vh - 110px));
+      height: min(760px, calc(100dvh - 110px));
+      max-height: min(760px, calc(100vh - 110px));
+      max-height: min(760px, calc(100dvh - 110px));
+    }
+
+    .voice-panel.is-chat.keyboard-open {
+      top: var(--voice-visible-top, 0px);
+      right: var(--voice-visible-right, auto);
+      bottom: var(--voice-panel-visible-bottom, 0px);
+      left: var(--voice-visible-left, 24px);
+      width: auto;
+      height: auto;
+      max-height: none;
+    }
+
+    .voice-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex: 0 0 auto;
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #33251e, #1b1c1e);
+      border-bottom: 1px solid rgba(213, 139, 81, 0.2);
+      color: #fff;
+    }
+
+    .voice-header-copy {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .voice-header-logo {
+      display: block;
+      flex: 0 0 38px;
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      border-radius: 9px;
+      background: #fff;
+    }
+
+    .voice-header h2 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.015em;
+      line-height: 1.35;
+    }
+
+    .voice-header-actions {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .voice-header p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.86rem;
+    }
+
+    .voice-back {
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 9px;
+      background: transparent;
+      color: #fff;
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .voice-close {
+      border: 0;
+      background: transparent;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .voice-compose {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      align-items: end;
+      flex: 0 0 auto;
+      gap: 8px;
+      margin-top: auto;
+      padding: 12px 16px;
+      z-index: 6;
+      pointer-events: auto;
+      touch-action: manipulation;
+      background: inherit;
+    }
+
+    .service-tabs {
+      display: grid;
+      flex: 0 1 auto;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-content: start;
+      gap: 7px;
+      max-height: 220px;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line);
+      overscroll-behavior: contain;
+      scrollbar-gutter: stable;
+    }
+
+    .service-tab {
+      min-height: 42px;
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #202123;
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.77rem;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .service-tab[aria-pressed="true"] {
+      border-color: var(--brand);
+      background: rgba(189, 116, 66, 0.13);
+      color: #f0b47e;
+    }
+
+    .service-tab:hover,
+    .service-tab:focus-visible,
+    .voice-message-actions button:hover,
+    .voice-message-actions button:focus-visible,
+    .voice-compose #voiceListen:hover,
+    .voice-compose #voiceListen:focus-visible,
+    .voice-back:hover,
+    .voice-back:focus-visible,
+    .voice-close:hover,
+    .voice-close:focus-visible {
+      border-color: rgba(213, 139, 81, 0.55);
+      outline-color: rgba(213, 139, 81, 0.55);
+    }
+
+    .voice-log {
+      display: flex;
+      flex: 1 1 0;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 14px 16px;
+      background: #141516;
+      overscroll-behavior: contain;
+    }
+
+    .voice-message {
+      max-width: 90%;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: #202123;
+      color: var(--ink);
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .voice-message.user {
+      align-self: flex-end;
+      background: rgba(189, 116, 66, 0.18);
+    }
+
+    .voice-message.assistant {
+      align-self: flex-start;
+    }
+
+    .voice-message-content {
+      display: block;
+    }
+
+    .voice-message-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 9px;
+    }
+
+    .voice-message-actions button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      min-height: 40px;
+      padding: 4px 9px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: #242527;
+      color: #efb17b;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .voice-message-actions button svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+    }
+
+    .voice-message-actions button .translator-icon {
+      width: 30px;
+      height: 22px;
+    }
+
+    .voice-message-actions button .translator-icon .translator-e {
+      fill: var(--brand);
+    }
+
+    .voice-message-actions button .translator-icon .translator-t {
+      fill: var(--accent);
+    }
+
+    .voice-message-actions button .translator-icon .translator-star,
+    .voice-message-actions button .translator-icon .translator-sun {
+      fill: #efb17b;
+    }
+
+    .voice-message-actions button .translator-icon .translator-stripe {
+      fill: var(--brand);
+    }
+
+    .voice-message-actions button .translator-icon .translator-blue-field {
+      fill: var(--accent);
+    }
+
+    .voice-message-actions button .translator-icon .translator-arrow {
+      fill: none;
+      stroke: var(--brand-deep);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
+    .voice-message-actions button.is-translating .translator-icon {
+      animation: translator-loading 0.9s linear infinite;
+    }
+
+    @keyframes translator-loading {
+      to { transform: rotate(360deg); }
+    }
+
+    .voice-message-actions button:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    .voice-message a {
+      display: inline-block;
+      margin-top: 8px;
+      color: #efb17b;
+      font-weight: 800;
+    }
+
+    .voice-message .talk-to-us-link {
+      display: inline-flex;
+      min-height: 38px;
+      align-items: center;
+      margin-top: 12px;
+      padding: 0 15px;
+      border: 1px solid rgba(151, 221, 255, 0.62);
+      border-radius: 12px;
+      background: linear-gradient(145deg, #f8fdff, #d8efff);
+      color: #18395b;
+      text-decoration: none;
+      box-shadow:
+        0 4px 0 #83b9dc,
+        0 7px 14px rgba(0, 0, 0, 0.22),
+        inset 0 2px 2px rgba(255, 255, 255, 0.95);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    }
+
+    .voice-message .talk-to-us-link:hover,
+    .voice-message .talk-to-us-link:focus-visible {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow:
+        0 6px 0 #83b9dc,
+        0 10px 18px rgba(0, 0, 0, 0.26),
+        inset 0 2px 2px rgba(255, 255, 255, 0.95);
+    }
+
+    .talk-to-us-typing {
+      display: inline-block;
+      width: 12ch;
+      overflow: hidden;
+      border-right: 2px solid currentColor;
+      white-space: nowrap;
+      animation:
+        talk-to-us-type 3s steps(12, end) infinite alternate,
+        talk-to-us-caret 0.7s step-end infinite;
+    }
+
+    @keyframes talk-to-us-type {
+      from { width: 0; }
+      to { width: 12ch; }
+    }
+
+    @keyframes talk-to-us-caret {
+      50% { border-color: transparent; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .talk-to-us-typing {
+        width: 12ch;
+        border-right: 0;
+        animation: none;
+      }
+    }
+
+    .voice-message.voice-message-contact {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .contact-answer-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      width: 100%;
+    }
+
+    .voice-message .contact-answer-links a {
+      display: flex;
+      min-width: 0;
+      min-height: 38px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 6px 8px;
+      overflow-wrap: anywhere;
+      border: 1px solid rgba(165, 203, 229, 0.18);
+      border-radius: 9px;
+      background: rgba(53, 215, 232, 0.08);
+      color: #9af0f3;
+      font-size: 0.78rem;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .voice-message .contact-answer-links a:hover,
+    .voice-message .contact-answer-links a:focus-visible {
+      border-color: rgba(53, 215, 232, 0.5);
+      background: rgba(53, 215, 232, 0.16);
+      color: #e8fbff;
+    }
+
+    .voice-status {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .voice-compose {
+      border-top: 1px solid var(--line);
+    }
+
+    .voice-compose #voiceListen {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #202123;
+      color: #efb17b;
+      font: inherit;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      touch-action: manipulation;
+      pointer-events: auto;
+    }
+
+    .voice-compose textarea {
+      min-width: 0;
+      width: 100%;
+      min-height: 44px;
+      max-height: 110px;
+      padding: 10px 12px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #141516;
+      color: var(--ink);
+      font: inherit;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-user-select: text;
+      user-select: text;
+      pointer-events: auto;
+      caret-color: var(--brand-deep);
+      touch-action: auto;
+    }
+
+    .voice-compose textarea:focus {
+      outline: none;
+      border-color: rgba(53, 215, 232, 0.72);
+      box-shadow: 0 0 0 4px rgba(53, 215, 232, 0.12);
+    }
+
+    @media (max-width: 760px) {
+      .voice-compose textarea {
+        min-height: 48px;
+        max-height: 96px;
+        padding: 12px 12px;
+        resize: none;
+        line-height: 1.4;
+        font-size: 16px;
+      }
+    }
+
+    .voice-compose button {
+      flex-shrink: 0;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #e9aa70, #b96839);
+      color: #21150e;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      touch-action: manipulation;
+      pointer-events: auto;
+    }
+
+    .voice-compose button:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    .voice-translation-error {
+      display: block;
+      margin-top: 8px;
+      color: #ffb4a8;
+      font-size: 0.8rem;
+    }
+
+    .voice-translation-feedback {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .voice-translation-feedback.is-error {
+      color: #ffb4a8;
+    }
+
+    .voice-translation-feedback[hidden] {
+      display: none;
+    }
+
+    .voice-translation-error[hidden] {
+      display: none;
+    }
+
+    .voice-speech-feedback {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+
+    .voice-speech-feedback[hidden] {
+      display: none;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .intro-grid,
+      .contact-grid,
+      .services-grid,
+      .industries-grid,
+      .process-grid,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        min-height: 0;
+      }
+
+      .hero-panel {
+        max-width: 620px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      section {
+        padding: 56px 16px;
+      }
+
+      .nav-inner {
+        width: 100%;
+        min-height: 0;
+        gap: 10px;
+        padding: 10px 14px;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        min-width: 0;
+        gap: 10px;
+      }
+
+      .brand img {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+      }
+
+      .brand-copy {
+        min-width: 0;
+      }
+
+      .brand-copy strong {
+        font-size: 0.78rem;
+        line-height: 1.25;
+      }
+
+      .brand-copy span {
+        font-size: 0.7rem;
+        line-height: 1.3;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 4px;
+        overflow: visible;
+        padding: 5px 0 8px;
+      }
+
+      .nav-links li {
+        flex: 1 1 0;
+        min-width: 0;
+      }
+
+      .nav-links a {
+        width: 100%;
+        min-height: 34px;
+        padding: 0 3px;
+        border-radius: 9px;
+        font-size: clamp(0.58rem, 2.8vw, 0.72rem);
+        letter-spacing: -0.015em;
+        white-space: nowrap;
+      }
+
+      .hero {
+        padding: 18px 12px 56px;
+      }
+
+      .hero-shell {
+        padding: 18px 16px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        max-width: 13ch;
+        font-size: clamp(2.05rem, 9.4vw, 2.8rem);
+        line-height: 1.06;
+      }
+
+      h2 {
+        margin-bottom: 14px;
+        font-size: clamp(1.8rem, 7.5vw, 2.35rem);
+        line-height: 1.12;
+      }
+
+      h3 {
+        margin-bottom: 9px;
+        font-size: 1.04rem;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 0.92rem;
+        line-height: 1.62;
+      }
+
+      .section-label {
+        margin-bottom: 10px;
+        font-size: 0.74rem;
+        letter-spacing: 0.13em;
+      }
+
+      .lead,
+      .hero-copy p {
+        font-size: 0.94rem;
+        line-height: 1.65;
+      }
+
+      .hero-copy p {
+        margin: 16px 0 22px;
+      }
+
+      .story-card,
+      .profile-card,
+      .service-card,
+      .industry-card,
+      .process-step,
+      .contact-panel {
+        padding: 18px;
+      }
+
+      .service-card p,
+      .industry-card p,
+      .process-step p,
+      .profile-list li,
+      .hero-panel li {
+        font-size: 0.88rem;
+        line-height: 1.55;
+      }
+
+      .hero-copy p,
+      .hero-panel li,
+      .story-card p,
+      .profile-card li,
+      .key-points p,
+      .service-card p,
+      .industry-card p,
+      .process-step p,
+      .contact-panel p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      .stat-card {
+        padding: 14px;
+      }
+
+      .stat-card strong {
+        font-size: 1.2rem;
+      }
+
+      .stat-card span {
+        font-size: 0.84rem;
+      }
+
+      .hero-copy,
+      .hero-panel,
+      .story-card,
+      .profile-card,
+      .contact-panel,
+      .map-card {
+        padding: 20px;
+      }
+
+      .hero-stats,
+      .key-points,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-links {
+        right: 0;
+        bottom: 0;
+        max-height: min(60dvh, 360px);
+        overflow-y: auto;
+        padding: 4px;
+      }
+
+      .floating-contact-panel {
+        right: 12px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+      }
+
+      .floating-links a.floating-contact {
+        width: min(176px, calc(100vw - 32px));
+        min-height: 48px;
+      }
+
+      .gallery-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        scroll-margin-top: 150px;
+      }
+
+      .gallery-filters {
+        width: 100%;
+      }
+
+      .gallery-date-toggle {
+        width: min(100%, 220px);
+        min-width: 0;
+        min-height: 44px;
+        padding: 0 12px;
+        font-size: 0.88rem;
+      }
+
+      .gallery-date-panel {
+        right: auto;
+        left: 0;
+        width: min(260px, calc(100vw - 56px));
+        gap: 10px;
+        padding: 10px;
+        border-radius: 14px;
+      }
+
+      .gallery-month-grid {
+        gap: 6px;
+      }
+
+      .gallery-month-option {
+        min-height: 36px;
+        font-size: 0.84rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .gallery-card {
+        border-radius: 12px;
+      }
+
+      .gallery-card figcaption {
+        padding: 8px;
+      }
+
+      .gallery-card figcaption strong {
+        display: block;
+        font-size: 0.78rem;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+      }
+
+      .gallery-card figcaption p {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        margin-top: 4px;
+        font-size: 0.7rem;
+        line-height: 1.35;
+      }
+
+      .gallery-card time {
+        margin-top: 4px;
+        font-size: 0.66rem;
+        line-height: 1.3;
+      }
+
+      .gallery-video-card-fullscreen {
+        top: 5px;
+        right: 5px;
+        width: 28px;
+        height: 26px;
+        font-size: 0.9rem;
+      }
+
+      .voice-launcher {
+        left: 9px;
+        bottom: max(6px, env(safe-area-inset-bottom));
+      }
+
+      .voice-launcher-icon {
+        flex-basis: 58px;
+        width: 58px;
+        height: 66px;
+        top: 12px;
+      }
+
+      .voice-launcher-bubble {
+        flex-basis: 92px;
+        width: 92px;
+        min-height: 38px;
+        margin-bottom: 25px;
+        padding: 0 8px;
+        font-size: 11px;
+      }
+
+      .voice-panel {
+        left: 8px;
+        bottom: max(70px, calc(env(safe-area-inset-bottom) + 60px));
+        width: min(360px, calc(100vw - 24px));
+        max-height: calc(100svh - 82px);
+        max-height: calc(100dvh - 82px);
+      }
+
+      .voice-panel:not(.is-chat) {
+        left: 12px;
+        width: min(360px, calc(100vw - 24px));
+        max-height: min(360px, calc(100dvh - 100px));
+        border-radius: 16px;
+      }
+
+      .voice-panel.is-chat {
+        top: env(safe-area-inset-top, 0px);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        border-radius: 16px 16px 0 0;
+      }
+
+      .voice-panel.is-chat.keyboard-open {
+        top: var(--voice-visible-top, 0px);
+        right: 0;
+        bottom: var(--voice-panel-visible-bottom, 0px);
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        border-radius: 0;
+      }
+
+      .voice-header-logo {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+      }
+
+      .service-tabs {
+        max-height: min(150px, 22dvh);
+        gap: 6px;
+        padding: 9px 10px;
+      }
+
+      .service-tab {
+        min-height: 36px;
+        padding: 6px 8px;
+        font-size: 0.72rem;
+        line-height: 1.3;
+      }
+
+      .voice-panel:not(.is-chat) .voice-header {
+        padding: 10px 14px;
+      }
+
+      .voice-panel:not(.is-chat) .voice-status {
+        min-height: 20px;
+        padding: 2px 10px 0;
+        font-size: 0.7rem;
+      }
+
+      .voice-compose {
+        position: sticky;
+        bottom: 0;
+        grid-template-columns: minmax(0, 1fr) 48px 64px;
+        gap: 8px;
+        padding: 10px 10px calc(10px + env(safe-area-inset-bottom, 0px));
+        background: #0e2237;
+      }
+
+      .voice-compose #voiceListen,
+      .voice-compose #voiceSend {
+        min-width: 48px;
+        min-height: 48px;
+        padding: 0 8px;
+      }
+
+      .voice-compose #voiceListen {
+        font-size: 0;
+      }
+
+    }
+
+    :root {
+      --bg: #0b1726;
+      --surface: #102238;
+      --surface-strong: #132941;
+      --ink: #edf6ff;
+      --muted: #9ab0c3;
+      --line: rgba(165, 203, 229, 0.14);
+      --brand: #35d7e8;
+      --brand-deep: #7ceaf2;
+      --accent: #9a7bff;
+      --accent-soft: rgba(154, 123, 255, 0.14);
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+      background:
+        radial-gradient(ellipse at 8% 8%, rgba(19, 110, 169, 0.2), transparent 34%),
+        radial-gradient(ellipse at 92% 78%, rgba(117, 78, 201, 0.12), transparent 35%),
+        linear-gradient(180deg, #0b1726 0%, #0e1e30 48%, #091624 100%);
+    }
+
+    .site-nav,
+    footer {
+      background: rgba(7, 20, 34, 0.9);
+    }
+
+    .hero-shell {
+      border: 1px solid rgba(126, 187, 220, 0.18);
+      background:
+        linear-gradient(135deg, rgba(7, 24, 40, 0.94), rgba(11, 34, 55, 0.91)),
+        url("/header.jpg") center/cover no-repeat;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34), 0 0 50px rgba(24, 124, 177, 0.08);
+    }
+
+    .hero-shell::before {
+      background:
+        radial-gradient(circle at 16% 18%, rgba(38, 193, 221, 0.18), transparent 28%),
+        radial-gradient(circle at 88% 78%, rgba(137, 104, 239, 0.14), transparent 31%),
+        linear-gradient(90deg, rgba(7, 19, 33, 0.9) 8%, rgba(7, 21, 37, 0.72) 58%, rgba(8, 24, 41, 0.62) 100%);
+    }
+
+    .eyebrow {
+      border-color: rgba(53, 215, 232, 0.25);
+      background: rgba(53, 215, 232, 0.1);
+      color: #a6f5f8;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #42dbe8, #548fff);
+      color: #071827;
+      box-shadow: 0 14px 30px rgba(53, 178, 224, 0.22);
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      box-shadow: 0 18px 36px rgba(53, 178, 224, 0.34);
+    }
+
+    .btn-secondary {
+      color: #e8f5ff;
+      border-color: rgba(171, 201, 225, 0.25);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      border-color: rgba(53, 215, 232, 0.55);
+      background: rgba(53, 215, 232, 0.1);
+    }
+
+    :focus-visible { outline-color: rgba(53, 215, 232, 0.82); }
+
+    .hero-copy p { color: rgba(227, 241, 250, 0.88); }
+    .stat-card {
+      border-color: rgba(145, 197, 225, 0.16);
+      background: rgba(12, 37, 59, 0.68);
+    }
+    .stat-card strong { color: #9ff4f5; }
+    .stat-card span { color: rgba(217, 234, 245, 0.86); }
+
+    .hero-panel,
+    .story-card,
+    .profile-card,
+    .service-card,
+    .industry-card,
+    .process-step,
+    .contact-panel,
+    .map-card {
+      border-color: rgba(153, 195, 220, 0.14);
+      background: linear-gradient(145deg, rgba(17, 43, 66, 0.97), rgba(10, 29, 48, 0.98));
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    }
+
+    .hero-panel h3,
+    .key-points strong,
+    .voice-message-actions button,
+    .voice-message a,
+    .voice-compose #voiceListen {
+      color: #7ceaf2;
+    }
+
+    .mini-card,
+    .key-points div,
+    .service-tag,
+    .step-no,
+    .response,
+    .service-tab[aria-pressed="true"],
+    .voice-message.user {
+      border-color: rgba(53, 215, 232, 0.18);
+      background: rgba(53, 215, 232, 0.08);
+      color: #b6f4f6;
+    }
+
+    .key-points div:nth-child(even),
+    .industry-card,
+    .process-step:nth-child(even) {
+      background:
+        linear-gradient(155deg, rgba(112, 88, 194, 0.12), transparent 72%),
+        linear-gradient(145deg, rgba(17, 43, 66, 0.97), rgba(10, 29, 48, 0.98));
+    }
+
+    .profile-card {
+      background:
+        linear-gradient(180deg, rgba(53, 215, 232, 0.06), transparent 45%),
+        #10243a;
+    }
+
+    .profile-list li::before { background: var(--brand); }
+    .services-wrap {
+      background: linear-gradient(180deg, rgba(53, 164, 211, 0.07), transparent);
+    }
+    .industry-card {
+      background:
+        linear-gradient(180deg, rgba(137, 104, 239, 0.11), transparent),
+        #10243a;
+    }
+    .process-wrap { background: #0b1a2a; }
+    .process-step::after { background: rgba(137, 104, 239, 0.12); }
+
+    .cta-band {
+      border-color: rgba(53, 215, 232, 0.2);
+      background: linear-gradient(135deg, #123851, #172644 74%, #1b2041);
+    }
+    .cta-band p { color: rgba(230, 241, 249, 0.8); }
+
+    .lead { color: #c4d5e2; }
+    .contact-details a { color: #83e9f0; }
+    .field label { color: #d3e2ed; }
+    .field input,
+    .field textarea,
+    .voice-compose textarea {
+      border-color: rgba(165, 203, 229, 0.16);
+      background: #0b1b2b;
+      color: var(--ink);
+    }
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(53, 215, 232, 0.72);
+      box-shadow: 0 0 0 4px rgba(53, 215, 232, 0.12);
+    }
+
+    .gallery-card {
+      border-color: rgba(153, 195, 220, 0.14);
+      background: #10243a;
+    }
+    .gallery-card img,
+    .gallery-card video { background: #0b1726; }
+    .gallery-empty { border-color: rgba(53, 215, 232, 0.28); }
+
+    .floating-contact-panel {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 25;
+      display: grid;
+      justify-items: end;
+      gap: 10px;
+    }
+
+    .talk-to-us {
+      appearance: none;
+      border: 1px solid rgba(92, 207, 226, 0.58);
+      border-radius: 999px;
+      background: linear-gradient(145deg, #246584 0%, #174965 55%, #0d2b45 100%);
+      color: #e8fbff;
+      font: 700 12px/1 var(--font-display);
+      letter-spacing: 0.01em;
+      padding: 0 13px;
+      min-height: 40px;
+      min-width: 158px;
+      box-shadow:
+        0 5px 0 #092238,
+        0 10px 24px rgba(0, 0, 0, 0.28),
+        inset 0 2px 2px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .talk-to-us:hover,
+    .talk-to-us:focus-visible {
+      transform: translateY(-3px);
+      box-shadow:
+        0 8px 0 #092238,
+        0 15px 28px rgba(0, 0, 0, 0.34),
+        inset 0 2px 2px rgba(255, 255, 255, 0.26),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.16);
+      filter: brightness(1.1);
+    }
+
+    .talk-to-us:active,
+    .talk-to-us[aria-expanded="true"] {
+      transform: none;
+      box-shadow:
+        0 5px 0 #092238,
+        0 12px 26px rgba(0, 0, 0, 0.34),
+        inset 0 2px 2px rgba(255, 255, 255, 0.24),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.18);
+      filter: brightness(1.08);
+    }
+
+    .floating-contact-panel.expanded .social-talk-typing {
+      width: 13ch;
+      border-right: 0;
+      animation: none;
+    }
+
+    .social-talk-typing {
+      display: inline-block;
+      width: 0;
+      overflow: hidden;
+      border-right: 2px solid currentColor;
+      white-space: nowrap;
+      vertical-align: middle;
+      animation:
+        social-talk-type 3.8s steps(13, end) infinite,
+        talk-to-us-caret 0.7s step-end infinite;
+    }
+
+    @keyframes social-talk-type {
+      0%, 8% { width: 0; }
+      48%, 72% { width: 13ch; }
+      100% { width: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .social-talk-typing {
+        width: 13ch;
+        border-right: 0;
+        animation: none;
+      }
+    }
+
+    .floating-links {
+      display: grid;
+      gap: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    }
+
+    .floating-contact-panel.expanded .floating-links {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .floating-links a.floating-contact {
+      position: relative;
+      display: flex;
+      width: 194px;
+      min-width: 0;
+      min-height: 56px;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 8px 11px;
+      overflow: hidden;
+      border: 1px solid rgba(164, 205, 229, 0.2);
+      border-radius: 19px;
+      color: #eef8ff;
+      background: linear-gradient(145deg, rgba(17, 47, 70, 0.97), rgba(9, 28, 46, 0.97));
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .floating-links .floating-contact::before {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 3px;
+      content: "";
+      background: var(--contact-accent);
+      opacity: 0.9;
+    }
+
+    .contact-icon {
+      display: grid;
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid color-mix(in srgb, var(--contact-accent) 46%, transparent);
+      border-radius: 11px;
+      color: var(--contact-accent);
+      background: linear-gradient(
+        145deg,
+        color-mix(in srgb, var(--contact-accent) 27%, #24384b),
+        color-mix(in srgb, var(--contact-accent) 12%, #0b1c2d)
+      );
+      box-shadow:
+        0 3px 0 color-mix(in srgb, var(--contact-accent) 32%, #081522),
+        0 5px 10px rgba(0, 0, 0, 0.24),
+        inset 0 2px 2px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 3px rgba(0, 0, 0, 0.2),
+        0 0 16px color-mix(in srgb, var(--contact-accent) 12%, transparent);
+      transform: translateY(-2px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .contact-icon svg {
+      width: 19px;
+      height: 19px;
+      filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
+      transform-origin: 50% 60%;
+      animation: social-logo-float 2.6s ease-in-out infinite;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .floating-contact:nth-child(2) .contact-icon svg { animation-delay: -0.5s; }
+    .floating-contact:nth-child(3) .contact-icon svg { animation-delay: -1s; }
+    .floating-contact:nth-child(4) .contact-icon svg { animation-delay: -1.5s; }
+    .floating-contact:nth-child(5) .contact-icon svg { animation-delay: -2s; }
+
+    @keyframes social-logo-float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      35% { transform: translateY(-2px) rotate(-5deg); }
+      70% { transform: translateY(1px) rotate(4deg); }
+    }
+
+    .floating-contact:hover .contact-icon,
+    .floating-contact:focus-visible .contact-icon {
+      transform: translateY(-2px) scale(1.06);
+      filter: brightness(1.13);
+      box-shadow:
+        0 5px 0 color-mix(in srgb, var(--contact-accent) 32%, #081522),
+        0 8px 13px rgba(0, 0, 0, 0.26),
+        inset 0 2px 2px rgba(255, 255, 255, 0.26),
+        inset 0 -2px 3px rgba(0, 0, 0, 0.16),
+        0 0 20px color-mix(in srgb, var(--contact-accent) 20%, transparent);
+    }
+
+    .floating-contact:hover .contact-icon svg,
+    .floating-contact:focus-visible .contact-icon svg {
+      animation-play-state: paused;
+      transform: translateY(-1px) rotate(8deg) scale(1.12);
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.4));
+    }
+
+    .floating-contact:active .contact-icon {
+      transform: translateY(1px) scale(0.97);
+      box-shadow:
+        0 1px 0 color-mix(in srgb, var(--contact-accent) 32%, #081522),
+        inset 0 2px 3px rgba(0, 0, 0, 0.24);
+    }
+
+    .whatsapp-link { --contact-accent: #50e0ad; }
+    .messenger-link { --contact-accent: #8db4ff; }
+    .telegram-link { --contact-accent: #55b8e8; }
+    .viber-link { --contact-accent: #b49bff; }
+
+    .contact-copy {
+      display: grid;
+      flex: 1;
+      align-content: center;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .contact-copy strong {
+      color: #f0f8ff;
+      font: 700 12px/1.3 var(--font-display);
+      letter-spacing: -0.01em;
+    }
+
+    .contact-copy small {
+      color: #91aabd;
+      font-size: 9px;
+      line-height: 1.35;
+    }
+
+    .contact-arrow {
+      align-self: center;
+      color: var(--contact-accent);
+      font-size: 16px;
+      font-weight: 700;
+      transition: transform 0.22s ease;
+    }
+
+    .floating-links .floating-contact:hover,
+    .floating-links .floating-contact:focus-visible {
+      transform: translateX(-4px);
+      border-color: color-mix(in srgb, var(--contact-accent) 55%, transparent);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38), 0 0 22px color-mix(in srgb, var(--contact-accent) 14%, transparent);
+      filter: none;
+    }
+
+    .floating-contact:hover .contact-arrow,
+    .floating-contact:focus-visible .contact-arrow { transform: translate(2px, -2px); }
+
+    .story-card:hover,
+    .profile-card:hover,
+    .service-card:hover,
+    .industry-card:hover,
+    .process-step:hover,
+    .contact-panel:hover,
+    .map-card:hover {
+      border-color: rgba(53, 215, 232, 0.3);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36), 0 0 24px rgba(53, 215, 232, 0.045);
+    }
+
+    .voice-compose button {
+      background: linear-gradient(135deg, #43dce8, #9877f3);
+      color: #071827;
+      box-shadow: 0 14px 34px rgba(53, 178, 224, 0.2);
+    }
+    .voice-panel {
+      border-color: rgba(153, 195, 220, 0.16);
+      background: #0e2237;
+    }
+    .voice-header {
+      background: linear-gradient(135deg, #123951, #172644);
+      border-bottom-color: rgba(53, 215, 232, 0.17);
+    }
+    .voice-back,
+    .service-tab,
+    .voice-message-actions button,
+    .voice-compose #voiceListen {
+      border-color: rgba(165, 203, 229, 0.15);
+      background: #142b41;
+    }
+    .service-tab[aria-pressed="true"] { border-color: var(--brand); }
+    .service-tab:hover,
+    .service-tab:focus-visible,
+    .voice-message-actions button:hover,
+    .voice-message-actions button:focus-visible,
+    .voice-compose #voiceListen:hover,
+    .voice-compose #voiceListen:focus-visible,
+    .voice-back:hover,
+    .voice-back:focus-visible,
+    .voice-close:hover,
+    .voice-close:focus-visible {
+      border-color: rgba(53, 215, 232, 0.55);
+      outline-color: rgba(53, 215, 232, 0.55);
+    }
+    .voice-log,
+    .voice-compose textarea { background: #0a1a2a; }
+    .voice-message,
+    .voice-message-actions button { background-color: #142b41; }
+    .voice-message.user { background: rgba(53, 215, 232, 0.12); }
+
+    @media (max-width: 760px) {
+      .floating-contact-panel {
+        right: 12px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+      }
+      .floating-links {
+        right: 12px;
+        bottom: calc(68px + env(safe-area-inset-bottom));
+        max-height: min(60dvh, 360px);
+        overflow-y: auto;
+        padding: 4px;
+      }
+      .floating-links a.floating-contact {
+        width: min(176px, calc(100vw - 32px));
+        min-width: 0;
+        min-height: 50px;
+        padding: 7px 9px;
+        border-radius: 15px;
+      }
+      .contact-icon { flex-basis: 32px; width: 32px; height: 32px; border-radius: 10px; }
+    }
+
+    @media (max-width: 380px) {
+      .brand-copy strong { font-size: 0.7rem; }
+      .brand-copy span { font-size: 0.64rem; }
+      .nav-links { gap: 3px; }
+      .nav-links a { padding: 0 1px; font-size: 0.52rem; }
+      .gallery-date-toggle { min-width: 0; }
+      .gallery-grid { gap: 6px; }
+      .gallery-card figcaption { padding: 6px; }
+      .gallery-card figcaption strong { font-size: 0.7rem; }
+      .gallery-card figcaption p { font-size: 0.64rem; }
+      .gallery-card time { font-size: 0.6rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .nav-links a,
+      .gallery-card,
+      .gallery-card img,
+      .gallery-card video,
+      .gallery-card figcaption,
+      .floating-links .floating-contact,
+      .contact-icon,
+      .contact-arrow { transition: none; }
+      .contact-icon svg { animation: none; }
+      .nav-links a:hover,
+      .nav-links a:focus-visible,
+      .nav-links a:active,
+      .gallery-card:hover,
+      .gallery-card:focus-within,
+      .gallery-card:hover img,
+      .gallery-card:hover video,
+      .gallery-card:focus-within img {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Awesome Accounting Services home">
+        <img id="brandLogo" src="public/logo-awe.jpg" alt="Awesome Accounting Services logo" />
+        <div class="brand-copy">
+          <strong>Awesome Accounting Services</strong>
+          <span>Accounting, compliance, and financial support</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">Profile</a></li>
+        <li><a href="#about-us-gallery">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Company Profile</span>
+            <h1>Accounting clarity for growing businesses.</h1>
+            <p>
+              Awesome Accounting Services helps business owners stay compliant, organized, and financially informed through dependable accounting, tax, and reporting support tailored to Philippine business requirements.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#contact">Request a Consultation</a>
+              <a class="btn-secondary" href="#services">Explore Services</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-card">
+                <strong>End-to-End</strong>
+                <span>Accounting, compliance, and reporting support in one partner.</span>
+              </div>
+              <div class="stat-card">
+                <strong>Client-Focused</strong>
+                <span>Built for owners who need responsive and practical guidance.</span>
+              </div>
+              <div class="stat-card">
+                <strong>Regulation-Aligned</strong>
+                <span>Structured around Philippine statutory and filing requirements.</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-panel">
+            <h3>What clients can expect</h3>
+            <ul>
+              <li>
+                <strong>Reliable compliance support</strong>
+                From BIR requirements to mandatory government contributions, we help keep obligations on schedule.
+              </li>
+              <li>
+                <strong>Clear financial documentation</strong>
+                Organized records and reporting that support management, audit readiness, and decision-making.
+              </li>
+              <li>
+                <strong>Hands-on coordination</strong>
+                A practical working relationship for business owners who want fewer administrative bottlenecks.
+              </li>
+            </ul>
+            <div class="mini-card">Serving businesses in General Mariano Alvarez, Cavite and nearby areas.</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container intro-grid">
+        <article class="story-card">
+          <span class="section-label">Company Overview</span>
+          <h2>A dependable financial operations partner.</h2>
+          <p class="lead">
+            We position Awesome Accounting Services as a professional support partner for companies that want discipline in their books, consistency in compliance, and confidence in the numbers they use to run the business.
+          </p>
+          <div class="key-points">
+            <div>
+              <strong>Mission</strong>
+              Deliver accurate, timely, and practical accounting services that help clients operate responsibly and grow with confidence.
+            </div>
+            <div>
+              <strong>Approach</strong>
+              Combine technical compliance work with a service style that is responsive, discreet, and easy for clients to work with.
+            </div>
+            <div>
+              <strong>Value</strong>
+              Reduce administrative pressure so owners and managers can focus more on operations and business development.
+            </div>
+            <div>
+              <strong>Presentation-Ready</strong>
+              Structured to function as a company profile page you can confidently show to prospective clients.
+            </div>
+          </div>
+        </article>
+
+        <aside class="profile-card">
+          <span class="section-label">Why Clients Choose Us</span>
+          <ul class="profile-list">
+            <li>Single-point support for accounting, statutory compliance, and reporting coordination.</li>
+            <li>Practical assistance for routine business requirements, not just one-time transactions.</li>
+            <li>Professional communication suitable for client presentations and credibility-building.</li>
+            <li>Service delivery designed to support both established firms and growing small-to-medium enterprises.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <div id="about-us-gallery" class="gallery-heading">
+          <div>
+            <span class="section-label">About Us Gallery</span>
+            <h2>Our work, through the years.</h2>
+            <p class="lead">Browse photos and videos from our team and community.</p>
+          </div>
+          <div class="gallery-filters" id="galleryDatePicker" aria-expanded="false">
+            <button type="button" class="gallery-date-toggle" id="galleryDateToggle" aria-expanded="false" aria-controls="galleryDatePanel">
+              <span id="galleryDateLabel">2026 · All months</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="gallery-date-panel" id="galleryDatePanel" hidden>
+              <input id="galleryYear" class="gallery-year-select" type="search" list="galleryYears" placeholder="All years" autocomplete="off" aria-label="Search gallery by year">
+              <datalist id="galleryYears"></datalist>
+              <div class="gallery-month-grid" id="galleryMonthGrid" role="group" aria-label="Filter by month">
+                <button type="button" class="gallery-month-option" data-month="all" aria-pressed="true">All months</button>
+                <button type="button" class="gallery-month-option" data-month="1" aria-pressed="false">Jan</button>
+                <button type="button" class="gallery-month-option" data-month="2" aria-pressed="false">Feb</button>
+                <button type="button" class="gallery-month-option" data-month="3" aria-pressed="false">Mar</button>
+                <button type="button" class="gallery-month-option" data-month="4" aria-pressed="false">Apr</button>
+                <button type="button" class="gallery-month-option" data-month="5" aria-pressed="false">May</button>
+                <button type="button" class="gallery-month-option" data-month="6" aria-pressed="false">Jun</button>
+                <button type="button" class="gallery-month-option" data-month="7" aria-pressed="false">Jul</button>
+                <button type="button" class="gallery-month-option" data-month="8" aria-pressed="false">Aug</button>
+                <button type="button" class="gallery-month-option" data-month="9" aria-pressed="false">Sep</button>
+                <button type="button" class="gallery-month-option" data-month="10" aria-pressed="false">Oct</button>
+                <button type="button" class="gallery-month-option" data-month="11" aria-pressed="true">Nov</button>
+                <button type="button" class="gallery-month-option" data-month="12" aria-pressed="false">Dec</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="galleryGrid" class="gallery-grid" aria-live="polite"></div>
+        <button type="button" class="gallery-show-more" id="galleryShowMore" aria-label="Show all gallery images" aria-expanded="false">
+          <span>Show more</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Full-size gallery media" hidden>
+      <div class="gallery-lightbox-toolbar">
+        <button type="button" class="gallery-lightbox-back" id="galleryLightboxBack" aria-label="Back to gallery">←</button>
+      </div>
+      <img class="gallery-lightbox-image" id="galleryLightboxImage" alt="">
+      <div class="gallery-lightbox-video-stage" id="galleryLightboxVideoStage" hidden>
+        <video class="gallery-lightbox-video" id="galleryLightboxVideo" controls controlslist="nodownload" disablepictureinpicture playsinline tabindex="0"></video>
+      </div>
+      <p class="gallery-lightbox-description" id="galleryLightboxDescription"></p>
+      <button type="button" class="gallery-lightbox-nav gallery-lightbox-previous" id="galleryLightboxPrevious" aria-label="Previous gallery item">‹</button>
+      <button type="button" class="gallery-lightbox-nav gallery-lightbox-next" id="galleryLightboxNext" aria-label="Next gallery item">›</button>
+    </div>
+
+    <section id="services" class="services-wrap">
+      <div class="container">
+        <span class="section-label">Core Services</span>
+        <h2>Structured support across the financial workflow.</h2>
+        <p class="lead">
+          Our service mix is designed to help companies maintain clean books, meet regulatory responsibilities, and present financial information with clarity and professionalism.
+        </p>
+        <div class="services-grid section-stack-lg">
+          <article class="service-card">
+            <div class="service-tag">01</div>
+            <h3>Accounting and Bookkeeping</h3>
+            <p>Maintain organized day-to-day records, ledgers, reconciliations, and accounting support that strengthen financial visibility.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-tag">02</div>
+            <h3>BIR Filing and Compliance</h3>
+            <p>Assist with tax compliance processes, required filings, and documentation aligned with business obligations.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-tag">03</div>
+            <h3>SSS, HDMF, and PHIC Support</h3>
+            <p>Provide compliance coordination for government-mandated employer and employee contribution requirements.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-tag">04</div>
+            <h3>Financial Statements</h3>
+            <p>Prepare clear financial reports and supporting schedules that help management and stakeholders understand business performance.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-tag">05</div>
+            <h3>Compliance Audit Assistance</h3>
+            <p>Support documentation readiness, internal review preparation, and compliance-related record organization.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-tag">06</div>
+            <h3>Property Transfer Documentation</h3>
+            <p>Assist in document coordination and administrative processes connected with transfer of real properties.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries">
+      <div class="container">
+        <span class="section-label">Client Fit</span>
+        <h2>Well-suited for practical, growth-oriented organizations.</h2>
+        <div class="industries-grid section-stack-md">
+          <article class="industry-card">
+            <h3>Small and Medium Enterprises</h3>
+            <p>For owners who need structure in their records, regular compliance support, and dependable admin coordination.</p>
+          </article>
+          <article class="industry-card">
+            <h3>Professional Service Firms</h3>
+            <p>For organizations that value polished documentation, financial order, and reliable back-office support.</p>
+          </article>
+          <article class="industry-card">
+            <h3>Property and Asset Transactions</h3>
+            <p>For clients requiring document-focused support related to transfer and compliance processes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process-wrap">
+      <div class="container">
+        <span class="section-label">How We Work</span>
+        <h2>A professional engagement flow that builds trust.</h2>
+        <div class="process-grid section-stack-md">
+          <article class="process-step">
+            <div class="step-no">1</div>
+            <h3>Initial Discovery</h3>
+            <p>We discuss your current setup, reporting needs, compliance exposure, and priorities so we can understand the engagement clearly.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-no">2</div>
+            <h3>Service Alignment</h3>
+            <p>We identify the right mix of bookkeeping, compliance, reporting, and documentation support based on your business needs.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-no">3</div>
+            <h3>Ongoing Coordination</h3>
+            <p>We maintain a responsive working relationship to keep submissions, records, and required financial outputs moving on time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h3 class="cta-title">Present a stronger image to your own clients and stakeholders.</h3>
+            <p>
+              This company profile layout is designed to communicate trust, order, and professionalism from the first impression.
+            </p>
+          </div>
+          <a class="btn" href="#contact">Start a Conversation</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <article class="contact-panel">
+          <span class="section-label">Contact</span>
+          <h2>Let's discuss your accounting and compliance needs.</h2>
+          <p class="lead">
+            Reach out for inquiries, consultations, or service discussions. We'll help you identify the right support setup for your business.
+          </p>
+
+          <ul class="contact-details">
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:aweclient@gmail.com">aweclient@gmail.com</a>
+            </li>
+            <li>
+              <strong>Phone</strong>
+              <a href="tel:+639175037023">+63 917 503 7023</a> | <a href="tel:+639068360010">0906 836 0010</a>
+            </li>
+            <li>
+              <strong>Telegram and Viber</strong>
+              <a href="https://t.me/rai_aep" target="_blank" rel="noopener noreferrer">Telegram</a> |
+              <a href="viber://chat?number=%2B639175037023">Viber</a>
+            </li>
+            <li>
+              <strong>Location</strong>
+              General Mariano Alvarez, Calabarzon, Philippines
+            </li>
+          </ul>
+
+          <div id="response" class="response hidden" role="status" aria-live="polite"></div>
+
+          <form id="contactForm" class="contact-form">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" placeholder="Tell us about your business and the support you need." required></textarea>
+            </div>
+            <button id="submitBtn" type="submit" class="btn">Send Inquiry</button>
+          </form>
+        </article>
+
+        <aside class="map-card">
+          <iframe
+            src="https://www.google.com/maps?q=B-2%20L-10%2C%20Brgy.%20Congressional%20Rd%2C%20Poblacion%20IV%2C%20General%20Mariano%20Alvarez%2C%204117%20Cavite%2C%20Philippines&output=embed"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Awesome Accounting Services location map"
+          ></iframe>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="floating-contact-panel" id="floatingContactPanel">
+    <button type="button" class="talk-to-us" id="talkToUsToggle" aria-label="Talk to Us" aria-expanded="false" aria-controls="floatingContactLinks">
+      <span class="social-talk-typing" aria-hidden="true">Talk to Us...</span>
+    </button>
+    <div class="floating-links" id="floatingContactLinks" aria-label="Contact us on social media">
+      <a class="floating-contact whatsapp-link" href="https://wa.me/639679326649" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M20 11.7a8.1 8.1 0 0 1-12 7.1L4 20l1.2-3.8A8.1 8.1 0 1 1 20 11.7Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 8.4c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.6 1.4c.1.2.1.4 0 .5l-.5.6c-.2.2-.2.3-.1.5.5.9 1.2 1.6 2.1 2.1.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.3.6c.3.1.4.2.4.4 0 .3-.2 1-.6 1.3-.4.4-1 .6-1.6.5-1-.1-2.1-.7-3.4-1.8-1.1-.9-1.8-2.1-2-3.1-.1-.8.2-1.7.6-2.1Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="contact-copy"><strong>WhatsApp</strong><small>Chat with our team</small></span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="floating-contact messenger-link" href="https://m.me/100067488122500" target="_blank" rel="noopener noreferrer" aria-label="Message us on Messenger">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3.2c-5.2 0-9.2 3.7-9.2 8.6 0 2.6 1.2 4.9 3.2 6.4v3l3.1-1.7c.9.3 1.9.5 2.9.5 5.2 0 9.2-3.7 9.2-8.6S17.2 3.2 12 3.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="m6.8 14.2 4-4.3 2.5 2.1 4-4.3-4 6.4-2.5-2.1-4 2.2Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="contact-copy"><strong>Messenger</strong><small>We’re here to help</small></span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="floating-contact telegram-link" href="https://t.me/rai_aep" target="_blank" rel="noopener noreferrer" aria-label="Message us on Telegram">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="m21 4-3.1 16-6.2-5.3-3.2 3.1.5-5.1L19 6.1 7.5 11.5 3 10l18-6Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="contact-copy"><strong>Telegram</strong><small>Chat with our team</small></span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="floating-contact viber-link" href="viber://chat?number=%2B639175037023" aria-label="Message us on Viber">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M5 4.5h14A2.5 2.5 0 0 1 21.5 7v9a2.5 2.5 0 0 1-2.5 2.5h-5.2L9 21v-2.5H5A2.5 2.5 0 0 1 2.5 16V7A2.5 2.5 0 0 1 5 4.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M8 9c.4 2.8 2.2 4.6 5 5M14 8.5c1 .3 1.7 1 2 2M14 6.5c2.2.4 3.6 1.8 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="contact-copy"><strong>Viber</strong><small>Chat with our team</small></span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <button id="voiceLauncher" class="voice-launcher" type="button" aria-label="Ask me" aria-expanded="false" aria-controls="voicePanel">
+    <span class="voice-launcher-content">
+      <svg class="voice-launcher-icon" viewBox="0 0 100 112" aria-hidden="true">
+        <defs>
+          <linearGradient id="assistantRobotFill" x1="0" y1="0" x2="0.9" y2="1">
+            <stop stop-color="#f8fdff"/>
+            <stop offset="1" stop-color="#d9f2ff"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="#142334" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 15v16h6M83 15v16h-6" stroke-width="4.5"/>
+          <circle cx="17" cy="10" r="6" fill="url(#assistantRobotFill)" stroke-width="4.5"/>
+          <circle cx="83" cy="10" r="6" fill="url(#assistantRobotFill)" stroke-width="4.5"/>
+        </g>
+        <g class="robot-head">
+          <rect x="22" y="14" width="56" height="39" rx="11" fill="url(#assistantRobotFill)" stroke="#142334" stroke-width="4.5"/>
+          <rect x="29" y="23" width="42" height="22" rx="10" fill="#fff" stroke="#142334" stroke-width="4"/>
+          <circle cx="41" cy="34" r="3.4" fill="#3bb7e8" stroke="#142334" stroke-width="2.5"/>
+          <circle cx="59" cy="34" r="3.4" fill="#3bb7e8" stroke="#142334" stroke-width="2.5"/>
+        </g>
+        <g transform="translate(100 0) scale(-1 1)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 58 24 68" fill="none" stroke="#142334" stroke-width="8"/>
+          <path d="M32 58 24 68" fill="none" stroke="#72cbee" stroke-width="4.5"/>
+          <path d="M24 68c-3-2-7-1-8 3l-2 4c-1 2 2 3.5 3.2 1.5l1.2-2.3-.8 4c-.5 2.3 2.8 3 3.5.8l1.1-3.5.2 3.2c.1 2.3 3.5 2.2 3.5 0l-.1-4.1c0-3.2-1.2-5.3-3.6-7.6Z" fill="url(#assistantRobotFill)" stroke="#142334" stroke-width="3.5"/>
+        </g>
+        <g class="robot-left-arm">
+          <path d="M32 58 22 47" fill="none" stroke="#142334" stroke-width="8" stroke-linecap="round"/>
+          <path d="M32 58 22 47" fill="none" stroke="#72cbee" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M22 48c-4-1-7-4-8-8l-2-5c-1-3 3-5 5-2l3 4-1-5c-.5-3 4-4 5-1l2 5 2 4c2 4 1 8-2 11Z" fill="url(#assistantRobotFill)" stroke="#142334" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <path d="M29 56h42v22c0 8-6 14-14 14H43c-8 0-14-6-14-14Z" fill="url(#assistantRobotFill)" stroke="#142334" stroke-width="4.5" stroke-linejoin="round"/>
+        <path d="M41 59h18v14c0 3-2 5-5 5h-8c-3 0-5-2-5-5Z" fill="#fff" stroke="#142334" stroke-width="3.5" stroke-linejoin="round"/>
+        <circle cx="47" cy="66" r="1.7" fill="#3bb7e8"/>
+        <circle cx="53" cy="66" r="1.7" fill="#3bb7e8"/>
+        <path d="M45 92v9c0 3 2 5 5 5h1c3 0 5-2 5-5v-9" fill="url(#assistantRobotFill)" stroke="#142334" stroke-width="4.5" stroke-linejoin="round"/>
+      </svg>
+      <span class="voice-launcher-thought-trail" aria-hidden="true">
+        <span class="voice-launcher-thought-dot"></span>
+        <span class="voice-launcher-thought-dot"></span>
+        <span class="voice-launcher-thought-dot"></span>
+      </span>
+      <span class="voice-launcher-bubble">
+        <svg class="voice-launcher-bubble-shape" viewBox="0 0 160 76" aria-hidden="true">
+          <defs>
+            <linearGradient id="thoughtCloudFill" x1="0" y1="0" x2="0.9" y2="1">
+              <stop stop-color="#fff"/>
+              <stop offset=".68" stop-color="#eaf8ff"/>
+              <stop offset="1" stop-color="#cfeaff"/>
+            </linearGradient>
+            <linearGradient id="thoughtCloudEdge" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#fff"/>
+              <stop offset="1" stop-color="#9ccbe7"/>
+            </linearGradient>
+          </defs>
+          <path d="M25 51C14 50 8 42 9 32c1-9 8-15 18-16C31 5 44 2 54 10c8-9 22-8 29 1 9-8 23-6 28 4 12-2 23 5 24 16 11 3 16 12 13 22-3 10-13 15-24 13-7 9-20 11-29 5-9 8-23 7-30-2-9 7-22 4-27-5-7 4-16 0-19-7-7 2-14-1-18-6Z" fill="url(#thoughtCloudFill)" stroke="url(#thoughtCloudEdge)" stroke-width="2.2" stroke-linejoin="round"/>
+        </svg>
+        <span class="voice-launcher-bubble-label">Ask me</span>
+      </span>
+    </span>
+  </button>
+  <section id="voicePanel" class="voice-panel" role="dialog" aria-modal="false" aria-labelledby="voiceTitle" hidden>
+    <header class="voice-header">
+      <div class="voice-header-copy">
+        <img class="voice-header-logo" src="public/logo-awe.jpg" alt="Awesome Accounting Services logo" />
+        <h2 id="voiceTitle">Select Service</h2>
+      </div>
+      <div class="voice-header-actions">
+        <button id="voiceBack" class="voice-back" type="button" hidden>Services</button>
+        <button id="voiceClose" class="voice-close" type="button" aria-label="Close assistant">&times;</button>
+      </div>
+    </header>
+    <div id="serviceTabs" class="service-tabs" aria-label="Services"></div>
+    <div id="voiceLog" class="voice-log" role="log" aria-live="polite" hidden></div>
+    <p id="voiceStatus" class="voice-status" role="status" aria-live="polite"></p>
+    <form id="voiceForm" class="voice-compose" hidden>
+      <textarea id="voiceQuestion" rows="1" maxlength="1000" placeholder="Ask a follow-up question..." aria-label="Your question" autocomplete="off" autocorrect="on" autocapitalize="sentences" enterkeyhint="send" inputmode="text" required></textarea>
+      <button id="voiceListen" type="button" aria-label="Start voice input" title="Speak your question" hidden>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.93V21h2v-3.07A7 7 0 0 0 19 11h-2Z" fill="currentColor"/></svg>
+      </button>
+      <button id="voiceSend" type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; 2022 Awesome Accounting Services</span>
+      <span>Professional accounting, compliance, and financial support.</span>
+    </div>
+  </footer>
+
+  <script>
+    const talkToUsToggle = document.getElementById("talkToUsToggle");
+    const floatingContactPanel = document.getElementById("floatingContactPanel");
+
+    if (talkToUsToggle && floatingContactPanel) {
+      talkToUsToggle.addEventListener("click", () => {
+        const expanded = floatingContactPanel.classList.toggle("expanded");
+        talkToUsToggle.setAttribute("aria-expanded", String(expanded));
+      });
+
+      document.addEventListener("pointerdown", (event) => {
+        if (
+          floatingContactPanel.classList.contains("expanded")
+          && event.target instanceof Node
+          && !floatingContactPanel.contains(event.target)
+        ) {
+          floatingContactPanel.classList.remove("expanded");
+          talkToUsToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          floatingContactPanel.classList.remove("expanded");
+          talkToUsToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    const brandLogo = document.getElementById("brandLogo");
+    const form = document.getElementById("contactForm");
+    const responseEl = document.getElementById("response");
+    const submitBtn = document.getElementById("submitBtn");
+
+    const brandLogoSources = [
+      brandLogo.getAttribute("src"),
+      new URL("public/logo-awe.jpg", document.baseURI).href,
+      new URL("logo-awe.jpg", document.baseURI).href,
+      new URL("/Awesome-main/public/logo-awe.jpg", window.location.origin).href
+    ].filter((source, index, sources) => source && sources.indexOf(source) === index);
+    let brandLogoSourceIndex = 0;
+    brandLogo.addEventListener("error", () => {
+      brandLogoSourceIndex += 1;
+      if (brandLogoSourceIndex < brandLogoSources.length) {
+        brandLogo.src = brandLogoSources[brandLogoSourceIndex];
+      } else {
+        console.error("Unable to load the Awesome Accounting Services logo.");
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      responseEl.classList.add("hidden");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+
+      const payload = {
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        message: document.getElementById("message").value.trim(),
+      };
+
+      try {
+        const res = await fetch("https://formspree.io/f/mdekbgjv", {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json();
+        responseEl.classList.remove("hidden");
+
+        if (res.ok) {
+          responseEl.textContent = "Thank you. Your message has been sent.";
+          responseEl.style.color = "#166534";
+          responseEl.style.background = "#effaf3";
+          responseEl.style.borderColor = "rgba(22, 101, 52, 0.12)";
+          form.reset();
+        } else {
+          if (data && data.errors) {
+            responseEl.textContent = data.errors.map(error => error.message).join(", ");
+          } else {
+            responseEl.textContent = "Something went wrong. Please try again later.";
+          }
+          responseEl.style.color = "#b91c1c";
+          responseEl.style.background = "#fef2f2";
+          responseEl.style.borderColor = "rgba(185, 28, 28, 0.12)";
+        }
+      } catch (err) {
+        responseEl.classList.remove("hidden");
+        responseEl.textContent = "Network error. Please try again later.";
+        responseEl.style.color = "#b91c1c";
+        responseEl.style.background = "#fef2f2";
+        responseEl.style.borderColor = "rgba(185, 28, 28, 0.12)";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send Inquiry";
+      }
+    });
+  </script>
+  <script>
+    (() => {
+      const services = [
+        {
+          id: "company-process",
+          title: "Company Information & Process",
+          en: "Ask about Awesome Accounting Services, who the services are for, how the three-step engagement process works, or how to get in touch."
+        },
+        {
+          id: "accounting",
+          title: "01 Accounting and Bookkeeping",
+          en: "Maintain organized day-to-day records, ledgers, reconciliations, and accounting support that strengthen financial visibility. We handle your daily transaction logging, bank reconciliations, accounts payable/receivable tracking, and general ledger maintenance to ensure your financial records are always accurate, up-to-date, and audit-ready."
+        },
+        {
+          id: "bir",
+          title: "02 BIR Filing and Compliance",
+          en: "Assist with tax compliance processes, required filings, and documentation aligned with business obligations. Our service covers computation, preparation, and timely filing of monthly, quarterly, and annual tax returns (Income Tax, VAT/Percentage Tax, Withholding Taxes) to keep your business fully compliant with BIR regulations and avoid penalties."
+        },
+        {
+          id: "sss-hdmf-phic",
+          title: "03 SSS, HDMF, and PHIC Support",
+          en: "Provide compliance coordination for government-mandated employer and employee contribution requirements. We streamline the computation, reporting, and remitting of SSS, Pag-IBIG (HDMF), and PhilHealth contributions, managing employee records and monthly reporting portals to ensure seamless statutory compliance."
+        },
+        {
+          id: "financial-statements",
+          title: "04 Financial Statements",
+          en: "Prepare clear financial reports and supporting schedules that help management and stakeholders understand business performance. We compile comprehensive Balance Sheets, Income Statements, Cash Flow Statements, and notes to financial statements that give you actionable insights for business expansion, bank loans, or investor reporting."
+        },
+        {
+          id: "audit",
+          title: "05 Compliance Audit Assistance",
+          en: "Support documentation readiness, internal review preparation, and compliance-related record organization. We conduct pre-audit reviews, organize necessary schedules and supporting vouchers, and guide your team through internal or external financial and tax audits with confidence."
+        },
+        {
+          id: "property-transfer",
+          title: "06 Property Transfer Documentation",
+          en: "Assist in document coordination and administrative processes connected with transfer of real properties. We handle the preparation and filing of tax clearances, Certificate Authorizing Registration (CAR) with the BIR, local transfer tax processing, and title updating with the Registry of Deeds to ensure a smooth, legal property ownership transfer."
+        }
+      ];
+
+      let galleryItems = [
+        // AUTO-GALLERY-ITEMS-START
+        // ===== 2024 =====
+        {
+          year: "2024",
+          src: "/about-me/2024/1.1_1.jpg",
+          type: "image",
+          version: "201253-mw6sgkz7",
+          title: "Gallery Photo",
+          description: "A photo from January 1, 2024.",
+          date: "2024-01-01"
+        },
+        // ===== 2025 =====
+        {
+          year: "2025",
+          src: "/about-me/2025/1.1_4.jpg",
+          type: "image",
+          version: "199004-mw56skmn",
+          title: "Mountain at Dusk",
+          description: "A rugged mountain ridge glows beneath a soft pink evening sky, ARL.",
+          date: "2025-01-04"
+        },
+        {
+          year: "2025",
+          src: "/about-me/2025/2.12_1.jpg",
+          type: "image",
+          version: "2069010-mw6qn9f5",
+          title: "Gallery Photo",
+          description: "A photo from December 1, 2025.",
+          date: "2025-12-01"
+        },
+        // ===== 2026 =====
+        {
+          year: "2026",
+          src: "/about-me/2026/6.1_2.jpg",
+          type: "image",
+          version: "5516947-mw6r1clx",
+          title: "Gallery Photo",
+          description: "A photo from January 2, 2026.",
+          date: "2026-01-02"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/2.1_19.jpg",
+          type: "image",
+          version: "12204443-mw544ye4",
+          title: "Cloudscape",
+          description: "Soft clouds fill the sky in this gentle, dreamy scene.",
+          date: "2026-01-19"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/2.1_19.mp4",
+          type: "video",
+          version: "35806769-msfnhmo4",
+          title: "Gallery Video",
+          description: "A video from January 19, 2026.",
+          date: "2026-01-19"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/1.1_20.jpg",
+          type: "image",
+          version: "2191403-mw5468x6",
+          title: "Floral Design",
+          description: "A delicate floral illustration adds a calm, personal touch to a deep blue background.",
+          date: "2026-01-20"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/3.1_25.jpg",
+          type: "image",
+          version: "2653254-mw545t1r",
+          title: "Open Sky",
+          description: "A peaceful view of open sky and clouds, captured in a soft pastel palette.",
+          date: "2026-01-25"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/4.2_1.jpg",
+          type: "image",
+          version: "1734424-mw56rinp",
+          title: "Sunset Valley",
+          description: "A glowing sunset stretches across a peaceful valley and distant mountains.",
+          date: "2026-02-01"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/8.3_1.jpg",
+          type: "image",
+          version: "683139-mw56rxio",
+          title: "Autumn Colors",
+          description: "Vibrant red leaves frame a sunlit tree above a lush green garden.",
+          date: "2026-03-01"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/7.4_1.jpg",
+          type: "image",
+          version: "1125455-mw56sdb0",
+          title: "Evening Storm",
+          description: "Lightning illuminates dramatic clouds over a quiet waterside landscape.",
+          date: "2026-04-01"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/5.5_1.jpg",
+          type: "image",
+          version: "353152-mw56srw6",
+          title: "Lakeside Sky",
+          description: "Blue evening clouds and warm sunset colors reflect across a calm lake.",
+          date: "2026-05-01"
+        }
+        // AUTO-GALLERY-ITEMS-END
+      ];
+      const months = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+      ];
+      const galleryYear = document.getElementById("galleryYear");
+      const galleryYears = document.getElementById("galleryYears");
+      const galleryGrid = document.getElementById("galleryGrid");
+      const galleryShowMore = document.getElementById("galleryShowMore");
+      const galleryShowMoreLabel = galleryShowMore.querySelector("span");
+      const galleryLightbox = document.getElementById("galleryLightbox");
+      const galleryLightboxImage = document.getElementById("galleryLightboxImage");
+      const galleryLightboxVideoStage = document.getElementById("galleryLightboxVideoStage");
+      const galleryLightboxVideo = document.getElementById("galleryLightboxVideo");
+      const galleryLightboxDescription = document.getElementById("galleryLightboxDescription");
+      const galleryLightboxBack = document.getElementById("galleryLightboxBack");
+      const galleryLightboxPrevious = document.getElementById("galleryLightboxPrevious");
+      const galleryLightboxNext = document.getElementById("galleryLightboxNext");
+      const galleryDatePicker = document.getElementById("galleryDatePicker");
+      const galleryDateToggle = document.getElementById("galleryDateToggle");
+      const galleryDatePanel = document.getElementById("galleryDatePanel");
+      const galleryDateLabel = document.getElementById("galleryDateLabel");
+      const galleryMonthButtons = document.querySelectorAll(".gallery-month-option");
+      let selectedMonth = "all";
+      const defaultGalleryYear = "2026";
+      let availableGalleryYears = [];
+      let selectedYear = defaultGalleryYear;
+      let galleryExpanded = false;
+      let lightboxTrigger = null;
+      let lightboxItems = [];
+      let lightboxIndex = -1;
+
+      async function closeGalleryLightbox() {
+        if (document.fullscreenElement === galleryLightboxVideoStage || document.fullscreenElement === galleryLightboxVideo) {
+          try {
+            await document.exitFullscreen();
+          } catch (error) {
+            console.warn("Unable to exit gallery video fullscreen.", error);
+          }
+        }
+        galleryLightbox.hidden = true;
+        galleryLightboxImage.removeAttribute("src");
+        galleryLightboxVideo.pause();
+        galleryLightboxVideo.removeAttribute("src");
+        galleryLightboxVideo.load();
+        galleryLightboxVideo.hidden = true;
+        galleryLightboxVideoStage.hidden = true;
+        galleryLightboxBack.hidden = false;
+        galleryLightboxImage.hidden = true;
+        galleryLightboxDescription.textContent = "";
+        if (lightboxTrigger) lightboxTrigger.focus();
+        lightboxTrigger = null;
+        lightboxIndex = -1;
+      }
+
+      function showLightboxMedia() {
+        const item = lightboxItems[lightboxIndex];
+        if (!item) return;
+        galleryLightboxVideo.pause();
+        galleryLightboxVideo.removeAttribute("src");
+        galleryLightboxVideo.load();
+        galleryLightboxVideo.hidden = item.type !== "video";
+        galleryLightboxVideoStage.hidden = item.type !== "video";
+        galleryLightboxBack.hidden = false;
+        galleryLightboxImage.hidden = item.type === "video";
+        if (item.type === "video") {
+          galleryLightboxVideo.dataset.assetFallbackIndex = "0";
+          galleryLightboxVideo.src = getVersionedGalleryUrl(item, getGalleryAssetCandidates(item)[0]);
+          galleryLightboxVideo.setAttribute("aria-label", item.title);
+          galleryLightboxVideo.addEventListener("loadedmetadata", () => rememberLoadedGallerySource(item, galleryLightboxVideo), { once: true });
+          if (item.startTime) {
+            galleryLightboxVideo.addEventListener("loadedmetadata", () => {
+              if (lightboxItems[lightboxIndex] !== item) return;
+              galleryLightboxVideo.currentTime = Math.min(item.startTime, galleryLightboxVideo.duration || item.startTime);
+              if (item.wasPlaying) {
+                galleryLightboxVideo.play().catch((error) => {
+                  console.warn("Unable to resume gallery video playback.", error);
+                });
+              }
+              delete item.startTime;
+              delete item.wasPlaying;
+            }, { once: true });
+          }
+        } else {
+          galleryLightboxImage.dataset.assetFallbackIndex = "0";
+          galleryLightboxImage.src = getVersionedGalleryUrl(item, getGalleryAssetCandidates(item)[0]);
+          galleryLightboxImage.alt = item.title;
+          galleryLightboxImage.addEventListener("load", () => rememberLoadedGallerySource(item, galleryLightboxImage), { once: true });
+        }
+        galleryLightboxDescription.textContent = item.description;
+      }
+
+      function retryLightboxVideoWithPublicPath() {
+        const item = lightboxItems[lightboxIndex];
+        if (!item) return;
+        const candidates = getGalleryAssetCandidates(item);
+        const nextIndex = Number(galleryLightboxVideo.dataset.assetFallbackIndex || "0") + 1;
+        if (nextIndex >= candidates.length) {
+          console.error(`Unable to load gallery video: ${item.src}`);
+          return;
+        }
+        galleryLightboxVideo.dataset.assetFallbackIndex = String(nextIndex);
+        galleryLightboxVideo.src = getVersionedGalleryUrl(item, candidates[nextIndex]);
+      }
+
+      function moveLightboxImage(direction) {
+        if (!lightboxItems.length) return;
+        lightboxIndex = (lightboxIndex + direction + lightboxItems.length) % lightboxItems.length;
+        showLightboxMedia();
+      }
+
+      function openGalleryLightbox(media, item) {
+        lightboxTrigger = media;
+        lightboxIndex = lightboxItems.indexOf(item);
+        if (item.type === "video" && Number.isFinite(media.currentTime)) {
+          item.startTime = media.currentTime;
+          item.wasPlaying = !media.paused;
+        }
+        showLightboxMedia();
+        galleryLightbox.hidden = false;
+        if (item.type === "video") {
+          galleryLightboxVideo.focus();
+        } else {
+          galleryLightboxBack.focus();
+        }
+      }
+
+      function renderGalleryFilters() {
+        const allYearsOption = document.createElement("option");
+        allYearsOption.value = "All years";
+        galleryYears.append(allYearsOption);
+        availableGalleryYears.forEach((year) => {
+          const option = document.createElement("option");
+          option.value = year;
+          galleryYears.append(option);
+        });
+      }
+
+      function initializeGallery() {
+        availableGalleryYears = [...new Set(galleryItems.map((item) => item.year))]
+          .sort((a, b) => Number(b) - Number(a));
+        selectedYear = availableGalleryYears.includes(selectedYear)
+          ? selectedYear
+          : availableGalleryYears.includes(defaultGalleryYear)
+            ? defaultGalleryYear
+            : availableGalleryYears[0] || defaultGalleryYear;
+        galleryYears.replaceChildren();
+        renderGalleryFilters();
+        galleryYear.value = selectedYear;
+        updateGalleryDateLabel();
+        renderGallery();
+      }
+
+      function updateGalleryDateLabel() {
+        const yearLabel = selectedYear === "all" ? "All years" : selectedYear;
+        if (selectedMonth === "all") {
+          galleryDateLabel.textContent = `${yearLabel} · All months`;
+        } else {
+          galleryDateLabel.textContent = `${months[Number(selectedMonth) - 1]} ${yearLabel}`;
+        }
+
+        galleryMonthButtons.forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.month === selectedMonth));
+        });
+      }
+
+      function setGalleryDatePickerOpen(open) {
+        galleryDatePicker.setAttribute("aria-expanded", String(open));
+        galleryDateToggle.setAttribute("aria-expanded", String(open));
+        galleryDatePanel.hidden = !open;
+      }
+
+      function renderGallery() {
+        const selectedYearIsAvailable = selectedYear === "all" || availableGalleryYears.includes(selectedYear);
+        const filtered = galleryItems.filter((item) => {
+          const date = new Date(`${item.date}T00:00:00`);
+          if (Number.isNaN(date.getTime())) return false;
+          const monthMatches = selectedMonth === "all" || String(date.getMonth() + 1) === selectedMonth;
+          const yearMatches = selectedYear === "all" || item.year === selectedYear;
+          return monthMatches && yearMatches;
+        });
+        lightboxItems = filtered;
+
+        galleryGrid.replaceChildren();
+        const visibleGalleryCount = galleryExpanded ? filtered.length : 3;
+        galleryShowMore.hidden = filtered.length <= 3;
+        galleryShowMore.setAttribute("aria-expanded", String(galleryExpanded));
+        galleryShowMore.setAttribute("aria-label", galleryExpanded ? "Show fewer gallery images" : "Show all gallery images");
+        galleryShowMoreLabel.textContent = galleryExpanded ? "Show less" : "Show more";
+        if (!filtered.length) {
+          const empty = document.createElement("p");
+          empty.className = "gallery-empty";
+          empty.textContent = selectedYearIsAvailable && galleryItems.length
+            ? "No image here yet for the selected year and month."
+            : "No image here yet for this year. Add an image to its year folder using the imageNumber.month_day filename format.";
+          galleryGrid.append(empty);
+          return;
+        }
+
+        filtered.slice(0, visibleGalleryCount).forEach((item) => {
+          const figure = document.createElement("figure");
+          figure.className = "gallery-card";
+          const videoStage = item.type === "video" ? document.createElement("div") : null;
+          if (videoStage) videoStage.className = "gallery-video-card-stage";
+          const media = document.createElement(item.type === "video" ? "video" : "img");
+          const mediaSources = getGalleryAssetCandidates(item);
+          let mediaSourceIndex = 0;
+          media.src = getVersionedGalleryUrl(item, mediaSources[mediaSourceIndex]);
+          media.addEventListener("error", () => {
+            mediaSourceIndex += 1;
+            if (mediaSourceIndex < mediaSources.length) {
+              media.src = getVersionedGalleryUrl(item, mediaSources[mediaSourceIndex]);
+              return;
+            }
+            console.error(`Unable to load gallery media: ${item.src}`);
+          });
+          media.addEventListener(item.type === "video" ? "loadedmetadata" : "load", () => {
+            rememberLoadedGallerySource(item, media);
+          }, { once: true });
+          if (item.type === "video") {
+            media.controls = false;
+            media.setAttribute("controlslist", "nodownload noplaybackrate");
+            media.disablePictureInPicture = true;
+            media.preload = "metadata";
+            media.tabIndex = 0;
+            media.className = "gallery-card-video";
+            media.setAttribute("role", "button");
+            media.setAttribute("aria-label", item.title);
+            const fullscreenButton = document.createElement("button");
+            fullscreenButton.type = "button";
+            fullscreenButton.className = "gallery-video-card-fullscreen";
+            fullscreenButton.textContent = "⛶";
+            fullscreenButton.setAttribute("aria-label", `View ${item.title} fullscreen`);
+            fullscreenButton.title = "View video fullscreen";
+            fullscreenButton.addEventListener("click", (event) => {
+              event.stopPropagation();
+              openGalleryLightbox(media, item, true);
+            });
+            videoStage.addEventListener("click", () => openGalleryLightbox(media, item));
+            media.addEventListener("keydown", (event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openGalleryLightbox(media, item);
+              }
+            });
+            videoStage.append(media, fullscreenButton);
+          } else {
+            media.alt = item.title;
+            media.loading = "lazy";
+            media.tabIndex = 0;
+            media.setAttribute("role", "button");
+            media.setAttribute("aria-label", `View full-size image: ${item.title}`);
+            media.addEventListener("click", () => openGalleryLightbox(media, item));
+            media.addEventListener("keydown", (event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openGalleryLightbox(media, item);
+              }
+            });
+          }
+          const caption = document.createElement("figcaption");
+          const title = document.createElement("strong");
+          title.textContent = item.title;
+          const description = document.createElement("p");
+          description.textContent = item.description;
+          const date = document.createElement("time");
+          date.dateTime = item.date;
+          date.textContent = new Date(`${item.date}T00:00:00`).toLocaleDateString(undefined, {
+            year: "numeric", month: "long", day: "numeric"
+          });
+          caption.append(title, description, date);
+          if (item.captionStatus) {
+            const captionStatus = document.createElement("p");
+            captionStatus.className = "gallery-caption-status";
+            captionStatus.setAttribute("role", "status");
+            captionStatus.textContent = item.captionStatus === "pending"
+              ? "Generating an AI-suggested description..."
+              : item.captionStatus === "suggested"
+                ? "AI suggestion is saved in this browser only. Edit scripts/gallery-descriptions.js to keep it in the project."
+                : "AI description unavailable. Start or deploy the caption backend.";
+            caption.append(captionStatus);
+          }
+          figure.append(videoStage || media, caption);
+          galleryGrid.append(figure);
+        });
+      }
+
+      initializeGallery();
+      let loadedGalleryManifest = "";
+      let galleryManifestErrorReported = false;
+      let galleryRefreshInProgress = false;
+
+      function getGalleryMediaFromFile(year, fileName) {
+        const match = fileName.match(/^(\d+)\.(\d{1,2})_(\d{1,2})\.(jpg|jpeg|png|gif|webp|mp4|webm|ogv)$/i);
+        if (!match) return null;
+
+        const imageNumber = Number(match[1]);
+        const month = Number(match[2]);
+        const day = Number(match[3]);
+        const extension = match[4].toLowerCase();
+        const type = ["mp4", "webm", "ogv"].includes(extension) ? "video" : "image";
+        const parsedDate = new Date(Date.UTC(Number(year), month - 1, day));
+        if (
+          parsedDate.getUTCFullYear() !== Number(year)
+          || parsedDate.getUTCMonth() !== month - 1
+          || parsedDate.getUTCDate() !== day
+        ) return null;
+
+        return {
+          year,
+          src: `/public/about-me/${year}/${fileName}`,
+          type,
+          title: `${type === "image" ? "Image" : "Video"} ${imageNumber}`,
+          description: `A ${type === "image" ? "photo" : "video"} from ${months[month - 1]} ${day}, ${year}.`,
+          date: `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`,
+          month,
+          day,
+          imageNumber
+        };
+      }
+
+      function getVersionedGalleryUrl(item, source = item.src) {
+        if (!item.version) return source;
+        const url = new URL(source, window.location.href);
+        url.searchParams.set("gallery-version", item.version);
+        return url.href;
+      }
+
+      function getGalleryAssetCandidates(item, source = item.src) {
+        const url = new URL(source, document.baseURI);
+        const galleryPath = url.pathname.match(/(?:^|\/)about-me\/(\d{4}\/[^/]+)$/);
+        if (!galleryPath) return [url.href];
+
+        const relativeGalleryPath = `about-me/${galleryPath[1]}`;
+        const candidates = [
+          url.href,
+          new URL(`public/${relativeGalleryPath}`, document.baseURI).href,
+          new URL(`/${relativeGalleryPath}`, window.location.origin).href,
+          new URL(`/public/${relativeGalleryPath}`, window.location.origin).href,
+          new URL(`/Awesome-main/public/${relativeGalleryPath}`, window.location.origin).href
+        ];
+        return [...new Set(candidates)];
+      }
+
+      function rememberLoadedGallerySource(item, media) {
+        if (!media.currentSrc) return;
+        const loadedUrl = new URL(media.currentSrc);
+        loadedUrl.searchParams.delete("gallery-version");
+        item.src = loadedUrl.href;
+      }
+
+      function getGalleryItemKey(item) {
+        const url = new URL(item.src, document.baseURI);
+        const fileName = url.pathname.split("/").pop();
+        return `${item.year}/${fileName}`;
+      }
+
+      const galleryCaptionStorageKey = "awesome-gallery-caption-cache";
+      const pendingGalleryCaptions = new Set();
+
+      function readGalleryCaptionCache() {
+        try {
+          const stored = JSON.parse(window.localStorage.getItem(galleryCaptionStorageKey) || "{}");
+          return stored && typeof stored === "object" && !Array.isArray(stored) ? stored : {};
+        } catch (error) {
+          console.warn("Unable to read saved gallery captions.", error);
+          return {};
+        }
+      }
+
+      function writeGalleryCaptionCache(cache) {
+        try {
+          window.localStorage.setItem(galleryCaptionStorageKey, JSON.stringify(cache));
+        } catch (error) {
+          console.warn("Unable to save gallery captions in this browser.", error);
+        }
+      }
+
+      function hasDefaultGalleryCaption(item) {
+        return (item.title === "Gallery Photo" || /^Image \d+$/.test(item.title))
+          && /^A photo from /.test(item.description);
+      }
+
+      function blobToDataUrl(blob) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.addEventListener("load", () => resolve(reader.result));
+          reader.addEventListener("error", () => reject(new Error("Could not prepare the image for captioning.")));
+          reader.readAsDataURL(blob);
+        });
+      }
+
+      async function generateGalleryCaption(item) {
+        const key = getGalleryItemKey(item);
+        const requestKey = `${key}|${item.version}`;
+        if (pendingGalleryCaptions.has(requestKey)) return;
+        pendingGalleryCaptions.add(requestKey);
+
+        try {
+          const imageResponse = await fetch(item.src, { cache: "no-store" });
+          if (!imageResponse.ok) {
+            throw new Error(`Could not load image for captioning (HTTP ${imageResponse.status}).`);
+          }
+          const bitmap = await createImageBitmap(await imageResponse.blob());
+          const scale = Math.min(1, 1024 / Math.max(bitmap.width, bitmap.height));
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+          canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+          const context = canvas.getContext("2d");
+          if (!context) throw new Error("Could not prepare the image for captioning.");
+          context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+          bitmap.close();
+
+          let jpegBlob;
+          for (const quality of [0.8, 0.65, 0.5]) {
+            jpegBlob = await new Promise((resolve) => canvas.toBlob(resolve, "image/jpeg", quality));
+            if (jpegBlob && jpegBlob.size <= 1024 * 1024) break;
+          }
+          if (!jpegBlob || jpegBlob.size > 1024 * 1024) {
+            throw new Error("The image is too large to caption after compression.");
+          }
+          const imageData = await blobToDataUrl(jpegBlob);
+          const response = await fetch(new URL("api/gallery-caption", document.baseURI), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ imageData })
+          });
+          const result = await response.json();
+          if (!response.ok) throw new Error(result.error || `Caption service failed (HTTP ${response.status}).`);
+          if (
+            typeof result.title !== "string"
+            || typeof result.description !== "string"
+            || !result.title.trim()
+            || !result.description.trim()
+          ) throw new Error("Caption service returned an invalid response.");
+
+          const currentItem = galleryItems.find((galleryItem) =>
+            getGalleryItemKey(galleryItem) === key && galleryItem.version === item.version
+          );
+          if (!currentItem) return;
+          currentItem.title = result.title.trim();
+          currentItem.description = result.description.trim();
+          currentItem.captionStatus = "suggested";
+          const cache = readGalleryCaptionCache();
+          cache[key] = {
+            version: item.version,
+            caption: { title: currentItem.title, description: currentItem.description }
+          };
+          writeGalleryCaptionCache(cache);
+          renderGallery();
+        } catch (error) {
+          const currentItem = galleryItems.find((galleryItem) =>
+            getGalleryItemKey(galleryItem) === key && galleryItem.version === item.version
+          );
+          if (currentItem) {
+            currentItem.captionStatus = "error";
+            renderGallery();
+          }
+          console.warn(`Unable to generate a caption for ${key}.`, error);
+        } finally {
+          pendingGalleryCaptions.delete(requestKey);
+        }
+      }
+
+      async function getDirectoryLinks(directoryUrl) {
+        const response = await fetch(`${directoryUrl}?updated=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Could not read gallery folder ${directoryUrl} (HTTP ${response.status}).`);
+        const html = await response.text();
+        const documentListing = new DOMParser().parseFromString(html, "text/html");
+        return [...documentListing.querySelectorAll("a[href]")].map((link) => link.getAttribute("href"));
+      }
+
+      async function getGalleryImageVersion(imageUrl) {
+        let response = await fetch(imageUrl, { method: "HEAD", cache: "no-store" });
+        if (response.status === 405 || response.status === 501) {
+          response = await fetch(imageUrl, {
+            headers: { Range: "bytes=0-0" },
+            cache: "no-store"
+          });
+        }
+        if (!response.ok) throw new Error(`Could not check gallery image ${imageUrl} (HTTP ${response.status}).`);
+        const version = [
+          response.headers.get("etag"),
+          response.headers.get("last-modified"),
+          response.headers.get("content-length")
+        ].filter(Boolean).join("|");
+        if (response.body) await response.body.cancel();
+        if (!version) throw new Error(`The server did not provide a version for gallery image ${imageUrl}.`);
+        return version;
+      }
+
+      async function discoverGalleryImages() {
+        const rootCandidates = [
+          new URL("public/about-me/", document.baseURI),
+          new URL("about-me/", document.baseURI)
+        ];
+        let rootUrl;
+        let yearFolders = [];
+        let directoryError;
+        for (const candidate of rootCandidates) {
+          try {
+            const rootLinks = await getDirectoryLinks(candidate.href);
+            const discoveredYears = rootLinks
+              .map((href) => new URL(href, candidate))
+              .filter((url) => url.origin === candidate.origin)
+              .map((url) => url.pathname.slice(candidate.pathname.length).match(/^(\d{4})\/$/)?.[1])
+              .filter(Boolean);
+            if (discoveredYears.length) {
+              rootUrl = candidate;
+              yearFolders = discoveredYears;
+              break;
+            }
+          } catch (error) {
+            directoryError = error;
+          }
+        }
+        if (!rootUrl) {
+          throw directoryError || new Error("Live Server did not return year folders for the gallery.");
+        }
+
+        const discoveredItems = [];
+        for (const year of [...new Set(yearFolders)]) {
+          const yearUrl = new URL(`${year}/`, rootUrl);
+          const fileLinks = await getDirectoryLinks(yearUrl.href);
+          const yearItems = fileLinks.map(async (href) => {
+            const fileUrl = new URL(href, yearUrl);
+            if (fileUrl.origin !== yearUrl.origin) return null;
+            const fileName = decodeURIComponent(fileUrl.pathname.slice(yearUrl.pathname.length));
+            if (!fileName || fileName.includes("/")) return null;
+            const item = getGalleryMediaFromFile(year, fileName);
+            if (!item) return null;
+            item.src = fileUrl.href;
+            item.version = await getGalleryImageVersion(fileUrl.href);
+            return item;
+          });
+          discoveredItems.push(...(await Promise.all(yearItems)).filter(Boolean));
+        }
+
+        return discoveredItems.sort((a, b) =>
+          Number(a.year) - Number(b.year)
+          || a.month - b.month
+          || a.day - b.day
+          || (a.type === b.type ? 0 : a.type === "image" ? -1 : 1)
+          || a.imageNumber - b.imageNumber
+        );
+      }
+
+      async function refreshGallery() {
+        let manifest;
+        try {
+          manifest = await discoverGalleryImages();
+        } catch (scanError) {
+          const manifestCandidates = [
+            {
+              url: new URL("public/gallery-manifest.json", document.baseURI),
+              assetPrefix: new URL("public/", document.baseURI).pathname
+            },
+            {
+              url: new URL("gallery-manifest.json", document.baseURI),
+              assetPrefix: ""
+            },
+            {
+              url: new URL("/gallery-manifest.json", window.location.origin),
+              assetPrefix: ""
+            },
+            {
+              url: new URL("/Awesome-main/public/gallery-manifest.json", window.location.origin),
+              assetPrefix: "/Awesome-main/public/"
+            }
+          ];
+          let manifestLoaded = false;
+          for (const candidate of manifestCandidates) {
+            let response;
+            try {
+              response = await fetch(`${candidate.url.href}?updated=${Date.now()}`, { cache: "no-store" });
+            } catch (error) {
+              continue;
+            }
+            if (!response.ok) continue;
+            manifest = await response.json();
+            if (candidate.assetPrefix) {
+              manifest = manifest.map((item) => ({
+                ...item,
+                src: new URL(`${candidate.assetPrefix}${item.src.replace(/^\//, "")}`, window.location.origin).href
+              }));
+            }
+            manifestLoaded = true;
+            break;
+          }
+          if (!manifestLoaded) throw scanError;
+        }
+        if (!Array.isArray(manifest)) throw new Error("Gallery image list has an invalid format.");
+
+        const signature = JSON.stringify(manifest);
+        if (signature === loadedGalleryManifest) return;
+        loadedGalleryManifest = signature;
+        const existingDescriptions = new Map(galleryItems.map((item) => [getGalleryItemKey(item), item]));
+        const savedCaptions = readGalleryCaptionCache();
+        const updatedCaptionCache = {};
+        const captionsToGenerate = [];
+        galleryItems = manifest.map((item) => {
+          const key = getGalleryItemKey(item);
+          const previousItem = existingDescriptions.get(key);
+          const savedCaption = savedCaptions[key];
+          const knownVersion = previousItem?.version ?? savedCaption?.version;
+          const imageChanged = knownVersion !== undefined && knownVersion !== item.version;
+          const updatedItem = { ...item };
+          const isNewImage = (
+            !previousItem || previousItem.version === undefined
+          ) && savedCaption?.version === undefined && hasDefaultGalleryCaption(updatedItem);
+
+          if (previousItem && !imageChanged) {
+            if (
+              savedCaption?.version === item.version
+              && savedCaption?.caption
+              && hasDefaultGalleryCaption(previousItem)
+            ) {
+              updatedItem.title = savedCaption.caption.title;
+              updatedItem.description = savedCaption.caption.description;
+              updatedItem.captionStatus = "suggested";
+            } else {
+              updatedItem.title = previousItem.title || item.title;
+              updatedItem.description = previousItem.description || item.description;
+            }
+          } else if (
+            !imageChanged
+            && savedCaption?.version === item.version
+            && savedCaption?.caption
+            && hasDefaultGalleryCaption(updatedItem)
+          ) {
+            updatedItem.title = savedCaption.caption.title;
+            updatedItem.description = savedCaption.caption.description;
+            updatedItem.captionStatus = "suggested";
+          }
+
+          if (item.type === "image" && item.version && (imageChanged || isNewImage)) {
+            updatedItem.captionStatus = "pending";
+            captionsToGenerate.push(updatedItem);
+          }
+          updatedCaptionCache[key] = {
+            version: item.version,
+            ...(savedCaption?.version === item.version && savedCaption?.caption && !imageChanged
+              ? { caption: savedCaption.caption }
+              : {})
+          };
+          return updatedItem;
+        });
+        writeGalleryCaptionCache(updatedCaptionCache);
+        initializeGallery();
+        if (!galleryLightbox.hidden) showLightboxMedia();
+        captionsToGenerate.forEach(generateGalleryCaption);
+      }
+
+      function refreshGalleryManifestWithLogging() {
+        if (galleryRefreshInProgress) return;
+        galleryRefreshInProgress = true;
+        refreshGallery()
+          .then(() => {
+            galleryManifestErrorReported = false;
+          })
+          .catch((error) => {
+            if (galleryManifestErrorReported) return;
+            console.warn("Unable to refresh gallery images.", error);
+            galleryManifestErrorReported = true;
+          })
+          .finally(() => {
+            galleryRefreshInProgress = false;
+          });
+      }
+
+      refreshGalleryManifestWithLogging();
+      window.setInterval(refreshGalleryManifestWithLogging, 5000);
+      galleryLightboxBack.addEventListener("click", closeGalleryLightbox);
+      galleryLightboxPrevious.addEventListener("click", () => moveLightboxImage(-1));
+      galleryLightboxNext.addEventListener("click", () => moveLightboxImage(1));
+      galleryLightboxImage.addEventListener("error", () => {
+        const item = lightboxItems[lightboxIndex];
+        if (!item) return;
+        const candidates = getGalleryAssetCandidates(item);
+        const nextIndex = Number(galleryLightboxImage.dataset.assetFallbackIndex || "0") + 1;
+        if (nextIndex >= candidates.length) {
+          console.error(`Unable to load gallery image: ${item.src}`);
+          return;
+        }
+        galleryLightboxImage.dataset.assetFallbackIndex = String(nextIndex);
+        galleryLightboxImage.src = getVersionedGalleryUrl(item, candidates[nextIndex]);
+      });
+      galleryLightbox.addEventListener("click", (event) => {
+        if (event.target === galleryLightbox) closeGalleryLightbox();
+      });
+      galleryLightboxVideo.addEventListener("error", retryLightboxVideoWithPublicPath);
+      galleryDateToggle.addEventListener("click", () => {
+        setGalleryDatePickerOpen(galleryDatePanel.hidden);
+      });
+      galleryYear.addEventListener("input", () => {
+        const year = galleryYear.value.trim();
+        if (year === "" || year.toLowerCase() === "all years") {
+          selectedYear = "all";
+          galleryYear.value = "All years";
+        } else {
+          selectedYear = year;
+        }
+        updateGalleryDateLabel();
+        renderGallery();
+      });
+      galleryShowMore.addEventListener("click", () => {
+        galleryExpanded = !galleryExpanded;
+        renderGallery();
+      });
+      galleryMonthButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedMonth = button.dataset.month;
+          updateGalleryDateLabel();
+          renderGallery();
+        });
+      });
+      document.addEventListener("click", (event) => {
+        if (!galleryDatePicker.contains(event.target)) setGalleryDatePickerOpen(false);
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          if (document.fullscreenElement === galleryLightboxVideoStage || document.fullscreenElement === galleryLightboxVideo) {
+            event.preventDefault();
+            document.exitFullscreen().catch((error) => {
+              console.warn("Unable to exit gallery video fullscreen.", error);
+            });
+            return;
+          }
+          if (!galleryLightbox.hidden) {
+            closeGalleryLightbox();
+            return;
+          }
+          setGalleryDatePickerOpen(false);
+        } else if (
+          !galleryLightbox.hidden
+          && lightboxItems[lightboxIndex]?.type === "video"
+          && ["ArrowLeft", "ArrowRight"].includes(event.key)
+        ) {
+          return;
+        } else if (!galleryLightbox.hidden && event.key === "ArrowLeft") {
+          moveLightboxImage(-1);
+        } else if (!galleryLightbox.hidden && event.key === "ArrowRight") {
+          moveLightboxImage(1);
+        }
+      });
+
+      const launcher = document.getElementById("voiceLauncher");
+      const panel = document.getElementById("voicePanel");
+      const closeButton = document.getElementById("voiceClose");
+      const backButton = document.getElementById("voiceBack");
+      const title = document.getElementById("voiceTitle");
+      const listenButton = document.getElementById("voiceListen");
+      const tabs = document.getElementById("serviceTabs");
+      const log = document.getElementById("voiceLog");
+      const status = document.getElementById("voiceStatus");
+      const form = document.getElementById("voiceForm");
+      const questionInput = document.getElementById("voiceQuestion");
+      const sendButton = document.getElementById("voiceSend");
+      const visualViewport = window.visualViewport;
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const assistantApiUrl = new URL("api/assistant", document.baseURI);
+      const assistantRequestTimeoutMs = 25000;
+      const conversation = [];
+      let activeService = null;
+      let recognition = null;
+      let listening = false;
+      let busy = false;
+      let activeSpeechButton = null;
+      let activeSpeechFeedback = null;
+      let activeUtterance = null;
+      let conversationVersion = 0;
+      let lastResponseLanguage = /^(tl|fil)(-|$)/i.test(navigator.language) ? "tl" : "en";
+
+      function resizeQuestionInput() {
+        questionInput.style.height = "auto";
+        const styles = window.getComputedStyle(questionInput);
+        const minHeight = Number.parseFloat(styles.minHeight) || 0;
+        const maxHeight = Number.parseFloat(styles.maxHeight) || questionInput.scrollHeight;
+        const height = Math.min(Math.max(questionInput.scrollHeight, minHeight), maxHeight);
+        questionInput.style.height = `${height}px`;
+        questionInput.style.overflowY = questionInput.scrollHeight > maxHeight ? "auto" : "hidden";
+      }
+
+      function focusQuestionInput() {
+        questionInput.focus({ preventScroll: true });
+        syncChatViewport();
+      }
+
+      function syncChatViewport() {
+        const chatOpen = panel.classList.contains("is-chat") && !panel.hidden;
+        const layoutHeight = Math.max(window.innerHeight, document.documentElement.clientHeight);
+        const viewport = visualViewport;
+        const viewportHeight = viewport?.height ?? layoutHeight;
+        const viewportTop = viewport?.offsetTop ?? 0;
+        const viewportLeft = viewport?.offsetLeft ?? 0;
+        const viewportWidth = viewport?.width ?? window.innerWidth;
+        const bottomGap = Math.max(0, layoutHeight - viewportTop - viewportHeight);
+        const rightGap = Math.max(0, window.innerWidth - viewportLeft - viewportWidth);
+        const focused = document.activeElement === questionInput;
+        const keyboardIsOpen = chatOpen && focused && (bottomGap > 80 || layoutHeight - viewportHeight > 80);
+
+        if (!chatOpen || !keyboardIsOpen) {
+          panel.classList.remove("keyboard-open");
+          launcher.classList.remove("keyboard-open");
+          panel.style.removeProperty("--voice-visible-top");
+          panel.style.removeProperty("--voice-visible-bottom");
+          panel.style.removeProperty("--voice-visible-left");
+          panel.style.removeProperty("--voice-visible-right");
+          panel.style.removeProperty("--voice-panel-visible-bottom");
+          launcher.style.removeProperty("--voice-visible-bottom");
+          return;
+        }
+
+        panel.style.setProperty("--voice-visible-top", `${viewportTop}px`);
+        panel.style.setProperty("--voice-visible-left", `${viewportLeft}px`);
+        panel.style.setProperty("--voice-visible-right", `${rightGap}px`);
+        panel.style.setProperty("--voice-panel-visible-bottom", `${bottomGap}px`);
+        launcher.style.setProperty("--voice-visible-bottom", `${Math.max(8, bottomGap + 8)}px`);
+        panel.classList.add("keyboard-open");
+        launcher.classList.add("keyboard-open");
+      }
+
+      questionInput.addEventListener("input", resizeQuestionInput);
+      questionInput.addEventListener("focus", () => {
+        syncChatViewport();
+        window.setTimeout(syncChatViewport, 250);
+      });
+      questionInput.addEventListener("blur", () => {
+        window.setTimeout(syncChatViewport, 150);
+      });
+      visualViewport?.addEventListener("resize", syncChatViewport);
+      visualViewport?.addEventListener("scroll", syncChatViewport);
+      window.addEventListener("resize", syncChatViewport);
+      resizeQuestionInput();
+
+      function stopSpeaking(message) {
+        window.speechSynthesis?.cancel();
+        if (activeSpeechButton) {
+          activeSpeechButton.setAttribute("aria-pressed", "false");
+          activeSpeechButton.title = "Read aloud";
+          activeSpeechButton.setAttribute("aria-label", "Read this answer aloud");
+        }
+        if (activeSpeechFeedback) {
+          activeSpeechFeedback.textContent = message || "";
+          activeSpeechFeedback.hidden = !message;
+        }
+        activeSpeechButton = null;
+        activeSpeechFeedback = null;
+        activeUtterance = null;
+        if (message) status.textContent = message;
+      }
+
+      async function requestAssistant(payload) {
+        if (window.location.protocol === "file:") {
+          throw new Error("Hindi gumagana ang AI at translator kapag binuksan ang index.html bilang file. Buksan ang deployed Vercel site o patakbuhin ang npm run dev sa project folder.");
+        }
+
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), assistantRequestTimeoutMs);
+        try {
+          const response = await fetch(assistantApiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+            signal: controller.signal
+          });
+          if (response.status === 404 || response.status === 405) {
+            throw new Error("Hindi makita ang AI API. Kailangan itong i-deploy sa Vercel kasama ng api/assistant.js, o patakbuhin gamit ang npm run dev; hindi ito sinusuportahan ng Live Server.");
+          }
+          return response;
+        } catch (error) {
+          if (controller.signal.aborted) {
+            throw new Error("Nag-time out ang request sa AI. Pakisubukan ulit.");
+          }
+          if (error instanceof TypeError) {
+            throw new Error("Hindi maabot ang AI API. Buksan ang deployed Vercel site, o patakbuhin ang npm run dev kasama ang GEMINI_API_KEY.");
+          }
+          throw error;
+        } finally {
+          window.clearTimeout(timeout);
+        }
+      }
+
+      function getWebsiteContext() {
+        const pageContent = document.createElement("div");
+        document.querySelectorAll("main, footer").forEach((section) => {
+          pageContent.append(section.cloneNode(true));
+        });
+        pageContent.querySelectorAll("script, style, noscript, template, form, [aria-hidden='true']").forEach((element) => {
+          element.remove();
+        });
+
+        const content = (pageContent.textContent || "").replace(/\s+/g, " ").trim();
+        const galleryContent = galleryItems.map((item) =>
+          `${item.date || item.year} | ${item.type}: ${item.title || "Gallery item"} — ${item.description || ""} (${item.src})`
+        ).join("\n");
+        const links = [...document.querySelectorAll("main a[href], footer a[href], #floatingContactLinks a[href]")]
+          .map((link) => `${link.textContent.trim() || link.getAttribute("aria-label") || "Page link"}: ${link.href}`)
+          .join("\n");
+        return `PAGE CONTENT:\n${content}\n\nPUBLISHED GALLERY ITEMS:\n${galleryContent}\n\nCONTACT AND PAGE LINKS:\n${links}`.trim().slice(0, 30000);
+      }
+
+      function setOpen(open) {
+        panel.hidden = !open;
+        launcher.setAttribute("aria-expanded", String(open));
+        if (!open) syncChatViewport();
+        if (open) {
+          if (activeService && !form.hidden) {
+            focusQuestionInput();
+          } else if (!tabs.hidden) {
+            tabs.querySelector("button")?.focus();
+          } else {
+            backButton.focus();
+          }
+        } else {
+          stopListening();
+          stopSpeaking();
+        }
+      }
+
+      function setBusy(value) {
+        busy = value;
+        sendButton.disabled = value;
+        listenButton.disabled = value || !SpeechRecognition;
+        backButton.disabled = value;
+        [...tabs.children].forEach((tab) => {
+          tab.disabled = value;
+        });
+      }
+
+      async function readAssistantResponse(response, fallbackMessage) {
+        const rawResponse = await response.text();
+        let data;
+        try {
+          data = rawResponse ? JSON.parse(rawResponse) : null;
+        } catch {
+          if (!response.ok) {
+            throw new Error(`${fallbackMessage} (HTTP ${response.status}).`);
+          }
+          throw new Error(`AI service returned an invalid response (HTTP ${response.status}). Please try again.`);
+        }
+        if (!response.ok) {
+          throw new Error(data?.error || `${fallbackMessage} (HTTP ${response.status}).`);
+        }
+        if (!data || typeof data !== "object") {
+          throw new Error("AI service returned an empty response. Please try again.");
+        }
+        return data;
+      }
+
+      function addMessage(role, text, options = {}) {
+        const message = document.createElement("div");
+        message.className = `voice-message ${role}`;
+        const content = document.createElement("span");
+        content.className = "voice-message-content";
+        content.textContent = text;
+        message.append(content);
+
+        if (role === "assistant") {
+          const language = options.language || "en";
+          let displayedLanguage = language;
+          let translatedText = null;
+          let isTranslated = false;
+          const actions = document.createElement("div");
+          actions.className = "voice-message-actions";
+          const speakButton = document.createElement("button");
+          speakButton.type = "button";
+          speakButton.innerHTML = '<svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3Zm12.5 3a3.5 3.5 0 0 0-2-3.16v6.32a3.5 3.5 0 0 0 2-3.16Zm-2-8.77v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54Z" fill="currentColor"/></svg>';
+          speakButton.setAttribute("aria-label", "Read this answer aloud");
+          speakButton.title = "Read aloud";
+          speakButton.setAttribute("aria-pressed", "false");
+          const speechFeedback = document.createElement("span");
+          speechFeedback.className = "voice-speech-feedback";
+          speechFeedback.hidden = true;
+          speakButton.addEventListener("click", () => {
+            speak(content.textContent, displayedLanguage, speakButton, speechFeedback);
+          });
+          const translateButton = document.createElement("button");
+          translateButton.type = "button";
+          const translatorIcon = '<svg class="translator-icon" viewBox="0 0 64 44" aria-hidden="true"><path class="translator-e" d="M5 8h27v6H13v6h17v6H13v6h20v7H5z"/><path fill="var(--ink)" d="M12 2h21v12H12z"/><path class="translator-stripe" d="M12 2h21v2H12zm0 4h21v2H12zm0 4h21v2H12z"/><path class="translator-blue-field" d="M12 2h9v6h-9z"/><circle fill="var(--ink)" cx="14" cy="3.5" r=".55"/><circle fill="var(--ink)" cx="17" cy="3.5" r=".55"/><circle fill="var(--ink)" cx="20" cy="3.5" r=".55"/><circle fill="var(--ink)" cx="15.5" cy="5.5" r=".55"/><circle fill="var(--ink)" cx="18.5" cy="5.5" r=".55"/><path class="translator-t" d="M35 3h26v8H51v28h-9V11H35z"/><path fill="var(--ink)" d="m35 11 8 0v9z"/><circle class="translator-sun" cx="39" cy="13" r="2"/><path class="translator-star" d="m44 11 .8 1.5 1.7.2-1.2 1.1.3 1.7-1.6-.8-1.5.8.3-1.7-1.3-1.1 1.8-.2zm10 0 .8 1.5 1.7.2-1.2 1.1.3 1.7-1.6-.8-1.5.8.3-1.7-1.3-1.1 1.8-.2zm-6 7 .7 1.4 1.6.2-1.2 1 .3 1.6-1.4-.7-1.5.7.3-1.6-1.1-1 1.6-.2z"/><path class="translator-arrow" d="M26 36c5-1 9-4 12-8m-1 5 1-5-5 1"/></svg>';
+          translateButton.innerHTML = translatorIcon;
+          const targetLanguage = language === "tl" ? "English" : "Tagalog";
+          translateButton.setAttribute("aria-label", `Translate this answer to ${targetLanguage}`);
+          translateButton.title = `Translate to ${targetLanguage}`;
+          translateButton.setAttribute("aria-pressed", "false");
+          const translationError = document.createElement("span");
+          translationError.className = "voice-translation-feedback";
+          translationError.hidden = true;
+          translateButton.addEventListener("click", async () => {
+            if (translatedText !== null) {
+              isTranslated = !isTranslated;
+              content.textContent = isTranslated ? translatedText : text;
+              displayedLanguage = isTranslated ? (language === "tl" ? "en" : "tl") : language;
+              translateButton.setAttribute("aria-pressed", String(isTranslated));
+              translateButton.title = isTranslated ? "Show original" : `Translate to ${targetLanguage}`;
+              translateButton.setAttribute("aria-label", isTranslated ? "Show original answer" : `Translate this answer to ${targetLanguage}`);
+              return;
+            }
+
+            translateButton.disabled = true;
+            translateButton.classList.add("is-translating");
+            translateButton.setAttribute("aria-busy", "true");
+            translationError.classList.remove("is-error");
+            translationError.textContent = "Translating…";
+            translationError.hidden = false;
+            try {
+              const response = await requestAssistant({
+                action: "translate",
+                serviceId: activeService.id,
+                text,
+                sourceLanguage: language
+              });
+              const data = await readAssistantResponse(response, "The answer could not be translated");
+              const targetLanguageCode = language === "tl" ? "en" : "tl";
+              if (data.language !== targetLanguageCode || typeof data.translation !== "string" || !data.translation.trim()) {
+                throw new Error("The translation service returned an invalid translation.");
+              }
+              translatedText = data.translation.trim();
+              isTranslated = true;
+              content.textContent = translatedText;
+              displayedLanguage = language === "tl" ? "en" : "tl";
+              translateButton.setAttribute("aria-pressed", "true");
+              translateButton.title = "Show original";
+              translateButton.setAttribute("aria-label", "Show original answer");
+              translationError.hidden = true;
+            } catch (error) {
+              console.warn("Unable to translate the assistant answer.", error);
+              translationError.textContent = error.message || "Translation unavailable. Please try again.";
+              translationError.classList.add("is-error");
+              translationError.hidden = false;
+            } finally {
+              translateButton.disabled = false;
+              translateButton.classList.remove("is-translating");
+              translateButton.removeAttribute("aria-busy");
+            }
+          });
+          actions.append(speakButton, translateButton);
+          message.append(actions);
+          message.append(speechFeedback);
+          message.append(translationError);
+        }
+
+        if (options.escalate) {
+          const contactLink = document.createElement("a");
+          contactLink.href = "#contact";
+          contactLink.className = "talk-to-us-link";
+          contactLink.setAttribute("aria-label", "Talk to us");
+          const typingText = document.createElement("span");
+          typingText.className = "talk-to-us-typing";
+          typingText.textContent = "Talk to us...";
+          contactLink.append(typingText);
+          contactLink.addEventListener("click", () => setOpen(false));
+          message.append(document.createElement("br"), contactLink);
+        }
+        log.append(message);
+        log.scrollTop = log.scrollHeight;
+        return message;
+      }
+
+      function getServiceWelcome(service, language) {
+        const greetings = {
+          en: "Hello! Thanks for visiting Awesome Accounting Services.",
+          tl: "Kumusta! Salamat sa pagbisita sa Awesome Accounting Services."
+        };
+        const descriptions = {
+          accounting: {
+            en: "We help keep day-to-day accounting records, ledgers, and reconciliations organized for clearer financial visibility.",
+            tl: "Tumutulong kami sa pag-aayos ng araw-araw na accounting records, ledgers, at reconciliations para mas malinaw ang financial records ng negosyo."
+          },
+          bir: {
+            en: "We assist with tax-compliance processes, required filings, and supporting documentation aligned with business obligations.",
+            tl: "Tumutulong kami sa tax-compliance processes, mga kailangang filing, at kaugnay na dokumentasyon ayon sa business obligations."
+          },
+          "sss-hdmf-phic": {
+            en: "We coordinate support for employer and employee contribution requirements for SSS, HDMF, and PHIC.",
+            tl: "Tumutulong kami sa pag-coordinate ng employer at employee contribution requirements para sa SSS, HDMF, at PHIC."
+          },
+          "financial-statements": {
+            en: "We prepare financial reports and supporting schedules to help management understand business performance.",
+            tl: "Naghahanda kami ng financial reports at supporting schedules para matulungan ang management na maunawaan ang performance ng negosyo."
+          },
+          audit: {
+            en: "We help organize compliance-related records and support documentation readiness and internal review preparation.",
+            tl: "Tumutulong kami sa pag-aayos ng compliance records, paghahanda ng dokumento, at paghahanda para sa internal review."
+          },
+          "property-transfer": {
+            en: "We provide document coordination and administrative support for real-property transfer processes.",
+            tl: "Nagbibigay kami ng document coordination at administrative support para sa proseso ng real-property transfer."
+          },
+          "company-process": {
+            en: "Our engagement starts with Initial Discovery, where we learn about your current setup and priorities. Next is Service Alignment, where we identify the right mix of support. Ongoing Coordination keeps records, submissions, and required financial outputs moving.",
+            tl: "Nagsisimula ang proseso sa Initial Discovery para alamin ang kasalukuyang setup at mga prayoridad ng negosyo. Kasunod ang Service Alignment para tukuyin ang angkop na suporta. Sa Ongoing Coordination, tinutulungan naming umusad ang records, submissions, at mga kailangang financial output."
+          }
+        };
+        const closing = language === "tl"
+          ? "Ano pa ang gusto mong malaman?"
+          : "What else would you like to know?";
+        return `${greetings[language]}\n\n${descriptions[service.id][language]}\n\n${closing}`;
+      }
+
+      function isProcessQuestion(question) {
+        return /\b(process|proseso|workflow|engagement flow|steps?|hakbang|paano kayo nagsisimula|how do you work|how does it work|how it works)\b/i.test(question);
+      }
+
+      function isContactQuestion(question) {
+        return /\b(contact|platform|inquir\w*|reach|message|email|phone|call|whatsapp|messenger|facebook|contact us|other channel)\b|(?:ugnay|kontak|tawag|mensahe|makipag-ugnayan|kumontak)/i.test(question);
+      }
+
+      function getContactAnswer(language) {
+        if (language === "tl") {
+          return "Para magpatuloy sa inquiry, puwede kang makipag-ugnayan sa amin sa WhatsApp o Facebook Messenger. Maaari ka ring mag-email sa aweclient@gmail.com, tumawag sa +63 917 503 7023 o 0906 836 0010, o gamitin ang contact form sa website. Sabihin kung anong service ang kailangan mo para maituro ka namin sa tamang support.";
+        }
+        return "You can continue your inquiry through WhatsApp or Facebook Messenger. You can also email aweclient@gmail.com, call +63 917 503 7023 or 0906 836 0010, or use the contact form on this website. Let us know which service you need so we can direct you to the right support.";
+      }
+
+      function getProcessAnswer(language) {
+        if (language === "tl") {
+          return "Ganito ang proseso ng pakikipagtrabaho sa amin:\n\n1. Initial Discovery — pag-uusapan natin ang kasalukuyang setup, reporting needs, compliance concerns, at mga prayoridad ng negosyo.\n\n2. Service Alignment — tutukuyin natin ang angkop na kombinasyon ng bookkeeping, compliance, reporting, at documentation support.\n\n3. Ongoing Coordination — magtutulungan tayo para umusad sa oras ang submissions, records, at mga kailangang financial output.";
+        }
+        return "Our engagement process has three steps:\n\n1. Initial Discovery — we discuss your current setup, reporting needs, compliance concerns, and business priorities.\n\n2. Service Alignment — we identify the right mix of bookkeeping, compliance, reporting, and documentation support for your needs.\n\n3. Ongoing Coordination — we work together to keep submissions, records, and required financial outputs moving on time.";
+      }
+
+      function getWebsiteFallback(question) {
+        const language = detectQuestionLanguage(question);
+        const respond = (en, tl = en) => ({ answer: language === "tl" ? tl : en, language });
+        const normalized = question.toLowerCase();
+
+        if (/\bachiev\w*|\bachiv\w*|\baward\w*|\baccomplish\w*|\bmilestone\w*|(?:tagumpay|natamo|nakamit|parangal|nagawa.*(?:taon|nyo|ninyo))/i.test(question)) {
+          const galleryByYear = galleryItems.reduce((counts, item) => {
+            counts[item.year] = (counts[item.year] || 0) + 1;
+            return counts;
+          }, {});
+          const gallerySummary = Object.keys(galleryByYear)
+            .sort()
+            .map((year) => `${year}: ${galleryByYear[year]}`)
+            .join(", ");
+          return respond(
+            `I can't verify a count of company achievements from the current About Us content because it does not list achievements or awards. The gallery has ${galleryItems.length} media items by year (${gallerySummary}), but their current captions describe photos and scenery, not documented company achievements. I shouldn't count them as achievements.`,
+            `Hindi ko matiyak ang bilang ng mga achievement ng kumpanya mula sa kasalukuyang About Us content dahil wala itong nakalistang achievement o award. May ${galleryItems.length} media item sa gallery ayon sa taon (${gallerySummary}), pero ang kasalukuyang captions ay tungkol sa mga larawan at tanawin, hindi sa mga dokumentadong achievement ng kumpanya. Hindi ko dapat bilangin ang mga iyon bilang achievement.`
+          );
+        }
+
+        if (isContactQuestion(question)) {
+          return respond(getContactAnswer("en"), getContactAnswer("tl"));
+        }
+        if (isProcessQuestion(question)) {
+          return respond(getProcessAnswer("en"), getProcessAnswer("tl"));
+        }
+        if (/\b(location|address|where are you|where.*located)\b|(?:lokasyon|address|saan kayo)/i.test(question)) {
+          return respond(
+            "The website lists Awesome Accounting Services in General Mariano Alvarez, Calabarzon, Philippines. The map shows B-2 L-10, Brgy. Congressional Rd, Poblacion IV, General Mariano Alvarez, 4117 Cavite, Philippines.",
+            "Matatagpuan ang Awesome Accounting Services sa General Mariano Alvarez, Calabarzon, Philippines. Ito ang address na nakalagay sa mapa: B-2 L-10, Brgy. Congressional Rd, Poblacion IV, General Mariano Alvarez, 4117 Cavite, Philippines."
+          );
+        }
+        if (/\b(who.*(serve|client)|clients?|business(es)?|sme|industry|industries|for whom)\b|(?:para kanino|anong negosyo|sino ang.*serbisyo)/i.test(question)) {
+          return respond(
+            "The website says the services are suited to small and medium enterprises that need organized records and compliance support, professional service firms that value financial order and back-office support, and clients needing documentation support for property and asset transactions.",
+            "Ayon sa website, angkop ang mga serbisyo para sa small at medium enterprises na nangangailangan ng maayos na records at compliance support; professional service firms na nangangailangan ng financial at back-office support; at mga kliyenteng nangangailangan ng dokumentasyon para sa property at asset transactions."
+          );
+        }
+
+        const serviceDetails = [
+          {
+            match: /\b(bookkeep\w*|accounting|ledger|reconcil\w*|accounts payable|accounts receivable)\b|(?:bookkeeping|accounting|ledger|reconciliation|talaan|pagbibilang)/i,
+            en: "Accounting and Bookkeeping: the firm helps organize day-to-day records, ledgers, reconciliations, transaction records, and accounts payable/receivable for clearer financial visibility.",
+            tl: "Accounting and Bookkeeping: tumutulong ang firm sa pag-aayos ng araw-araw na records, ledgers, reconciliations, transactions, at accounts payable/receivable para mas malinaw ang financial records."
+          },
+          {
+            match: /\b(bir|tax|taxes|filing|returns?)\b|(?:buwis|tax|pag-file)/i,
+            en: "BIR Filing and Compliance: the firm assists with tax-compliance processes, required filings, and supporting documentation. The website does not specify your filing deadlines or tax amount.",
+            tl: "BIR Filing and Compliance: tumutulong ang firm sa tax-compliance processes, mga kailangang filing, at dokumentasyon. Hindi tinutukoy ng website ang filing deadline o halaga ng buwis para sa partikular mong sitwasyon."
+          },
+          {
+            match: /\b(sss|hdmf|pag-?ibig|philhealth|phic|contributions?)\b/i,
+            en: "SSS, HDMF, and PHIC Support: the firm coordinates employer and employee contribution requirements, reporting, remittance support, and employee records.",
+            tl: "SSS, HDMF, at PHIC Support: kino-coordinate ng firm ang employer at employee contribution requirements, reporting, remittance support, at employee records."
+          },
+          {
+            match: /\b(financial statements?|balance sheet|income statement|cash ?flow|reports?)\b|(?:ulat pampinansyal|financial report)/i,
+            en: "Financial Statements: the firm prepares financial reports and supporting schedules. The website lists balance sheets, income statements, cash-flow statements, and notes to financial statements.",
+            tl: "Financial Statements: naghahanda ang firm ng financial reports at supporting schedules. Kabilang sa binanggit sa website ang balance sheets, income statements, cash-flow statements, at notes to financial statements."
+          },
+          {
+            match: /\b(audit|audits|pre-?audit|vouchers?)\b|(?:audit|pagsusuri)/i,
+            en: "Compliance Audit Assistance: the firm supports documentation readiness, internal-review preparation, and organization of compliance records, schedules, and supporting vouchers.",
+            tl: "Compliance Audit Assistance: tumutulong ang firm sa paghahanda ng dokumento, internal review, at pag-aayos ng compliance records, schedules, at supporting vouchers."
+          },
+          {
+            match: /\b(property|real estate|realty|transfer|title|registry of deeds|car)\b|(?:ari-arian|paglilipat ng titulo)/i,
+            en: "Property Transfer Documentation: the firm coordinates documents and administrative steps related to property transfers. The website mentions tax clearances, BIR CAR, local transfer-tax processing, and title updating.",
+            tl: "Property Transfer Documentation: kino-coordinate ng firm ang mga dokumento at administrative steps para sa property transfer. Binabanggit sa website ang tax clearances, BIR CAR, local transfer-tax processing, at pag-update ng titulo."
+          }
+        ];
+        const matchedService = serviceDetails.find((service) => service.match.test(normalized));
+        if (matchedService) return respond(matchedService.en, matchedService.tl);
+
+        if (/\b(services?|offerings?|what do you do)\b|(?:serbisyo|inaalok|ginagawa ninyo)/i.test(question)) {
+          return respond(
+            "The website lists six services: Accounting and Bookkeeping; BIR Filing and Compliance; SSS, HDMF, and PHIC Support; Financial Statements; Compliance Audit Assistance; and Property Transfer Documentation.",
+            "Anim na serbisyo ang nakalista sa website: Accounting and Bookkeeping; BIR Filing and Compliance; SSS, HDMF, at PHIC Support; Financial Statements; Compliance Audit Assistance; at Property Transfer Documentation."
+          );
+        }
+        if (/\b(mission|approach|value|why.*choose|about the company|company profile)\b|(?:misyon|layunin|bakit kayo|tungkol sa kumpanya)/i.test(question)) {
+          return respond(
+            "The company says its mission is to provide accurate, timely, practical accounting services. Its approach combines technical compliance work with responsive, discreet service, aiming to reduce administrative pressure so business owners can focus on operations and growth.",
+            "Ayon sa kumpanya, layunin nitong magbigay ng tumpak, maagap, at praktikal na accounting services. Pinagsasama ng approach nito ang compliance work at responsive at maingat na serbisyo upang mabawasan ang administrative work ng business owners."
+          );
+        }
+        if (/\b(gallery|photos?|videos?|pictures?)\b|(?:larawan|bidyo|gallery)/i.test(question)) {
+          const itemCount = galleryItems.length;
+          if (/\b(how many|do you have|is there|tell me about|about the|show me)\b|(?:ilan|mayroon ba|meron ba|sabihin.*tungkol)/i.test(question)) {
+            return respond(
+              itemCount
+                ? `The About Us Gallery currently has ${itemCount} published items, organized by month and year.`
+                : "The About Us Gallery is organized by month and year, but there are currently no published items.",
+              itemCount
+                ? `May ${itemCount} na naka-publish na item sa About Us Gallery, na nakaayos ayon sa buwan at taon.`
+                : "Nakaayos ayon sa buwan at taon ang About Us Gallery, pero wala pang naka-publish na item."
+            );
+          }
+        }
+
+        return null;
+      }
+
+      function detectQuestionLanguage(question) {
+        const tagalogSignals = question.match(/\b(?:ano|anong|paano|pwede|puwede|maaari|ko|mo|namin|natin|kayo|ikaw|ako|ba|mga|sa|ng|ang|yung|rin|din|saan|sino|bakit|gusto|iba|ibang|hakbang|proseso|serbisyo|negosyo|kami|niyo|ninyo|nyo|ngayon|taon|naging|ilan)\b|(?:macontact|makontact|makontak|makipag-ugnayan)/gi);
+        return (tagalogSignals?.length || 0) > 0 ? "tl" : "en";
+      }
+
+      function speak(text, language = "en", button, feedback) {
+        if (!("speechSynthesis" in window)) {
+          feedback.textContent = "Audio playback is not supported in this browser.";
+          feedback.hidden = false;
+          return;
+        }
+        if (!text || !text.trim()) {
+          feedback.textContent = "There is no text to read aloud.";
+          feedback.hidden = false;
+          return;
+        }
+        const synthesis = window.speechSynthesis;
+        if (activeSpeechButton === button && (synthesis.speaking || synthesis.pending)) {
+          stopSpeaking("Audio stopped.");
+          return;
+        }
+        if (synthesis.speaking || synthesis.pending) stopSpeaking();
+        const utterance = new SpeechSynthesisUtterance(text);
+        const speechLanguage = language === "tl" ? "fil-PH" : "en-PH";
+        const voices = synthesis.getVoices();
+        const matchingVoice = voices.find((voice) => voice.lang.toLowerCase() === speechLanguage.toLowerCase())
+          || voices.find((voice) => voice.lang.toLowerCase().startsWith(language === "tl" ? "fil" : "en"))
+          || (language === "tl" ? voices.find((voice) => voice.lang.toLowerCase().startsWith("en")) : null)
+          || null;
+        activeSpeechButton = button;
+        activeSpeechFeedback = feedback;
+        activeUtterance = utterance;
+        utterance.lang = matchingVoice?.lang || speechLanguage;
+        if (matchingVoice) utterance.voice = matchingVoice;
+        const usingFallbackVoice = language === "tl" && matchingVoice && !matchingVoice.lang.toLowerCase().startsWith("fil");
+        button.setAttribute("aria-pressed", "true");
+        button.title = "Stop audio";
+        button.setAttribute("aria-label", "Stop reading this answer");
+        feedback.textContent = usingFallbackVoice
+          ? "Starting audio with the available English voice; this browser has no Tagalog voice installed."
+          : `Starting ${language === "tl" ? "Tagalog" : "English"} audio...`;
+        feedback.hidden = false;
+        utterance.onstart = () => {
+          if (activeUtterance === utterance) {
+            status.textContent = `Playing ${language === "tl" ? "Tagalog" : "English"} audio...`;
+            feedback.textContent = usingFallbackVoice
+              ? "Playing with the available English voice; this browser has no Tagalog voice installed."
+              : `Playing ${language === "tl" ? "Tagalog" : "English"} audio...`;
+          }
+        };
+        utterance.onend = () => {
+          if (activeUtterance === utterance) {
+            activeSpeechButton = null;
+            activeSpeechFeedback = null;
+            activeUtterance = null;
+            button.setAttribute("aria-pressed", "false");
+            button.title = "Read aloud";
+            button.setAttribute("aria-label", "Read this answer aloud");
+            feedback.textContent = "Audio finished.";
+            status.textContent = "Audio finished.";
+          }
+        };
+        utterance.onerror = (event) => {
+          if (activeUtterance === utterance) {
+            activeSpeechButton = null;
+            activeSpeechFeedback = null;
+            activeUtterance = null;
+            button.setAttribute("aria-pressed", "false");
+            button.title = "Read aloud";
+            button.setAttribute("aria-label", "Read this answer aloud");
+            feedback.textContent = `Speech playback failed (${event.error}). Check that your device has speech audio enabled.`;
+            status.textContent = `Speech playback failed (${event.error}). Check that your browser has a speech voice enabled.`;
+          }
+        };
+        try {
+          synthesis.resume();
+          synthesis.speak(utterance);
+          status.textContent = feedback.textContent;
+        } catch (error) {
+          activeSpeechButton = null;
+          activeSpeechFeedback = null;
+          activeUtterance = null;
+          button.setAttribute("aria-pressed", "false");
+          button.title = "Read aloud";
+          button.setAttribute("aria-label", "Read this answer aloud");
+          feedback.textContent = error.message || "Speech playback could not be started.";
+          status.textContent = error.message || "Speech playback could not be started.";
+        }
+      }
+
+      async function selectService(service) {
+        if (activeService?.id === service.id) {
+          showSelectedService();
+          return;
+        }
+
+        activeService = service;
+        conversationVersion += 1;
+        conversation.length = 0;
+        questionInput.value = "";
+        resizeQuestionInput();
+        log.replaceChildren();
+        [...tabs.children].forEach((tab) => {
+          tab.setAttribute("aria-pressed", String(tab.dataset.serviceId === service.id));
+        });
+        showSelectedService();
+        const requestVersion = conversationVersion;
+        const welcomeText = getServiceWelcome(service, lastResponseLanguage);
+        const welcomeMessage = addMessage("assistant", welcomeText, { language: lastResponseLanguage });
+        conversation.push({ role: "assistant", text: welcomeText });
+        setBusy(true);
+        status.textContent = "Preparing a welcome and service explanation...";
+
+        try {
+          const response = await requestAssistant({
+            action: "explain",
+            serviceId: service.id,
+            language: lastResponseLanguage,
+            websiteContext: getWebsiteContext()
+          });
+          const data = await readAssistantResponse(response, "The service explanation could not be loaded");
+          if (requestVersion !== conversationVersion) return;
+          if (typeof data.answer !== "string" || !data.answer.trim() || !["en", "tl"].includes(data.language)) {
+            throw new Error("The assistant returned an incomplete service explanation. Please try again.");
+          }
+
+          welcomeMessage.remove();
+          conversation[0] = { role: "assistant", text: data.answer };
+          lastResponseLanguage = data.language;
+          addMessage("assistant", data.answer, { language: data.language });
+          status.textContent = "Ask a follow-up question about this service.";
+        } catch (error) {
+          if (requestVersion !== conversationVersion) return;
+          console.warn("Unable to load the AI service overview.", error);
+          status.textContent = "";
+        } finally {
+          if (requestVersion === conversationVersion) {
+            setBusy(false);
+            focusQuestionInput();
+          }
+        }
+      }
+
+      function showSelectedService() {
+        panel.classList.add("is-chat");
+        title.textContent = activeService.title;
+        tabs.hidden = true;
+        backButton.hidden = false;
+        log.hidden = false;
+        form.hidden = false;
+        listenButton.hidden = false;
+        focusQuestionInput();
+      }
+
+      function showServicePicker() {
+        panel.classList.remove("is-chat");
+        syncChatViewport();
+        title.textContent = "Select Services";
+        tabs.hidden = false;
+        backButton.hidden = true;
+        log.hidden = true;
+        form.hidden = true;
+        listenButton.hidden = true;
+        tabs.querySelector(`[data-service-id="${activeService?.id || ""}"]`)?.focus();
+      }
+
+      services.forEach((service) => {
+        const tab = document.createElement("button");
+        tab.type = "button";
+        tab.className = "service-tab";
+        tab.textContent = service.title;
+        tab.dataset.serviceId = service.id;
+        tab.setAttribute("aria-pressed", "false");
+        tab.addEventListener("click", () => selectService(service));
+        tabs.append(tab);
+      });
+
+      launcher.addEventListener("click", () => setOpen(panel.hidden));
+      backButton.addEventListener("click", showServicePicker);
+      closeButton.addEventListener("click", () => {
+        conversationVersion += 1;
+        activeService = null;
+        conversation.length = 0;
+        busy = false;
+        sendButton.disabled = false;
+        questionInput.disabled = false;
+        listenButton.disabled = !SpeechRecognition;
+        backButton.disabled = false;
+        questionInput.value = "";
+        resizeQuestionInput();
+        [...tabs.children].forEach((tab) => {
+          tab.disabled = false;
+        });
+        log.replaceChildren();
+        [...tabs.children].forEach((tab) => tab.setAttribute("aria-pressed", "false"));
+        showServicePicker();
+        status.textContent = SpeechRecognition
+          ? "Choose a service to start a conversation."
+          : "Speech recognition is not supported in this browser. You can type questions.";
+        setOpen(false);
+        launcher.focus();
+      });
+      document.addEventListener("pointerdown", (event) => {
+        if (
+          !panel.hidden &&
+          event.target instanceof Node &&
+          !panel.contains(event.target) &&
+          !launcher.contains(event.target)
+        ) {
+          setOpen(false);
+        }
+
+        if (
+          !floatingContactPanel.contains(event.target)
+          && !panel.contains(event.target)
+          && !launcher.contains(event.target)
+          && !talkToUsToggle.contains(event.target)
+        ) {
+          floatingContactPanel.classList.remove("expanded");
+          talkToUsToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+      function closeOverlaysOnPageScroll(event) {
+        const scrollTarget = event.target;
+        if (
+          document.activeElement === questionInput
+          ||
+          scrollTarget instanceof Node
+          && (
+            panel.contains(scrollTarget)
+            || floatingContactPanel.contains(scrollTarget)
+            || launcher.contains(scrollTarget)
+          )
+        ) return;
+
+        if (!panel.hidden) setOpen(false);
+        if (floatingContactPanel.classList.contains("expanded")) {
+          floatingContactPanel.classList.remove("expanded");
+          talkToUsToggle.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      document.addEventListener("scroll", closeOverlaysOnPageScroll, { capture: true, passive: true });
+      document.addEventListener("wheel", closeOverlaysOnPageScroll, { capture: true, passive: true });
+      document.addEventListener("touchmove", closeOverlaysOnPageScroll, { capture: true, passive: true });
+      function stopListening() {
+        if (recognition && listening) recognition.stop();
+        listening = false;
+        listenButton.textContent = "Use microphone";
+      }
+
+      if (SpeechRecognition) {
+        recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.onresult = (event) => {
+          const transcript = event.results[0][0].transcript;
+          questionInput.value = [questionInput.value.trim(), transcript].filter(Boolean).join(" ");
+          resizeQuestionInput();
+          focusQuestionInput();
+        };
+        recognition.onerror = (event) => {
+          status.textContent = event.error === "not-allowed"
+            ? "Microphone access was denied. Allow microphone access or type your question."
+            : `Speech recognition error: ${event.error}. You can type your question instead.`;
+        };
+        recognition.onend = () => {
+          listening = false;
+          listenButton.textContent = "Use microphone";
+        };
+        listenButton.addEventListener("click", () => {
+          if (listening) {
+            stopListening();
+            return;
+          }
+          recognition.lang = lastResponseLanguage === "tl" ? "fil-PH" : "en-PH";
+          try {
+            recognition.start();
+            listening = true;
+            listenButton.textContent = "Stop listening";
+            status.textContent = "Listening...";
+          } catch (error) {
+            status.textContent = "Could not start speech recognition. Please try again or type your question.";
+          }
+        });
+      } else {
+        listenButton.disabled = true;
+        listenButton.title = "Speech recognition is not available in this browser.";
+      }
+      status.textContent = SpeechRecognition
+        ? "Choose a service to start a conversation."
+        : "Speech recognition is not supported in this browser. You can type questions.";
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const question = questionInput.value.trim();
+        if (!question || !activeService || busy) {
+          if (!activeService) status.textContent = "Choose a service tab before asking a question.";
+          return;
+        }
+
+        addMessage("user", question);
+        conversation.push({ role: "user", text: question });
+        questionInput.value = "";
+        resizeQuestionInput();
+        const requestVersion = conversationVersion;
+        setBusy(true);
+        status.textContent = "Preparing your answer...";
+
+        try {
+          const localAnswer = getWebsiteFallback(question);
+          if (localAnswer) {
+            conversation.push({ role: "assistant", text: localAnswer.answer });
+            lastResponseLanguage = localAnswer.language;
+            const message = addMessage("assistant", localAnswer.answer, { language: localAnswer.language });
+            if (isContactQuestion(question)) {
+              message.classList.add("voice-message-contact");
+              const links = document.createElement("div");
+              links.className = "voice-message-actions contact-answer-links";
+              [
+                { label: "WhatsApp", href: "https://wa.me/639679326649" },
+                { label: "Messenger", href: "https://m.me/100067488122500" },
+                { label: "Telegram", href: "https://t.me/rai_aep" },
+                { label: "Viber", href: "viber://chat?number=%2B639175037023" },
+                { label: "Email", href: "mailto:aweclient@gmail.com" },
+                { label: "Contact form", href: "#contact" }
+              ].forEach(({ label, href }) => {
+                const link = document.createElement("a");
+                link.href = href;
+                link.textContent = label;
+                if (href.startsWith("https://")) {
+                  link.target = "_blank";
+                  link.rel = "noopener noreferrer";
+                }
+                if (href === "#contact") link.addEventListener("click", () => setOpen(false));
+                links.append(link);
+              });
+              message.append(links);
+            }
+            status.textContent = isContactQuestion(question)
+              ? "Answered using the official contact options on this website."
+              : "Answered using information published on this website.";
+            return;
+          }
+
+          const response = await requestAssistant({
+            serviceId: activeService.id,
+            question,
+            language: detectQuestionLanguage(question),
+            history: conversation.slice(-8, -1),
+            websiteContext: getWebsiteContext()
+          });
+          const data = await readAssistantResponse(response, "The assistant could not answer right now");
+          if (requestVersion !== conversationVersion) return;
+          if (!response.ok) throw new Error(data.error || "The assistant could not answer right now.");
+
+          conversation.push({ role: "assistant", text: data.answer });
+          lastResponseLanguage = data.language;
+          addMessage("assistant", data.answer, { language: data.language, escalate: data.escalate });
+          status.textContent = data.escalate
+            ? "This question may need staff review."
+            : "Answer generated. Please confirm case-specific requirements with our staff.";
+        } catch (error) {
+          if (requestVersion !== conversationVersion) return;
+          status.textContent = error.message || "Unable to reach the assistant. Please try again.";
+          addMessage("assistant", "I could not verify an answer from the information on this website. Please contact our team and they can help with that question.", {
+            language: lastResponseLanguage,
+            escalate: true
+          });
+        } finally {
+          if (requestVersion === conversationVersion) {
+            setBusy(false);
+            focusQuestionInput();
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
+fonts.googleapis.com

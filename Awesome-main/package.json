@@ -1,0 +1,16 @@
+{
+  "name": "awesome-accounting-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-gallery-manifest.js",
+    "prestart": "npm run build",
+    "start": "vercel dev",
+    "predev": "npm run build",
+    "dev": "node scripts/dev.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "@sendgrid/mail": "^8.1.6"
+  }
+}
