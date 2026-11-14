@@ -1,9 +1,12 @@
 const fs = require("node:fs");
 const http = require("node:http");
 const path = require("node:path");
+const { spawnSync } = require("node:child_process");
 
 const root = path.resolve(__dirname, "..");
 const publicRoot = path.join(root, "public");
+const galleryGeneratorPath = path.join(__dirname, "generate-gallery-manifest.js");
+const syncGalleryMedia = require("./sync-gallery-media");
 for (const envPath of [path.join(root, ".env"), path.resolve(root, "..", ".env")]) {
   if (fs.existsSync(envPath)) {
     if (typeof process.loadEnvFile !== "function") {
@@ -124,6 +127,18 @@ function resolveStaticFile(urlPath) {
   return null;
 }
 
+function refreshGalleryManifest() {
+  syncGalleryMedia();
+  const result = spawnSync(process.execPath, [galleryGeneratorPath], {
+    cwd: root,
+    encoding: "utf8"
+  });
+  if (result.error) throw result.error;
+  if (result.status !== 0) {
+    throw new Error((result.stderr || result.stdout || `Exited with code ${result.status}.`).trim());
+  }
+}
+
 const server = http.createServer(async (request, response) => {
   const requestUrl = new URL(request.url, `http://${request.headers.host || "localhost"}`);
   const apiHandler = apiHandlers.get(requestUrl.pathname);
@@ -136,6 +151,17 @@ const server = http.createServer(async (request, response) => {
     response.setHeader("Allow", "GET, HEAD");
     response.writeHead(405).end("Method Not Allowed");
     return;
+  }
+
+  if (/(?:^|\/)gallery-manifest\.json$/i.test(requestUrl.pathname)) {
+    try {
+      refreshGalleryManifest();
+      response.setHeader("Cache-Control", "no-store");
+    } catch (error) {
+      console.error("Could not refresh the gallery manifest.", error);
+      response.writeHead(500).end("Could not refresh gallery media.");
+      return;
+    }
   }
 
   const requestPath = requestUrl.pathname === "/" ? "/index.html" : requestUrl.pathname;

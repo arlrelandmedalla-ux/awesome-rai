@@ -9,7 +9,9 @@ module.exports = {
     // Media/file: public/about-me/2025/1.1_4.jpg
     "1.1_4.jpg": {"title":"Mountain at Dusk","description":"A rugged mountain ridge glows beneath a soft pink evening sky, ARL."},
     // Media/file: public/about-me/2025/2.12_1.jpg
-    "2.12_1.jpg": {"title":"Gallery Photo","description":"A photo from December 1, 2025."}
+    "2.12_1.jpg": {"title":"Gallery Photo","description":"A photo from December 1, 2025."},
+    // Media/file: public/about-me/2025/3.3_1.jpg
+    "3.3_1.jpg": {"title":"Gallery Photo","description":"A photo from March 1, 2025."}
   },
   // ===== 2026 =====
   "2026": {
@@ -27,8 +29,12 @@ module.exports = {
     "5.5_1.jpg": {"title":"Lakeside Sky","description":"Blue evening clouds and warm sunset colors reflect across a calm lake."},
     // Media/file: public/about-me/2026/6.1_2.jpg
     "6.1_2.jpg": {"title":"Gallery Photo","description":"A photo from January 2, 2026."},
+    // Media/file: public/about-me/2026/7.1_4.jpg
+    "7.1_4.jpg": {"title":"Gallery Photo","description":"A photo from January 4, 2026."},
     // Media/file: public/about-me/2026/7.4_1.jpg
     "7.4_1.jpg": {"title":"Evening Storm","description":"Lightning illuminates dramatic clouds over a quiet waterside landscape."},
+    // Media/file: public/about-me/2026/8.1_3.jpg
+    "8.1_3.jpg": {"title":"Gallery Photo","description":"A photo from January 3, 2026."},
     // Media/file: public/about-me/2026/8.3_1.jpg
     "8.3_1.jpg": {"title":"Autumn Colors","description":"Vibrant red leaves frame a sunlit tree above a lush green garden."}
   }

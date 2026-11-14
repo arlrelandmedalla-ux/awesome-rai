@@ -14,6 +14,16 @@ const monthNames = [
   "July", "August", "September", "October", "November", "December"
 ];
 const existingDescriptions = require(descriptionsPath);
+const previousGalleryItems = fs.existsSync(manifestPath)
+  ? JSON.parse(fs.readFileSync(manifestPath, "utf8"))
+  : [];
+if (!Array.isArray(previousGalleryItems)) {
+  throw new Error("The existing gallery manifest must contain an array.");
+}
+const previousAddedAtByFile = new Map(previousGalleryItems.map((item) => {
+  const fileName = typeof item.src === "string" ? item.src.split("/").pop() : "";
+  return [`${item.year}/${fileName}`, item.addedAt];
+}));
 
 function isValidDate(year, month, day) {
   const date = new Date(Date.UTC(year, month - 1, day));
@@ -44,23 +54,26 @@ for (const yearFolder of yearFolders) {
 
     const match = file.name.match(mediaPattern);
     if (!match) {
-      throw new Error(
+      console.warn(
         `Invalid gallery media filename "${file.name}" in ${yearFolder.name}. `
-        + "Use imageNumber.month_day (for example, 1.1_20.jpg or 1.1_20.mp4)."
+        + "Ignoring it; use imageNumber.month_day (for example, 1.1_20.jpg or 1.1_20.mp4)."
       );
+      continue;
     }
 
     const imageNumber = Number(match[1]);
     const month = Number(match[2]);
     const day = Number(match[3]);
     if (!isValidDate(year, month, day)) {
-      throw new Error(`Invalid date in gallery image filename: ${yearFolder.name}/${file.name}`);
+      console.warn(`Invalid date in gallery image filename "${yearFolder.name}/${file.name}". Ignoring it.`);
+      continue;
     }
 
     const date = `${yearFolder.name}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
     const displayDate = `${monthNames[month - 1]} ${day}, ${yearFolder.name}`;
     const type = imageExtensions.has(file.name.split(".").pop().toLowerCase()) ? "image" : "video";
     const stats = fs.statSync(path.join(yearPath, file.name));
+    const previousAddedAt = previousAddedAtByFile.get(`${yearFolder.name}/${file.name}`);
     const imageDescription = existingDescriptions[yearFolder.name]?.[file.name] || {
       title: type === "image" ? "Gallery Photo" : "Gallery Video",
       description: `A ${type === "image" ? "photo" : "video"} from ${displayDate}.`
@@ -70,6 +83,7 @@ for (const yearFolder of yearFolders) {
       year: yearFolder.name,
       src: `/about-me/${yearFolder.name}/${file.name}`,
       type,
+      addedAt: Number.isFinite(previousAddedAt) ? previousAddedAt : stats.ctimeMs,
       version: `${stats.size}-${Math.trunc(stats.mtimeMs).toString(36)}`,
       title: imageDescription.title,
       description: imageDescription.description,
@@ -87,7 +101,9 @@ galleryItems.sort((a, b) =>
   || a.month - b.month
   || a.day - b.day
   || (a.type === b.type ? 0 : a.type === "image" ? -1 : 1)
+  || a.addedAt - b.addedAt
   || a.imageNumber - b.imageNumber
+  || a.src.localeCompare(b.src)
 );
 
 const descriptionsSource = [
@@ -118,6 +134,7 @@ const galleryItemsSource = [
       `          year: ${JSON.stringify(item.year)},`,
       `          src: ${JSON.stringify(item.src)},`,
       `          type: ${JSON.stringify(item.type)},`,
+      `          addedAt: ${item.addedAt},`,
       `          version: ${JSON.stringify(item.version)},`,
       `          title: ${JSON.stringify(item.title)},`,
       `          description: ${JSON.stringify(item.description)},`,

@@ -249,6 +249,18 @@
         inset 0 2px 3px rgba(0, 0, 0, 0.16);
     }
 
+    .nav-toggle,
+    .nav-cta-item {
+      display: none;
+    }
+
+    @media (min-width: 761px) {
+      .nav-toggle,
+      .nav-cta-item {
+        display: none !important;
+      }
+    }
+
     .hero {
       position: relative;
       padding: 40px 20px 84px;
@@ -843,7 +855,7 @@
       right: 0;
       top: calc(100% + 10px);
       display: grid;
-      width: min(288px, calc(100vw - 40px));
+      width: min(248px, calc(100vw - 40px));
       gap: 14px;
       padding: 14px;
       border: 1px solid rgba(53, 215, 232, 0.2);
@@ -870,6 +882,43 @@
     .gallery-year-select::placeholder {
       color: #91aabd;
       opacity: 1;
+    }
+
+    .gallery-year-suggestions {
+      display: grid;
+      max-height: 88px;
+      overflow-y: auto;
+      margin-top: -8px;
+      padding: 2px;
+      border: 1px solid rgba(165, 203, 229, 0.18);
+      border-radius: 10px;
+      background: #0b1b2b;
+    }
+
+    .gallery-year-suggestions[hidden] {
+      display: none;
+    }
+
+    .gallery-year-suggestion {
+      min-height: 28px;
+      padding: 0 8px;
+      border: 0;
+      border-radius: 7px;
+      background: transparent;
+      color: #e8f5ff;
+      font: 600 0.88rem var(--font-body);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .gallery-year-suggestion:hover,
+    .gallery-year-suggestion:focus-visible {
+      outline: none;
+      background: rgba(53, 215, 232, 0.14);
+    }
+
+    body.gallery-year-keyboard-open .floating-contact-panel {
+      bottom: calc(var(--gallery-contact-base-bottom, 24px) - var(--gallery-keyboard-gap, 0px));
     }
 
     .gallery-month-grid {
@@ -906,6 +955,42 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
+    }
+
+    .gallery-show-more {
+      display: flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin: 24px auto 0;
+      padding: 0 18px;
+      border: 1px solid rgba(53, 215, 232, 0.28);
+      border-radius: 999px;
+      background: #142b41;
+      color: #e8f5ff;
+      font: 700 0.92rem var(--font-body);
+      cursor: pointer;
+    }
+
+    .gallery-show-more[hidden] {
+      display: none;
+    }
+
+    .gallery-show-more:hover,
+    .gallery-show-more:focus-visible {
+      border-color: rgba(53, 215, 232, 0.65);
+      background: #1b3b56;
+    }
+
+    .gallery-show-more svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-show-more[aria-expanded="true"] svg {
+      transform: rotate(180deg);
     }
 
     .gallery-card {
@@ -1002,42 +1087,6 @@
       border-radius: var(--radius-md);
       color: var(--muted);
       text-align: center;
-    }
-
-    .gallery-show-more {
-      display: flex;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      margin: 24px auto 0;
-      padding: 0 18px;
-      border: 1px solid rgba(53, 215, 232, 0.28);
-      border-radius: 999px;
-      background: #142b41;
-      color: #e8f5ff;
-      font: 700 0.92rem var(--font-body);
-      cursor: pointer;
-    }
-
-    .gallery-show-more[hidden] {
-      display: none;
-    }
-
-    .gallery-show-more:hover,
-    .gallery-show-more:focus-visible {
-      border-color: rgba(53, 215, 232, 0.65);
-      background: #1b3b56;
-    }
-
-    .gallery-show-more svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.2s ease;
-    }
-
-    .gallery-show-more[aria-expanded="true"] svg {
-      transform: rotate(180deg);
     }
 
     .gallery-lightbox {
@@ -1228,6 +1277,10 @@
       cursor: pointer;
       filter: drop-shadow(0 10px 8px rgba(0, 20, 45, 0.25));
       transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    body.gallery-year-keyboard-open .voice-launcher {
+      bottom: calc(9px - var(--gallery-keyboard-gap, 0px));
     }
 
     .voice-launcher-content {
@@ -1968,14 +2021,15 @@
       .nav-inner {
         width: 100%;
         min-height: 0;
-        gap: 10px;
+        gap: 12px;
         padding: 10px 14px;
         align-items: center;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
       }
 
       .brand {
+        flex: 1 1 auto;
         min-width: 0;
         gap: 10px;
       }
@@ -2001,28 +2055,138 @@
         line-height: 1.3;
       }
 
+      /* ---- circular toggle (hamburger -> X) ---- */
+      .nav-toggle {
+        display: block;
+        position: relative;
+        flex: 0 0 46px;
+        width: 46px;
+        height: 46px;
+        padding: 0;
+        border-radius: 50%;
+        border: 1px solid rgba(53, 215, 232, 0.35);
+        background: rgba(53, 215, 232, 0.04);
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .nav-toggle span {
+        position: absolute;
+        left: 13px;
+        right: 13px;
+        height: 2.5px;
+        border-radius: 2px;
+        background: #35d7e8;
+        transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+      }
+
+      .nav-toggle span:nth-child(1) { top: 16px; }
+      .nav-toggle span:nth-child(2) { top: 22px; }
+      .nav-toggle span:nth-child(3) { top: 28px; }
+
+      .nav-toggle[aria-expanded="true"] span:nth-child(1) { top: 22px; transform: rotate(45deg); }
+      .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+      .nav-toggle[aria-expanded="true"] span:nth-child(3) { top: 22px; transform: rotate(-45deg); }
+
+      /* ---- full-width dropdown panel ---- */
       .nav-links {
-        width: 100%;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        gap: 4px;
-        overflow: visible;
-        padding: 5px 0 8px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: calc(100dvh - 100%);
+        display: block;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding: 18px 20px calc(28px + env(safe-area-inset-bottom));
+        background: #07101a;
+        border-top: 1px solid rgba(133, 204, 235, 0.12);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
       }
 
       .nav-links li {
-        flex: 1 1 0;
-        min-width: 0;
+        width: auto;
       }
 
-      .nav-links a {
+      .nav-links li a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        min-height: 34px;
-        padding: 0 3px;
-        border-radius: 9px;
-        font-size: clamp(0.58rem, 2.8vw, 0.72rem);
-        letter-spacing: -0.015em;
-        white-space: nowrap;
+        min-height: 0;
+        padding: 26px 16px;
+        border: 0;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+        color: #f4efe8;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        white-space: normal;
+      }
+
+      .nav-links li a::after {
+        content: "\2192";
+        color: #8a9aa0;
+        font-size: 1.3rem;
+        letter-spacing: 0;
+      }
+
+      .nav-links li a:hover,
+      .nav-links li a:focus-visible,
+      .nav-links li a:active,
+      .nav-links li a.active {
+        transform: none;
+        background: none;
+        box-shadow: none;
+        text-shadow: none;
+        color: #35d7e8;
+      }
+
+      .nav-links li a.active::after,
+      .nav-links li a:hover::after {
+        color: #35d7e8;
+      }
+
+      .nav-links li.nav-cta-item {
+        display: block;
+        margin-top: 14px;
+      }
+
+      .nav-links li.nav-cta-item a.nav-cta {
+        justify-content: center;
+        gap: 12px;
+        padding: 20px 16px;
+        border-radius: 999px;
+        background: #35d7e8;
+        color: #04181c;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      .nav-links li.nav-cta-item a.nav-cta::after {
+        color: #04181c;
+        font-size: 1.2rem;
+      }
+
+      .site-nav {
+        z-index: 90;
+      }
+
+      body.nav-open {
+        overflow: hidden;
       }
 
       .hero {
@@ -2144,6 +2308,10 @@
         bottom: max(12px, env(safe-area-inset-bottom));
       }
 
+      body.gallery-year-keyboard-open .floating-contact-panel {
+        --gallery-contact-base-bottom: max(12px, env(safe-area-inset-bottom));
+      }
+
       .floating-links a.floating-contact {
         width: min(176px, calc(100vw - 32px));
         min-height: 48px;
@@ -2170,7 +2338,7 @@
       .gallery-date-panel {
         right: auto;
         left: 0;
-        width: min(260px, calc(100vw - 56px));
+        width: min(220px, calc(100vw - 56px));
         gap: 10px;
         padding: 10px;
         border-radius: 14px;
@@ -2827,8 +2995,6 @@
     @media (max-width: 380px) {
       .brand-copy strong { font-size: 0.7rem; }
       .brand-copy span { font-size: 0.64rem; }
-      .nav-links { gap: 3px; }
-      .nav-links a { padding: 0 1px; font-size: 0.52rem; }
       .gallery-date-toggle { min-width: 0; }
       .gallery-grid { gap: 6px; }
       .gallery-card figcaption { padding: 6px; }
@@ -2870,13 +3036,17 @@
           <span>Accounting, compliance, and financial support</span>
         </div>
       </a>
-      <ul class="nav-links">
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navMenu">
         <li><a href="#about">Profile</a></li>
         <li><a href="#about-us-gallery">About Us</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#industries">Industries</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta-item"><a class="nav-cta" href="#contact">Request a Consultation</a></li>
       </ul>
     </div>
   </nav>
@@ -2989,8 +3159,8 @@
               </svg>
             </button>
             <div class="gallery-date-panel" id="galleryDatePanel" hidden>
-              <input id="galleryYear" class="gallery-year-select" type="search" list="galleryYears" placeholder="All years" autocomplete="off" aria-label="Search gallery by year">
-              <datalist id="galleryYears"></datalist>
+              <input id="galleryYear" class="gallery-year-select" type="text" inputmode="numeric" placeholder="Search year" autocomplete="off" aria-label="Search gallery by year" aria-autocomplete="list" aria-controls="galleryYearSuggestions">
+              <div id="galleryYearSuggestions" class="gallery-year-suggestions" role="listbox" aria-label="Matching gallery years" hidden></div>
               <div class="gallery-month-grid" id="galleryMonthGrid" role="group" aria-label="Filter by month">
                 <button type="button" class="gallery-month-option" data-month="all" aria-pressed="true">All months</button>
                 <button type="button" class="gallery-month-option" data-month="1" aria-pressed="false">Jan</button>
@@ -3482,6 +3652,7 @@
           year: "2024",
           src: "/about-me/2024/1.1_1.jpg",
           type: "image",
+          addedAt: 1794079261921.6733,
           version: "201253-mw6sgkz7",
           title: "Gallery Photo",
           description: "A photo from January 1, 2024.",
@@ -3492,6 +3663,7 @@
           year: "2025",
           src: "/about-me/2025/1.1_4.jpg",
           type: "image",
+          addedAt: 1794075259692.0144,
           version: "199004-mw56skmn",
           title: "Mountain at Dusk",
           description: "A rugged mountain ridge glows beneath a soft pink evening sky, ARL.",
@@ -3499,8 +3671,19 @@
         },
         {
           year: "2025",
+          src: "/about-me/2025/3.3_1.jpg",
+          type: "image",
+          addedAt: 1794506350540.2212,
+          version: "563097-mwduqca4",
+          title: "Gallery Photo",
+          description: "A photo from March 1, 2025.",
+          date: "2025-03-01"
+        },
+        {
+          year: "2025",
           src: "/about-me/2025/2.12_1.jpg",
           type: "image",
+          addedAt: 1794076231299.836,
           version: "2069010-mw6qn9f5",
           title: "Gallery Photo",
           description: "A photo from December 1, 2025.",
@@ -3511,6 +3694,7 @@
           year: "2026",
           src: "/about-me/2026/6.1_2.jpg",
           type: "image",
+          addedAt: 1794076877646.4138,
           version: "5516947-mw6r1clx",
           title: "Gallery Photo",
           description: "A photo from January 2, 2026.",
@@ -3518,8 +3702,29 @@
         },
         {
           year: "2026",
+          src: "/about-me/2026/8.1_3.jpg",
+          type: "image",
+          addedAt: 1794568780372.2288,
+          version: "734650-mwevu4qk",
+          title: "Gallery Photo",
+          description: "A photo from January 3, 2026.",
+          date: "2026-01-03"
+        },
+        {
+          year: "2026",
+          src: "/about-me/2026/7.1_4.jpg",
+          type: "image",
+          addedAt: 1794568796803.697,
+          version: "1314807-mwdwccft",
+          title: "Gallery Photo",
+          description: "A photo from January 4, 2026.",
+          date: "2026-01-04"
+        },
+        {
+          year: "2026",
           src: "/about-me/2026/2.1_19.jpg",
           type: "image",
+          addedAt: 1794075003890.243,
           version: "12204443-mw544ye4",
           title: "Cloudscape",
           description: "Soft clouds fill the sky in this gentle, dreamy scene.",
@@ -3529,6 +3734,7 @@
           year: "2026",
           src: "/about-me/2026/2.1_19.mp4",
           type: "video",
+          addedAt: 1794170582538.321,
           version: "35806769-msfnhmo4",
           title: "Gallery Video",
           description: "A video from January 19, 2026.",
@@ -3538,6 +3744,7 @@
           year: "2026",
           src: "/about-me/2026/1.1_20.jpg",
           type: "image",
+          addedAt: 1794074992982.2043,
           version: "2191403-mw5468x6",
           title: "Floral Design",
           description: "A delicate floral illustration adds a calm, personal touch to a deep blue background.",
@@ -3547,6 +3754,7 @@
           year: "2026",
           src: "/about-me/2026/3.1_25.jpg",
           type: "image",
+          addedAt: 1794074998181.0847,
           version: "2653254-mw545t1r",
           title: "Open Sky",
           description: "A peaceful view of open sky and clouds, captured in a soft pastel palette.",
@@ -3556,6 +3764,7 @@
           year: "2026",
           src: "/about-me/2026/4.2_1.jpg",
           type: "image",
+          addedAt: 1794075012315.8608,
           version: "1734424-mw56rinp",
           title: "Sunset Valley",
           description: "A glowing sunset stretches across a peaceful valley and distant mountains.",
@@ -3565,6 +3774,7 @@
           year: "2026",
           src: "/about-me/2026/8.3_1.jpg",
           type: "image",
+          addedAt: 1794075034966.582,
           version: "683139-mw56rxio",
           title: "Autumn Colors",
           description: "Vibrant red leaves frame a sunlit tree above a lush green garden.",
@@ -3574,7 +3784,8 @@
           year: "2026",
           src: "/about-me/2026/7.4_1.jpg",
           type: "image",
-          version: "1125455-mw56sdb0",
+          addedAt: 1794075029044.6333,
+          version: "1125455-mwdx6qgk",
           title: "Evening Storm",
           description: "Lightning illuminates dramatic clouds over a quiet waterside landscape.",
           date: "2026-04-01"
@@ -3583,6 +3794,7 @@
           year: "2026",
           src: "/about-me/2026/5.5_1.jpg",
           type: "image",
+          addedAt: 1794075046863.8428,
           version: "353152-mw56srw6",
           title: "Lakeside Sky",
           description: "Blue evening clouds and warm sunset colors reflect across a calm lake.",
@@ -3595,7 +3807,7 @@
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
       ];
       const galleryYear = document.getElementById("galleryYear");
-      const galleryYears = document.getElementById("galleryYears");
+      const galleryYearSuggestions = document.getElementById("galleryYearSuggestions");
       const galleryGrid = document.getElementById("galleryGrid");
       const galleryShowMore = document.getElementById("galleryShowMore");
       const galleryShowMoreLabel = galleryShowMore.querySelector("span");
@@ -3615,6 +3827,7 @@
       let selectedMonth = "all";
       const defaultGalleryYear = "2026";
       let availableGalleryYears = [];
+      let allGalleryYearSuggestions = [];
       let selectedYear = defaultGalleryYear;
       let galleryExpanded = false;
       let lightboxTrigger = null;
@@ -3716,28 +3929,61 @@
         }
       }
 
-      function renderGalleryFilters() {
-        const allYearsOption = document.createElement("option");
-        allYearsOption.value = "All years";
-        galleryYears.append(allYearsOption);
-        availableGalleryYears.forEach((year) => {
-          const option = document.createElement("option");
-          option.value = year;
-          galleryYears.append(option);
+      function renderGalleryYearSuggestions(query = galleryYear.value.trim()) {
+        const normalizedQuery = query.toLowerCase();
+        const suggestedYears = normalizedQuery
+          ? allGalleryYearSuggestions.filter((year) => year.startsWith(normalizedQuery))
+          : availableGalleryYears;
+        const options = document.createDocumentFragment();
+        galleryYearSuggestions.replaceChildren();
+        suggestedYears.forEach((year) => {
+          const option = document.createElement("div");
+          option.className = "gallery-year-suggestion";
+          option.setAttribute("role", "option");
+          option.setAttribute("aria-selected", String(year === selectedYear));
+          option.tabIndex = 0;
+          option.textContent = year;
+          option.addEventListener("pointerdown", (event) => {
+            event.preventDefault();
+            selectGalleryYear(year);
+          });
+          option.addEventListener("click", () => {
+            selectGalleryYear(year);
+          });
+          option.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              selectGalleryYear(year);
+            }
+          });
+          options.append(option);
         });
+        galleryYearSuggestions.append(options);
+        galleryYearSuggestions.hidden = !suggestedYears.length;
+      }
+
+      function selectGalleryYear(year) {
+        galleryYear.value = year;
+        selectedYear = year;
+        galleryYearSuggestions.hidden = true;
+        updateGalleryDateLabel();
+        renderGallery();
+        galleryYear.focus({ preventScroll: true });
       }
 
       function initializeGallery() {
         availableGalleryYears = [...new Set(galleryItems.map((item) => item.year))]
           .sort((a, b) => Number(b) - Number(a));
-        selectedYear = availableGalleryYears.includes(selectedYear)
-          ? selectedYear
-          : availableGalleryYears.includes(defaultGalleryYear)
-            ? defaultGalleryYear
-            : availableGalleryYears[0] || defaultGalleryYear;
-        galleryYears.replaceChildren();
-        renderGalleryFilters();
-        galleryYear.value = selectedYear;
+        allGalleryYearSuggestions = [...new Set([
+          ...Array.from({ length: 9999 }, (_, index) => String(index + 1).padStart(4, "0")),
+          ...availableGalleryYears
+        ])].sort((a, b) => Number(a) - Number(b));
+        selectedYear = selectedYear === "all"
+          ? "all"
+          : availableGalleryYears.includes(selectedYear)
+            ? selectedYear
+            : availableGalleryYears[0] || "all";
+        galleryYear.value = selectedYear === "all" ? "" : selectedYear;
         updateGalleryDateLabel();
         renderGallery();
       }
@@ -3759,6 +4005,54 @@
         galleryDatePicker.setAttribute("aria-expanded", String(open));
         galleryDateToggle.setAttribute("aria-expanded", String(open));
         galleryDatePanel.hidden = !open;
+        if (open) renderGalleryYearSuggestions();
+        syncGalleryYearKeyboardPosition();
+        if (open && !panel.hidden) setOpen(false);
+      }
+
+      function syncGalleryYearKeyboardPosition() {
+        const viewport = window.visualViewport;
+        const layoutHeight = Math.max(window.innerHeight, document.documentElement.clientHeight);
+        const viewportHeight = viewport?.height ?? layoutHeight;
+        const viewportTop = viewport?.offsetTop ?? 0;
+        const keyboardGap = Math.max(0, layoutHeight - viewportTop - viewportHeight);
+        const keyboardIsOpen = !galleryDatePanel.hidden
+          && document.activeElement === galleryYear
+          && (keyboardGap > 80 || layoutHeight - viewportHeight > 80);
+
+        document.body.classList.toggle("gallery-year-keyboard-open", keyboardIsOpen);
+        if (keyboardIsOpen) {
+          document.body.style.setProperty("--gallery-keyboard-gap", `${keyboardGap}px`);
+        } else {
+          document.body.style.removeProperty("--gallery-keyboard-gap");
+        }
+      }
+
+      galleryYear.addEventListener("focus", syncGalleryYearKeyboardPosition);
+      galleryDatePanel.addEventListener("focusout", syncGalleryYearKeyboardPosition);
+      window.visualViewport?.addEventListener("resize", syncGalleryYearKeyboardPosition);
+      window.visualViewport?.addEventListener("scroll", syncGalleryYearKeyboardPosition);
+      window.addEventListener("resize", syncGalleryYearKeyboardPosition);
+
+      function getGalleryFileSortParts(item) {
+        const fileName = new URL(item.src, document.baseURI).pathname.split("/").pop() || "";
+        const match = fileName.match(/^(\d+)\.(\d{1,2})_(\d{1,2})\./);
+        return match
+          ? [Number(match[2]), Number(match[3]), Number(match[1])]
+          : [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY];
+      }
+
+      function compareGalleryItems(a, b) {
+        const aFileParts = getGalleryFileSortParts(a);
+        const bFileParts = getGalleryFileSortParts(b);
+        const aAddedAt = Number.isFinite(a.addedAt) ? a.addedAt : Number.MAX_SAFE_INTEGER;
+        const bAddedAt = Number.isFinite(b.addedAt) ? b.addedAt : Number.MAX_SAFE_INTEGER;
+        return Number(a.year) - Number(b.year)
+          || aFileParts[0] - bFileParts[0]
+          || aFileParts[1] - bFileParts[1]
+          || (a.type === b.type ? 0 : a.type === "image" ? -1 : 1)
+          || aAddedAt - bAddedAt
+          || aFileParts[2] - bFileParts[2];
       }
 
       function renderGallery() {
@@ -3769,7 +4063,7 @@
           const monthMatches = selectedMonth === "all" || String(date.getMonth() + 1) === selectedMonth;
           const yearMatches = selectedYear === "all" || item.year === selectedYear;
           return monthMatches && yearMatches;
-        });
+        }).sort(compareGalleryItems);
         lightboxItems = filtered;
 
         galleryGrid.replaceChildren();
@@ -4075,9 +4369,13 @@
           response.headers.get("last-modified"),
           response.headers.get("content-length")
         ].filter(Boolean).join("|");
+        const lastModified = Date.parse(response.headers.get("last-modified") || "");
         if (response.body) await response.body.cancel();
         if (!version) throw new Error(`The server did not provide a version for gallery image ${imageUrl}.`);
-        return version;
+        return {
+          version,
+          lastModified: Number.isFinite(lastModified) ? lastModified : Number.MAX_SAFE_INTEGER
+        };
       }
 
       async function discoverGalleryImages() {
@@ -4121,19 +4419,18 @@
             const item = getGalleryMediaFromFile(year, fileName);
             if (!item) return null;
             item.src = fileUrl.href;
-            item.version = await getGalleryImageVersion(fileUrl.href);
+            const previousItem = galleryItems.find((candidate) =>
+              getGalleryItemKey(candidate) === getGalleryItemKey(item)
+            );
+            const imageVersion = await getGalleryImageVersion(fileUrl.href);
+            item.version = imageVersion.version;
+            item.addedAt = previousItem?.addedAt ?? imageVersion.lastModified;
             return item;
           });
           discoveredItems.push(...(await Promise.all(yearItems)).filter(Boolean));
         }
 
-        return discoveredItems.sort((a, b) =>
-          Number(a.year) - Number(b.year)
-          || a.month - b.month
-          || a.day - b.day
-          || (a.type === b.type ? 0 : a.type === "image" ? -1 : 1)
-          || a.imageNumber - b.imageNumber
-        );
+        return discoveredItems.sort(compareGalleryItems);
       }
 
       async function refreshGallery() {
@@ -4283,16 +4580,28 @@
       galleryDateToggle.addEventListener("click", () => {
         setGalleryDatePickerOpen(galleryDatePanel.hidden);
       });
-      galleryYear.addEventListener("input", () => {
+      function updateGalleryYearFilter() {
         const year = galleryYear.value.trim();
-        if (year === "" || year.toLowerCase() === "all years") {
+        if (!year || year.toLowerCase() === "all years") {
           selectedYear = "all";
-          galleryYear.value = "All years";
         } else {
-          selectedYear = year;
+          selectedYear = availableGalleryYears.includes(year) ? year : "all";
         }
         updateGalleryDateLabel();
         renderGallery();
+      }
+      function handleGalleryYearInput() {
+        updateGalleryYearFilter();
+        renderGalleryYearSuggestions(galleryYear.value);
+      }
+      galleryYear.addEventListener("input", handleGalleryYearInput);
+      galleryYear.addEventListener("change", updateGalleryYearFilter);
+      galleryYear.addEventListener("focus", () => {
+        galleryYear.select();
+        renderGalleryYearSuggestions();
+      });
+      galleryYear.addEventListener("keyup", () => {
+        renderGalleryYearSuggestions(galleryYear.value);
       });
       galleryShowMore.addEventListener("click", () => {
         galleryExpanded = !galleryExpanded;
@@ -4306,10 +4615,17 @@
         });
       });
       document.addEventListener("click", (event) => {
-        if (!galleryDatePicker.contains(event.target)) setGalleryDatePickerOpen(false);
+        if (!galleryDatePicker.contains(event.target)) {
+          galleryYearSuggestions.hidden = true;
+          setGalleryDatePickerOpen(false);
+        }
       });
       document.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
+          if (!galleryYearSuggestions.hidden) {
+            galleryYearSuggestions.hidden = true;
+            return;
+          }
           if (document.fullscreenElement === galleryLightboxVideoStage || document.fullscreenElement === galleryLightboxVideo) {
             event.preventDefault();
             document.exitFullscreen().catch((error) => {
@@ -4499,7 +4815,7 @@
           if (activeService && !form.hidden) {
             focusQuestionInput();
           } else if (!tabs.hidden) {
-            tabs.querySelector("button")?.focus();
+            tabs.querySelector("button")?.focus({ preventScroll: true });
           } else {
             backButton.focus();
           }
@@ -4513,7 +4829,6 @@
         busy = value;
         sendButton.disabled = value;
         listenButton.disabled = value || !SpeechRecognition;
-        backButton.disabled = value;
         [...tabs.children].forEach((tab) => {
           tab.disabled = value;
         });
@@ -4655,28 +4970,28 @@
         };
         const descriptions = {
           accounting: {
-            en: "We help keep day-to-day accounting records, ledgers, and reconciliations organized for clearer financial visibility.",
-            tl: "Tumutulong kami sa pag-aayos ng araw-araw na accounting records, ledgers, at reconciliations para mas malinaw ang financial records ng negosyo."
+            en: "We organize day-to-day transactions, ledgers, bank reconciliations, and payables/receivables. This is useful for businesses that need orderly records and clearer financial visibility.",
+            tl: "Inaayos namin ang araw-araw na transactions, ledgers, bank reconciliations, at payables/receivables. Kapaki-pakinabang ito sa negosyong nangangailangan ng maayos na records at mas malinaw na financial visibility."
           },
           bir: {
-            en: "We assist with tax-compliance processes, required filings, and supporting documentation aligned with business obligations.",
-            tl: "Tumutulong kami sa tax-compliance processes, mga kailangang filing, at kaugnay na dokumentasyon ayon sa business obligations."
+            en: "We support preparation and filing of monthly, quarterly, and annual tax returns, including income tax, VAT/percentage tax, and withholding tax, with supporting documentation. Exact tax amounts and deadlines depend on the business.",
+            tl: "Tumutulong kami sa paghahanda at pag-file ng monthly, quarterly, at annual tax returns gaya ng income tax, VAT/percentage tax, at withholding tax, kasama ang supporting documents. Nakadepende sa negosyo ang eksaktong tax amount at deadline."
           },
           "sss-hdmf-phic": {
-            en: "We coordinate support for employer and employee contribution requirements for SSS, HDMF, and PHIC.",
-            tl: "Tumutulong kami sa pag-coordinate ng employer at employee contribution requirements para sa SSS, HDMF, at PHIC."
+            en: "We coordinate employer and employee SSS, HDMF, and PHIC contribution computation, reporting, remittance, and employee records. This is useful for employers managing recurring government-contribution requirements.",
+            tl: "Kino-coordinate namin ang computation, reporting, remittance, at employee records para sa employer at employee contributions sa SSS, HDMF, at PHIC. Kapaki-pakinabang ito sa employers na namamahala ng regular na government-contribution requirements."
           },
           "financial-statements": {
-            en: "We prepare financial reports and supporting schedules to help management understand business performance.",
-            tl: "Naghahanda kami ng financial reports at supporting schedules para matulungan ang management na maunawaan ang performance ng negosyo."
+            en: "We prepare balance sheets, income statements, cash-flow statements, and supporting notes so management and stakeholders can understand business performance and support planning, expansion, bank-loan, or investor reporting.",
+            tl: "Naghahanda kami ng balance sheets, income statements, cash-flow statements, at supporting notes para maunawaan ng management at stakeholders ang performance ng negosyo at masuportahan ang planning, expansion, bank-loan, o investor reporting."
           },
           audit: {
-            en: "We help organize compliance-related records and support documentation readiness and internal review preparation.",
-            tl: "Tumutulong kami sa pag-aayos ng compliance records, paghahanda ng dokumento, at paghahanda para sa internal review."
+            en: "We organize compliance records, schedules, and supporting vouchers and help prepare for internal review or financial and tax audits. This is documentation assistance and does not guarantee an audit result.",
+            tl: "Inaayos namin ang compliance records, schedules, at supporting vouchers at tumutulong maghanda para sa internal review o financial at tax audit. Dokumentasyon ang suportang ito at hindi nito ginagarantiya ang resulta ng audit."
           },
           "property-transfer": {
-            en: "We provide document coordination and administrative support for real-property transfer processes.",
-            tl: "Nagbibigay kami ng document coordination at administrative support para sa proseso ng real-property transfer."
+            en: "We coordinate administrative documents for real-property transfers, including tax clearances, BIR CAR, local transfer-tax processing, and title updating. This is useful when a client is handling a property transfer.",
+            tl: "Kino-coordinate namin ang administrative documents para sa real-property transfer, kabilang ang tax clearances, BIR CAR, local transfer-tax processing, at pag-update ng titulo. Kapaki-pakinabang ito kapag may inaasikasong paglilipat ng property."
           },
           "company-process": {
             en: "Our engagement starts with Initial Discovery, where we learn about your current setup and priorities. Next is Service Alignment, where we identify the right mix of support. Ongoing Coordination keeps records, submissions, and required financial outputs moving.",
@@ -4690,7 +5005,23 @@
       }
 
       function isProcessQuestion(question) {
-        return /\b(process|proseso|workflow|engagement flow|steps?|hakbang|paano kayo nagsisimula|how do you work|how does it work|how it works)\b/i.test(question);
+        return /\b(process|proseso|workflow|engagement flow|steps?|hakbang|paano kayo nagsisimula|how do you work|how does it work|how it works)\b|paano.{0,30}\bgumag?ana\w*/i.test(question);
+      }
+
+      function isServicePurposeQuestion(question) {
+        return /\b(para saan|para ano|ano ang gamit|ano gamit|ano ang ginagawa|anong ginagawa|gamit nito|purpose of|what is the purpose|what does (?:it|this|that|the service) do|what (?:does|can)\b.{0,35}\bdo|what(?:'s| is) (?:it|this|that) for|function of)\b|(?:ano.{0,20}(?:function|purpose|ginagawa)|(?:function|purpose).{0,20}ng serbisyo)/i.test(question);
+      }
+
+      function isServiceUseCaseQuestion(question) {
+        return /\bwhere\b.{0,35}\b(?:use|used|useful|apply|applied)\b|\bwhat\b.{0,25}\b(?:used|useful)\b.{0,10}\bfor\b|\bhow\b.{0,35}\b(?:use|used|useful|apply|applied)\b|\buse cases?\b|\bwhen\b.{0,35}\b(?:need|useful|use)\b|(?:kung saan|saan).{0,35}(?:gamit|magagamit|kailangan|mapapakinabangan)|(?:kailan|kanino).{0,30}(?:kailangan|gamit|magagamit)|paano.{0,30}(?:magagamit|ginagamit|makikinabang)/i.test(question);
+      }
+
+      function isServiceImportanceQuestion(question) {
+        return /\bhow important\b|\bwhy\b.{0,30}\b(?:important|matter)\b|\bin what way\b.{0,35}\b(?:important|matters?|helpful|useful)\b|\bwhat(?:'s| is) (?:the )?importance\b|\bbenefits?\b|\bhow\b.{0,20}help(?:ful)?\b|\bimportance\b|(?:gaano|gano).{0,30}kahalaga|bakit.{0,30}mahalaga|kahalagahan|paano.{0,30}(?:nakakatulong|nakatutulong|tumutulong)|(?:ano|anong).{0,20}benepisyo/i.test(question);
+      }
+
+      function isServiceHowQuestion(question) {
+        return /\bhow (?:does|do) (?:it|this|that) work\b|\bhow it works\b|\bhow (?:does|do) .{0,30}\bwork\b|paano.{0,30}(?:gumag?ana\w*|ginagawa|ginagamit)/i.test(question);
       }
 
       function isContactQuestion(question) {
@@ -4716,6 +5047,76 @@
         const respond = (en, tl = en) => ({ answer: language === "tl" ? tl : en, language });
         const normalized = question.toLowerCase();
 
+        if (isServiceImportanceQuestion(question)) {
+          const importanceAnswers = {
+            accounting: [
+              "Organized accounting records and reconciliations give a business clearer financial visibility and help keep its day-to-day records in order.",
+              "Mahalaga ang maayos na accounting records at reconciliations dahil nagbibigay ang mga ito ng mas malinaw na financial visibility at tumutulong panatilihing organisado ang pang-araw-araw na records ng negosyo."
+            ],
+            bir: [
+              "BIR Filing and Compliance helps coordinate required tax filings and supporting documents so businesses can manage their stated tax-compliance responsibilities.",
+              "Mahalaga ang BIR Filing and Compliance dahil tumutulong itong i-coordinate ang mga kailangang tax filing at supporting documents para maasikaso ng negosyo ang tax-compliance responsibilities nito."
+            ],
+            "sss-hdmf-phic": [
+              "This support helps coordinate employer and employee contribution requirements, reporting, remittance, and related records in one service.",
+              "Mahalaga ang serbisyong ito dahil kino-coordinate nito ang employer at employee contribution requirements, reporting, remittance, at kaugnay na records."
+            ],
+            "financial-statements": [
+              "Financial statements help management and stakeholders understand business performance and provide organized reporting for needs such as planning, expansion, or bank-loan discussions.",
+              "Mahalaga ang financial statements dahil nakatutulong ang mga ito sa management at stakeholders na maunawaan ang performance ng negosyo at nagbibigay ng organisadong reports para sa planning, expansion, o pagtalakay ng bank loan."
+            ],
+            audit: [
+              "Organized records and supporting documents help a business prepare for internal review or an audit. This assistance does not guarantee an audit result.",
+              "Mahalaga ang maayos na records at supporting documents dahil nakatutulong ang mga ito sa paghahanda para sa internal review o audit. Hindi ginagarantiya ng serbisyong ito ang resulta ng audit."
+            ],
+            "property-transfer": [
+              "Coordinating transfer documents and administrative steps helps keep the property-transfer process organized, including the clearances and title-updating support listed on the website.",
+              "Mahalaga ang pag-coordinate ng transfer documents at administrative steps dahil nakatutulong itong maging organisado ang proseso ng paglilipat ng property, kabilang ang mga clearance at suporta sa pag-update ng titulo na nakalista sa website."
+            ],
+            "company-process": [
+              "These services help businesses keep records organized, coordinate compliance and reporting work, and reduce administrative pressure so owners can focus on operations and growth.",
+              "Mahalaga ang mga serbisyong ito dahil tumutulong ang mga ito sa pag-aayos ng records, pag-coordinate ng compliance at reporting work, at pagbawas ng administrative pressure para makapagtuon ang owners sa operasyon at paglago ng negosyo."
+            ]
+          };
+          const answer = importanceAnswers[activeService?.id];
+          if (answer) return respond(answer[0], answer[1]);
+        }
+
+        if (isServiceUseCaseQuestion(question)) {
+          const useCases = {
+            accounting: [
+              "Accounting and Bookkeeping is useful in day-to-day business operations for recording transactions, reconciling bank activity, and keeping ledgers and payables/receivables organized.",
+              "Magagamit ang Accounting and Bookkeeping sa araw-araw na operasyon ng negosyo para itala ang transactions, i-reconcile ang bank activity, at ayusin ang ledgers at payables/receivables."
+            ],
+            bir: [
+              "BIR Filing and Compliance is useful when a business needs help preparing and coordinating its required monthly, quarterly, or annual tax returns and supporting documents. Specific tax amounts and deadlines depend on the business.",
+              "Magagamit ang BIR Filing and Compliance kapag nangangailangan ang negosyo ng tulong sa paghahanda at pag-coordinate ng mga kailangang monthly, quarterly, o annual tax return at supporting documents. Nakadepende sa negosyo ang eksaktong tax amount at deadline."
+            ],
+            "sss-hdmf-phic": [
+              "This service is useful for employers coordinating employee contribution requirements, reports, remittances, and related records for SSS, HDMF, and PHIC.",
+              "Magagamit ang serbisyong ito ng employers na nagko-coordinate ng employee contribution requirements, reports, remittances, at kaugnay na records para sa SSS, HDMF, at PHIC."
+            ],
+            "financial-statements": [
+              "Financial statements are useful when management or stakeholders need to understand business performance, or when organized reporting is needed for planning, expansion, bank-loan, or investor discussions.",
+              "Magagamit ang financial statements kapag kailangang maunawaan ng management o stakeholders ang performance ng negosyo, o kailangan ng organisadong reports para sa planning, expansion, bank-loan, o investor discussions."
+            ],
+            audit: [
+              "Compliance Audit Assistance is useful when a business is organizing records and supporting documents for internal review or preparation for a financial or tax audit. It does not guarantee an audit result.",
+              "Magagamit ang Compliance Audit Assistance kapag inaayos ng negosyo ang records at supporting documents para sa internal review o paghahanda para sa financial o tax audit. Hindi nito ginagarantiya ang resulta ng audit."
+            ],
+            "property-transfer": [
+              "Property Transfer Documentation is useful when a client is handling a real-property transfer and needs coordination of related documents, such as tax clearances, BIR CAR, local transfer-tax processing, and title updating.",
+              "Magagamit ang Property Transfer Documentation kapag may inaasikasong real-property transfer at kailangan ng coordination sa mga kaugnay na dokumento, gaya ng tax clearances, BIR CAR, local transfer-tax processing, at pag-update ng titulo."
+            ],
+            "company-process": [
+              "These services are useful to businesses that need organized accounting records, tax and contribution coordination, financial reporting, or document support for a property transfer. The website highlights SMEs, professional service firms, and property or asset transactions.",
+              "Magagamit ang mga serbisyong ito ng negosyong nangangailangan ng maayos na accounting records, tax at contribution coordination, financial reporting, o dokumentasyon para sa property transfer. Kabilang sa binanggit sa website ang SMEs, professional service firms, at property o asset transactions."
+            ]
+          };
+          const answer = useCases[activeService?.id];
+          if (answer) return respond(answer[0], answer[1]);
+        }
+
         if (/\bachiev\w*|\bachiv\w*|\baward\w*|\baccomplish\w*|\bmilestone\w*|(?:tagumpay|natamo|nakamit|parangal|nagawa.*(?:taon|nyo|ninyo))/i.test(question)) {
           const galleryByYear = galleryItems.reduce((counts, item) => {
             counts[item.year] = (counts[item.year] || 0) + 1;
@@ -4734,10 +5135,46 @@
         if (isContactQuestion(question)) {
           return respond(getContactAnswer("en"), getContactAnswer("tl"));
         }
+        if (isServicePurposeQuestion(question) || isServiceHowQuestion(question)) {
+          if (activeService?.id === "company-process") {
+            return respond(
+              "Awesome Accounting Services supports businesses with accounting, bookkeeping, tax and compliance coordination, financial reporting, and documentation support.",
+              "Tumutulong ang Awesome Accounting Services sa mga negosyo sa accounting, bookkeeping, tax at compliance coordination, financial reporting, at dokumentasyon."
+            );
+          }
+          const serviceAnswers = {
+            accounting: [
+              "Accounting and Bookkeeping records day-to-day transactions, maintains ledgers, reconciles bank activity, and tracks accounts payable and receivable. It is useful for keeping routine business records organized and improving financial visibility.",
+              "Itinatala ng Accounting and Bookkeeping ang araw-araw na transactions, inaayos ang ledgers, nagre-reconcile ng bank activity, at sumusubaybay sa accounts payable at receivable. Nakakatulong ito sa pag-aayos ng regular na business records at pagpapalinaw ng financial visibility."
+            ],
+            bir: [
+              "BIR Filing and Compliance supports preparation and filing of monthly, quarterly, and annual returns, including income tax, VAT/percentage tax, and withholding tax, with supporting documents. Exact tax amounts and deadlines depend on the business.",
+              "Tumutulong ang BIR Filing and Compliance sa paghahanda at pag-file ng monthly, quarterly, at annual returns gaya ng income tax, VAT/percentage tax, at withholding tax, kasama ang supporting documents. Nakadepende sa negosyo ang eksaktong tax amount at deadline."
+            ],
+            "sss-hdmf-phic": [
+              "SSS, HDMF, and PHIC Support coordinates employer and employee contribution computation, reporting, remittance, and employee records. It is useful for employers managing recurring contribution requirements.",
+              "Kino-coordinate ng SSS, HDMF, at PHIC Support ang computation, reporting, remittance, at employee records para sa employer at employee contributions. Nakakatulong ito sa employers na namamahala ng regular na contribution requirements."
+            ],
+            "financial-statements": [
+              "Financial Statements include balance sheets, income statements, cash-flow statements, notes, and supporting schedules. They help management and stakeholders understand performance and support planning, expansion, bank-loan, or investor reporting.",
+              "Kabilang sa Financial Statements ang balance sheets, income statements, cash-flow statements, notes, at supporting schedules. Tinutulungan nito ang management at stakeholders na maunawaan ang performance at sinusuportahan ang planning, expansion, bank-loan, o investor reporting."
+            ],
+            audit: [
+              "Compliance Audit Assistance organizes compliance records, schedules, and supporting vouchers and helps prepare for internal review or financial and tax audits. It does not guarantee an audit result.",
+              "Inaayos ng Compliance Audit Assistance ang compliance records, schedules, at supporting vouchers at tumutulong maghanda para sa internal review o financial at tax audit. Hindi nito ginagarantiya ang resulta ng audit."
+            ],
+            "property-transfer": [
+              "Property Transfer Documentation coordinates documents for real-property transfers, including tax clearances, BIR CAR, local transfer-tax processing, and title updating with the Registry of Deeds.",
+              "Kino-coordinate ng Property Transfer Documentation ang mga dokumento para sa real-property transfer, kabilang ang tax clearances, BIR CAR, local transfer-tax processing, at pag-update ng titulo sa Registry of Deeds."
+            ]
+          };
+          const answer = serviceAnswers[activeService?.id];
+          if (answer) return respond(answer[0], answer[1]);
+        }
         if (isProcessQuestion(question)) {
           return respond(getProcessAnswer("en"), getProcessAnswer("tl"));
         }
-        if (/\b(location|address|where are you|where.*located)\b|(?:lokasyon|address|saan kayo)/i.test(question)) {
+        if (/\b(location|address|where are you|where.*located|where are you based)\b|(?:lokasyon|address|saan kayo|nasaan kayo|matatagpuan)/i.test(question)) {
           return respond(
             "The website lists Awesome Accounting Services in General Mariano Alvarez, Calabarzon, Philippines. The map shows B-2 L-10, Brgy. Congressional Rd, Poblacion IV, General Mariano Alvarez, 4117 Cavite, Philippines.",
             "Matatagpuan ang Awesome Accounting Services sa General Mariano Alvarez, Calabarzon, Philippines. Ito ang address na nakalagay sa mapa: B-2 L-10, Brgy. Congressional Rd, Poblacion IV, General Mariano Alvarez, 4117 Cavite, Philippines."
@@ -4815,7 +5252,7 @@
       }
 
       function detectQuestionLanguage(question) {
-        const tagalogSignals = question.match(/\b(?:ano|anong|paano|pwede|puwede|maaari|ko|mo|namin|natin|kayo|ikaw|ako|ba|mga|sa|ng|ang|yung|rin|din|saan|sino|bakit|gusto|iba|ibang|hakbang|proseso|serbisyo|negosyo|kami|niyo|ninyo|nyo|ngayon|taon|naging|ilan)\b|(?:macontact|makontact|makontak|makipag-ugnayan)/gi);
+        const tagalogSignals = question.match(/\b(?:ano|anong|paano|pwede|puwede|maaari|ko|mo|namin|natin|kayo|ikaw|ako|ba|mga|sa|ng|ang|yung|yan|rin|din|saan|sino|bakit|gusto|iba|ibang|hakbang|proseso|serbisyo|negosyo|kami|niyo|ninyo|nyo|ngayon|taon|naging|ilan|gano|gaano|mahalaga|kahalaga|kahalagahan)\b|(?:macontact|makontact|makontak|makipag-ugnayan)/gi);
         return (tagalogSignals?.length || 0) > 0 ? "tl" : "en";
       }
 
@@ -4904,7 +5341,7 @@
         }
       }
 
-      async function selectService(service) {
+      function selectService(service) {
         if (activeService?.id === service.id) {
           showSelectedService();
           return;
@@ -4920,41 +5357,12 @@
           tab.setAttribute("aria-pressed", String(tab.dataset.serviceId === service.id));
         });
         showSelectedService();
-        const requestVersion = conversationVersion;
         const welcomeText = getServiceWelcome(service, lastResponseLanguage);
-        const welcomeMessage = addMessage("assistant", welcomeText, { language: lastResponseLanguage });
+        addMessage("assistant", welcomeText, { language: lastResponseLanguage });
         conversation.push({ role: "assistant", text: welcomeText });
-        setBusy(true);
-        status.textContent = "Preparing a welcome and service explanation...";
-
-        try {
-          const response = await requestAssistant({
-            action: "explain",
-            serviceId: service.id,
-            language: lastResponseLanguage,
-            websiteContext: getWebsiteContext()
-          });
-          const data = await readAssistantResponse(response, "The service explanation could not be loaded");
-          if (requestVersion !== conversationVersion) return;
-          if (typeof data.answer !== "string" || !data.answer.trim() || !["en", "tl"].includes(data.language)) {
-            throw new Error("The assistant returned an incomplete service explanation. Please try again.");
-          }
-
-          welcomeMessage.remove();
-          conversation[0] = { role: "assistant", text: data.answer };
-          lastResponseLanguage = data.language;
-          addMessage("assistant", data.answer, { language: data.language });
-          status.textContent = "Ask a follow-up question about this service.";
-        } catch (error) {
-          if (requestVersion !== conversationVersion) return;
-          console.warn("Unable to load the AI service overview.", error);
-          status.textContent = "";
-        } finally {
-          if (requestVersion === conversationVersion) {
-            setBusy(false);
-            focusQuestionInput();
-          }
-        }
+        setBusy(false);
+        status.textContent = "Ask a follow-up question about this service.";
+        focusQuestionInput();
       }
 
       function showSelectedService() {
@@ -4969,6 +5377,16 @@
       }
 
       function showServicePicker() {
+        conversationVersion += 1;
+        activeService = null;
+        conversation.length = 0;
+        questionInput.value = "";
+        resizeQuestionInput();
+        stopListening();
+        stopSpeaking();
+        log.replaceChildren();
+        [...tabs.children].forEach((tab) => tab.setAttribute("aria-pressed", "false"));
+        setBusy(false);
         panel.classList.remove("is-chat");
         syncChatViewport();
         title.textContent = "Select Services";
@@ -4977,7 +5395,10 @@
         log.hidden = true;
         form.hidden = true;
         listenButton.hidden = true;
-        tabs.querySelector(`[data-service-id="${activeService?.id || ""}"]`)?.focus();
+        tabs.querySelector("button")?.focus({ preventScroll: true });
+        status.textContent = SpeechRecognition
+          ? "Choose a service to start a conversation."
+          : "Speech recognition is not supported in this browser. You can type questions.";
       }
 
       services.forEach((service) => {
@@ -5001,7 +5422,6 @@
         sendButton.disabled = false;
         questionInput.disabled = false;
         listenButton.disabled = !SpeechRecognition;
-        backButton.disabled = false;
         questionInput.value = "";
         resizeQuestionInput();
         [...tabs.children].forEach((tab) => {
@@ -5039,7 +5459,7 @@
       function closeOverlaysOnPageScroll(event) {
         const scrollTarget = event.target;
         if (
-          document.activeElement === questionInput
+          panel.contains(document.activeElement)
           ||
           scrollTarget instanceof Node
           && (
@@ -5164,7 +5584,9 @@
             question,
             language: detectQuestionLanguage(question),
             history: conversation.slice(-8, -1),
-            websiteContext: getWebsiteContext()
+            ...(/\b(gallery|photos?|videos?|achiev\w*|awards?|milestones?)\b|(?:gallery|larawan|bidyo|tagumpay|parangal)/i.test(question)
+              ? { websiteContext: getWebsiteContext() }
+              : {})
           });
           const data = await readAssistantResponse(response, "The assistant could not answer right now");
           if (requestVersion !== conversationVersion) return;
@@ -5179,8 +5601,13 @@
         } catch (error) {
           if (requestVersion !== conversationVersion) return;
           status.textContent = error.message || "Unable to reach the assistant. Please try again.";
-          addMessage("assistant", "I could not verify an answer from the information on this website. Please contact our team and they can help with that question.", {
-            language: lastResponseLanguage,
+          const errorLanguage = detectQuestionLanguage(question);
+          const fallbackAnswer = errorLanguage === "tl"
+            ? "Hindi ko makuha ang sagot mula sa AI sa ngayon. Subukan ulit mamaya o makipag-ugnayan sa aming team para matulungan ka."
+            : "I couldn't get an answer from the AI right now. Please try again later or contact our team for help.";
+          lastResponseLanguage = errorLanguage;
+          addMessage("assistant", fallbackAnswer, {
+            language: errorLanguage,
             escalate: true
           });
         } finally {
@@ -5190,6 +5617,40 @@
           }
         }
       });
+    })();
+  </script>
+  <script>
+    (function () {
+      const toggle = document.getElementById("navToggle");
+      const menu = document.getElementById("navMenu");
+      if (!toggle || !menu) return;
+      const links = menu.querySelectorAll("a:not(.nav-cta)");
+
+      function setActive() {
+        let current = null;
+        links.forEach((a) => {
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target && target.getBoundingClientRect().top <= 140) current = a;
+        });
+        links.forEach((a) => a.classList.toggle("active", a === current));
+      }
+
+      function setMenu(open) {
+        if (open) setActive();
+        menu.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        document.body.classList.toggle("nav-open", open);
+      }
+
+      toggle.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+      // Tap anywhere (links, empty panel space, header, page) closes the menu
+      document.addEventListener("click", (e) => {
+        if (!menu.classList.contains("open")) return;
+        if (toggle.contains(e.target)) return; // the toggle handles itself
+        setMenu(false);
+      });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+      window.addEventListener("resize", () => { if (window.innerWidth > 760) setMenu(false); });
     })();
   </script>
 </body>

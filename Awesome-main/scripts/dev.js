@@ -4,7 +4,10 @@ const path = require("node:path");
 
 const root = path.join(__dirname, "..");
 const galleryRoot = path.join(root, "public", "about-me");
+const outputGalleryRoot = path.join(root, "..", "public", "public", "about-me");
 const generatorPath = path.join(__dirname, "generate-gallery-manifest.js");
+const rootBuildPath = path.join(root, "..", "scripts", "vercel-build.js");
+const syncGalleryMedia = require("./sync-gallery-media");
 const mediaPattern = /\.(jpg|jpeg|png|gif|webp|mp4|webm|ogv)$/i;
 
 const envFile = [path.join(root, ".env"), path.join(root, "..", ".env")]
@@ -23,14 +26,14 @@ if (envFile) {
   }
 }
 
-function getGallerySignature() {
-  if (!fs.existsSync(galleryRoot)) return "";
+function getGalleryRootSignature(directory) {
+  if (!fs.existsSync(directory)) return "";
 
   const entries = [];
-  for (const yearFolder of fs.readdirSync(galleryRoot, { withFileTypes: true })) {
+  for (const yearFolder of fs.readdirSync(directory, { withFileTypes: true })) {
     if (!yearFolder.isDirectory() || !/^\d{4}$/.test(yearFolder.name)) continue;
 
-    const yearPath = path.join(galleryRoot, yearFolder.name);
+    const yearPath = path.join(directory, yearFolder.name);
     entries.push(`${yearFolder.name}/`);
     for (const file of fs.readdirSync(yearPath, { withFileTypes: true })) {
       if (!file.isFile() || !mediaPattern.test(file.name)) continue;
@@ -42,18 +45,27 @@ function getGallerySignature() {
   return entries.sort().join("|");
 }
 
+function getGallerySignature() {
+  return `${getGalleryRootSignature(galleryRoot)}||${getGalleryRootSignature(outputGalleryRoot)}`;
+}
+
 function regenerateGallery() {
-  const result = spawnSync(process.execPath, [generatorPath], { cwd: root, stdio: "inherit" });
+  if (!fs.existsSync(rootBuildPath)) syncGalleryMedia();
+  const buildPath = fs.existsSync(rootBuildPath) ? rootBuildPath : generatorPath;
+  const workingDirectory = path.dirname(buildPath);
+  const result = spawnSync(process.execPath, [buildPath], { cwd: workingDirectory, stdio: "inherit" });
   if (result.error) {
-    console.error("Could not regenerate the gallery manifest.", result.error);
+    console.error("Could not rebuild the gallery.", result.error);
     return false;
   }
   if (result.status !== 0) {
-    console.error(`Gallery manifest generation failed with exit code ${result.status}.`);
+    console.error(`Gallery build failed with exit code ${result.status}.`);
     return false;
   }
   return true;
 }
+
+if (syncGalleryMedia() && !regenerateGallery()) process.exit(1);
 
 const server = spawn(process.execPath, [path.join(__dirname, "local-server.js")], {
   cwd: root,

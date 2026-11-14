@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "build": "npm --prefix Awesome-main run build",
+    "build": "node scripts/vercel-build.js",
     "dev": "npm --prefix Awesome-main run dev"
   },
   "dependencies": {
-    "@google/genai": "^2.31.0"
+    "@google/genai": "^2.31.0",
+    "@sendgrid/mail": "^8.1.6"
   }
 }
